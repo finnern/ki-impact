@@ -3,26 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KI-Impact Group Schramberg</title>
+    <title>KI-Impact Group - Workshop für Marketer im Mittelstand</title>
     <style>
-        body {
+        * {
             margin: 0;
-            padding: 20px;
-            background: linear-gradient(135deg, #2e8b57, #228b22);
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f8f9fb, #e8ecf2);
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh;
-            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            color: #5a6c7d;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
         }
         
         .poster-container {
             max-width: 90%;
-            max-height: 80vh;
-            margin: auto;
+            max-height: 70vh;
+            margin: 0 auto 2rem auto;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
             transition: transform 0.3s ease;
         }
         
@@ -37,52 +61,90 @@
             display: block;
         }
         
-        .header {
-            text-align: center;
-            color: white;
-            margin-bottom: 2rem;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        .footer-links {
-            margin-top: 2rem;
+        .action-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
             justify-content: center;
+            margin-top: 2rem;
         }
         
-        .link {
-            color: white;
+        .btn {
+            padding: 15px 30px;
             text-decoration: none;
-            padding: 8px 16px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
+            text-align: center;
+            min-width: 200px;
+            display: inline-block;
         }
         
-        .link:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
+        .btn-primary {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            border: 2px solid transparent;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #c0392b, #a93226);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(231, 76, 60, 0.3);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            border: 2px solid transparent;
+        }
+        
+        .btn-secondary:hover {
+            background: linear-gradient(45deg, #2980b9, #21618c);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+        }
+        
+        .btn-contact {
+            background: linear-gradient(45deg, #27ae60, #229954);
+            color: white;
+            border: 2px solid transparent;
+        }
+        
+        .btn-contact:hover {
+            background: linear-gradient(45deg, #229954, #1e8449);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(39, 174, 96, 0.3);
+        }
+        
+        .footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.9rem;
         }
         
         @media (max-width: 768px) {
             h1 {
-                font-size: 1.8rem;
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
             }
             
             .poster-container {
                 max-width: 95%;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .btn {
+                min-width: 250px;
             }
         }
     </style>
@@ -90,18 +152,29 @@
 <body>
     <div class="header">
         <h1>KI-Impact Group</h1>
-        <p class="subtitle">Innovation made in Schramberg</p>
+        <p class="subtitle">Schwarzwald Innovationen</p>
     </div>
     
     <div class="poster-container">
-        <img src="poster.jpg" alt="KI-Impact Group Poster" class="poster">
+        <img src="poster.jpg" alt="Workshop für Marketer im Mittelstand - KI im Marketing" class="poster">
     </div>
     
-    <div class="footer-links">
-        <a href="mailto:mark@finnern.com" class="link">📧 Kontakt</a>
-        <a href="#workshops" class="link">🎓 Workshops</a>
-        <a href="#projekte" class="link">🚀 Projekte</a>
-        <a href="https://github.com/finnern/ki-impact" class="link">💻 GitHub</a>
+    <div class="action-buttons">
+        <a href="https://forms.gle/5J7AyzCr3zmHVehR6" class="btn btn-primary" target="_blank">
+            🎯 Jetzt anmelden
+        </a>
+        
+        <a href="https://www.linkedin.com/groups/9804412/" class="btn btn-secondary" target="_blank">
+            💼 KI-Impact Gruppe
+        </a>
+        
+        <a href="mailto:mark@finnern.com" class="btn btn-contact">
+            📧 Kontakt
+        </a>
+    </div>
+    
+    <div class="footer">
+        <p>Innovation made in Schramberg 🚀</p>
     </div>
 </body>
 </html>
