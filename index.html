@@ -5,134 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KI-Impact Group Schramberg</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: 'Arial', sans-serif;
-            background: url('poster.jpg') center center/cover no-repeat;
-            min-height: 100vh;
-            position: relative;
-        }
-        
-        /* Overlay für bessere Lesbarkeit */
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: 1;
-        }
-        
-        .container {
-            position: relative;
-            z-index: 2;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #2e8b57, #228b22);
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             min-height: 100vh;
-            text-align: center;
-            color: white;
-            padding: 20px;
+            font-family: Arial, sans-serif;
         }
         
-        .logo {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 2rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .poster-container {
+            max-width: 90%;
+            max-height: 80vh;
+            margin: auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .poster-container:hover {
+            transform: scale(1.02);
+        }
+        
+        .poster {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
             margin-bottom: 2rem;
         }
         
         h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
         
-        .tagline {
+        .subtitle {
             font-size: 1.2rem;
-            margin-bottom: 2rem;
             opacity: 0.9;
         }
         
-        .cta-buttons {
+        .footer-links {
+            margin-top: 2rem;
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
             justify-content: center;
         }
         
-        .btn {
-            padding: 12px 24px;
-            background: linear-gradient(45deg, #2e8b57, #228b22);
+        .link {
             color: white;
             text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
             transition: all 0.3s ease;
-            border: 2px solid transparent;
         }
         
-        .btn:hover {
-            background: linear-gradient(45deg, #228b22, #2e8b57);
-            border-color: white;
+        .link:hover {
+            background: rgba(255, 255, 255, 0.3);
             transform: translateY(-2px);
-        }
-        
-        .footer {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            color: white;
-            opacity: 0.8;
         }
         
         @media (max-width: 768px) {
             h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 200px;
+            .poster-container {
+                max-width: 95%;
             }
         }
     </style>
 </head>
 <body>
-    <div class="overlay"></div>
-    
-    <div class="container">
-        <div class="logo">
-            <h1>KI-Impact Group</h1>
-            <p class="tagline">Innovation made in Schramberg 🚀</p>
-        </div>
-        
-        <div class="cta-buttons">
-            <a href="#workshops" class="btn">Workshops</a>
-            <a href="#projekte" class="btn">Projekte</a>
-            <a href="#faceguess" class="btn">FaceGuess App</a>
-            <a href="#kontakt" class="btn">Kontakt</a>
-        </div>
+    <div class="header">
+        <h1>KI-Impact Group</h1>
+        <p class="subtitle">Innovation made in Schramberg</p>
     </div>
     
-    <div class="footer">
-        <p>Nit schwätza - macha! 💡</p>
-        <p>Schramberg, Baden-Württemberg</p>
+    <div class="poster-container">
+        <img src="poster.jpg" alt="KI-Impact Group Poster" class="poster">
+    </div>
+    
+    <div class="footer-links">
+        <a href="mailto:mark@finnern.com" class="link">📧 Kontakt</a>
+        <a href="#workshops" class="link">🎓 Workshops</a>
+        <a href="#projekte" class="link">🚀 Projekte</a>
+        <a href="https://github.com/finnern/ki-impact" class="link">💻 GitHub</a>
     </div>
 </body>
 </html>
