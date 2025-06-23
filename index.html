@@ -172,7 +172,69 @@
             📧 Kontakt
         </a>
     </div>
-    
+    <!-- Events Section -->
+        <div class="events-section" style="margin-top: 2rem; max-width: 600px; width: 100%;">
+            <h2 style="text-align: center; color: #2c3e50; font-size: 1.8rem; margin-bottom: 1.5rem;">Kommende Events</h2>
+            
+            <div class="event-cards" style="display: flex; flex-direction: column; gap: 1rem;">
+                
+                <!-- Käpselefest -->
+                <div class="event-card" style="background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <h3 style="color: #2c3e50; margin: 0; font-size: 1.2rem;">Käpselefest Freiburg</h3>
+                        <span style="color: #e74c3c; font-weight: bold; font-size: 0.9rem;">Do, 26. Juni • 14-23h</span>
+                    </div>
+                    <p style="color: #5a6c7d; margin-bottom: 1rem; font-size: 0.95rem;">
+                        Innovation Festival - Die Community im Südwesten kommt zusammen! Wer ist interessiert mitzukommen?
+                    </p>
+                    <a href="https://www.innovation-festival.de/" style="background: #e74c3c; color: white; padding: 8px 16px; text-decoration: none; border-radius: 6px; font-size: 0.9rem;" target="_blank">
+                        🎊 Info
+                    </a>
+                </div>
+
+                <!-- KI im Marketing Workshop -->
+                <div class="event-card" style="background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <h3 style="color: #2c3e50; margin: 0; font-size: 1.2rem;">KI im Marketing After Work-Shop</h3>
+                        <span style="color: #6c7b7f; font-weight: bold; font-size: 0.9rem;">Mi, 2. Juli • 18-21h</span>
+                    </div>
+                    <p style="color: #5a6c7d; margin-bottom: 1rem; font-size: 0.95rem;">
+                        Workshop für Marketer im Mittelstand
+                    </p>
+                    <a href="https://forms.gle/5J7AyzCr3zmHVehR6" style="background: #6c7b7f; color: white; padding: 8px 16px; text-decoration: none; border-radius: 6px; font-size: 0.9rem;" target="_blank">
+                        🎯 Anmelden
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <style>
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .event-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .event-cards {
+                padding: 0 1rem;
+            }
+            
+            .event-card {
+                padding: 1.5rem !important;
+            }
+            
+            .event-btn {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 0.5rem;
+            }
+        }
+        </style>
     <div class="footer">
         <p>Nit schwätza - macha! :-)</p>
     </div>
