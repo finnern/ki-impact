@@ -1,0 +1,11 @@
+{
+    "name": "ki-impact-events-fetcher",
+    "version": "1.0.0",
+    "description": "Fetches events from a Google Sheet.",
+    "main": "index.html",
+    "scripts": {
+      "start": "echo \"No start script specified\""
+    },
+    "author": "KI-Impact",
+    "license": "UNLICENSED"
+  }

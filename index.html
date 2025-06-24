@@ -3,240 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KI-Impact Group - Workshop für Marketer im Mittelstand</title>
+    <title>KI-Impact Group Events</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #f8f9fb, #e8ecf2);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #2c3e50;
-        }
-        
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-        }
-        
-        .subtitle {
-            font-size: 1.8rem;
-            color: #5a6c7d;
-            font-weight: 400;
-            margin-bottom: 0.5rem;
-        }
-        
-        .poster-container {
-            max-width: 30%;
-            width: 100%;
-            margin: 0 auto 2rem auto;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease;
-        }
-        
-        .poster-container:hover {
-            transform: scale(1.01);
-        }
-        
-        .poster {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            display: block;
-        }
-        
-        .action-buttons {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-        
-        .btn {
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            text-align: center;
-            min-width: 200px;
-            display: inline-block;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(45deg, #6c7b7f, #5a6c7d);
-            color: white;
-            border: 2px solid transparent;
-        }
-        
-        .btn-primary:hover {
-            background: linear-gradient(45deg, #5a6c7d, #4a5a68);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(90, 108, 125, 0.3);
-        }
-        
-        .btn-secondary {
-            background: linear-gradient(45deg, #5a6c7d, #4a5a68);
-            color: white;
-            border: 2px solid transparent;
-        }
-        
-        .btn-secondary:hover {
-            background: linear-gradient(45deg, #4a5a68, #3a4a55);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(74, 90, 104, 0.3);
-        }
-        
-        .btn-contact {
-            background: linear-gradient(45deg, #4a5a68, #3a4a55);
-            color: white;
-            border: 2px solid transparent;
-        }
-        
-        .btn-contact:hover {
-            background: linear-gradient(45deg, #3a4a55, #2a3a42);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(58, 74, 85, 0.3);
-        }
-        
-        .footer {
-            margin-top: 3rem;
-            text-align: center;
-            color: #7f8c8d;
-            font-size: 1.4rem;
-        }
-        
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            .subtitle {
-                font-size: 1.4rem;
-            }
-            
-            .poster-container {
-                max-width: 60%;
-            }
-            
-            .action-buttons {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
-            
-            .btn {
-                min-width: 250px;
-            }
-        }
+        body { font-family: sans-serif; background-color: #f4f4f4; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1, h2 { text-align: center; }
+        .event-card { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 5px; }
+        .event-card h3 { margin-top: 0; }
+        .add-event-btn { display: block; width: 200px; margin: 20px auto; padding: 10px 15px; background-color: #ffd700; color: black; text-align: center; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        #status { text-align: center; padding: 10px; margin-top: 20px; border-radius: 5px; }
+        .status-loading { background-color: #e0e0e0; }
+        .status-error { background-color: #ffdddd; color: #d8000c; }
+        .status-success { background-color: #ddffdd; color: #4f8a10; }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>KI-Impact Group</h1>
-        <p class="subtitle">Black Forest Tradition meets Silicon Valley Innovation!</p>
+    <div class="container">
+        <h1>KI-Impact Group Events</h1>
+        <a href="https://forms.gle/TiWcBjudXAxCZwvC7" target="_blank" class="add-event-btn">Neues Event eintragen</a>
+        <div id="events-container"></div>
+        <div id="status"></div>
     </div>
-    
-    <div class="poster-container">
-        <img src="poster.jpg" alt="Workshop für Marketer im Mittelstand - KI im Marketing" class="poster">
-    </div>
-    
-    <div class="action-buttons">
-        <a href="https://forms.gle/5J7AyzCr3zmHVehR6" class="btn btn-primary" target="_blank">
-            🎯 Jetzt anmelden
-        </a>
-        
-        <a href="https://www.linkedin.com/groups/9804412/" class="btn btn-secondary" target="_blank">
-            💼 KI-Impact Group
-        </a>
-        
-        <a href="mailto:mark@finnern.com" class="btn btn-contact">
-            📧 Kontakt
-        </a>
-    </div>
-    <!-- Events Section -->
-        <div class="events-section" style="margin-top: 2rem; max-width: 600px; width: 100%;">
-            <h2 style="text-align: center; color: #2c3e50; font-size: 1.8rem; margin-bottom: 1.5rem;">Kommende Events</h2>
-            
-            <div class="event-cards" style="display: flex; flex-direction: column; gap: 1rem;">
-                
-                <!-- Käpselefest -->
-                <div class="event-card" style="background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                        <h3 style="color: #2c3e50; margin: 0; font-size: 1.2rem;">Käpselefest Freiburg</h3>
-                        <span style="color: #e74c3c; font-weight: bold; font-size: 0.9rem;">Do, 26. Juni • 14-23h</span>
-                    </div>
-                    <p style="color: #5a6c7d; margin-bottom: 1rem; font-size: 0.95rem;">
-                        Innovation Festival - Die Community im Südwesten kommt zusammen! Wer ist interessiert mitzukommen?
-                    </p>
-                    <a href="https://www.innovation-festival.de/" style="background: #e74c3c; color: white; padding: 8px 16px; text-decoration: none; border-radius: 6px; font-size: 0.9rem;" target="_blank">
-                        🎊 Info
-                    </a>
-                </div>
 
-                <!-- KI im Marketing Workshop -->
-                <div class="event-card" style="background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                        <h3 style="color: #2c3e50; margin: 0; font-size: 1.2rem;">KI im Marketing After Work-Shop</h3>
-                        <span style="color: #6c7b7f; font-weight: bold; font-size: 0.9rem;">Mi, 2. Juli • 18-21h</span>
-                    </div>
-                    <p style="color: #5a6c7d; margin-bottom: 1rem; font-size: 0.95rem;">
-                        Workshop für Marketer im Mittelstand
-                    </p>
-                    <a href="https://forms.gle/5J7AyzCr3zmHVehR6" style="background: #6c7b7f; color: white; padding: 8px 16px; text-decoration: none; border-radius: 6px; font-size: 0.9rem;" target="_blank">
-                        🎯 Anmelden
-                    </a>
-                </div>
+    <script>
+        const eventsContainer = document.getElementById('events-container');
+        const statusDiv = document.getElementById('status');
+        const sheetURL = '/.netlify/functions/get-events';
 
-            </div>
-        </div>
-
-        <style>
-        .event-card:hover {
-            transform: translateY(-5px);
+        function setStatus(message, type) {
+            statusDiv.textContent = message;
+            statusDiv.className = `status-${type}`;
         }
-        
-        .event-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        @media (max-width: 768px) {
-            .event-cards {
-                padding: 0 1rem;
-            }
-            
-            .event-card {
-                padding: 1.5rem !important;
-            }
-            
-            .event-btn {
-                width: 100%;
-                text-align: center;
-                margin-bottom: 0.5rem;
+
+        async function fetchEvents() {
+            setStatus('Lade Events...', 'loading');
+            try {
+                const response = await fetch(sheetURL);
+                if (!response.ok) {
+                    throw new Error(`Netzwerk-Antwort war nicht ok. Status: ${response.status}`);
+                }
+                const csvData = await response.text();
+                const events = parseCSV(csvData);
+
+                if(events.length === 0) {
+                     setStatus('Keine Events gefunden. Das Google Sheet ist eventuell leer.', 'error');
+                     return;
+                }
+
+                displayEvents(events);
+                setStatus(`Erfolgreich ${events.length} Event(s) geladen.`, 'success');
+
+            } catch (error) {
+                console.error('Fehler beim Abrufen der Events:', error);
+                setStatus(`Fehler beim Laden der Events. Prüfe die Browser-Konsole für Details. (${error.message})`, 'error');
             }
         }
-        </style>
-    <div class="footer">
-        <p>Nit schwätza - macha! :-)</p>
-    </div>
+
+        function parseCSV(csv) {
+            const lines = csv.split('\\n').slice(1); // Skip header row
+            const events = [];
+            lines.forEach(line => {
+                const columns = line.split(',');
+                if (columns.length > 4) { // Ensure there's enough data
+                    const event = {
+                        name: columns[1].trim().replace(/^"|"$/g, ''),
+                        date: columns[2].trim().replace(/^"|"$/g, ''),
+                        location: columns[3].trim().replace(/^"|"$/g, ''),
+                        reason: columns[4].trim().replace(/^"|"$/g, ''),
+                        url: columns.length > 5 ? columns[5].trim().replace(/^"|"$/g, '') : ''
+                    };
+                    events.push(event);
+                }
+            });
+            return events;
+        }
+
+        function displayEvents(events) {
+            eventsContainer.innerHTML = '';
+            events.forEach(event => {
+                const card = document.createElement('div');
+                card.className = 'event-card';
+                let html = `<h3>${event.name}</h3>`;
+                html += `<p><strong>Datum:</strong> ${event.date}</p>`;
+                html += `<p><strong>Ort:</strong> ${event.location}</p>`;
+                html += `<p><strong>Beschreibung:</strong> ${event.reason}</p>`;
+                if (event.url && event.url !== '') {
+                    html += `<a href="${event.url}" target="_blank">Zur Event-Seite</a>`;
+                }
+                card.innerHTML = html;
+                eventsContainer.appendChild(card);
+            });
+        }
+
+        fetchEvents();
+    </script>
 </body>
 </html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KI-Impact Group Events</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f4c3a 0%, #1a5d4a 50%, #2d7a65 100%);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ffffff, #a8e6cf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .add-event-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .add-event-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+        }
+
+        .events-section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #a8e6cf;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+
+        .event-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .event-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #ff6b35, #f7931e, #a8e6cf);
+        }
+
+        .event-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .event-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .event-date {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .event-location {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #a8e6cf;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .event-description {
+            color: #e0e0e0;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .event-type {
+            display: inline-block;
+            background: rgba(168, 230, 207, 0.2);
+            color: #a8e6cf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+
+        .event-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #a8e6cf, #7fcdae);
+            color: #0f4c3a;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2rem;
+            color: #a8e6cf;
+        }
+
+        .error {
+            text-align: center;
+            padding: 50px;
+            color: #ff6b35;
+            background: rgba(255, 107, 53, 0.1);
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #a8e6cf;
+        }
+
+        .empty-state h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .event-card {
+                padding: 20px;
+            }
+            
+            .event-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>KI-Impact Group Events</h1>
+            <p>Community-driven Innovation Events</p>
+            <a href="https://docs.google.com/forms/d/1Ji1jsr2gfliaYh-VrW0HTxWiaZD5v0E9KLzCkW4GHRo/viewform" class="add-event-btn" target="_blank">
+                ⚡ Add Your Innovation Event
+            </a>
+        </div>
+
+        <div class="events-section">
+            <h2 class="section-title">Kommende Events</h2>
+            <div id="events-container">
+                <div class="loading">
+                    🔄 Events werden geladen...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Google Sheets CSV URL (öffentlich lesbar)
+        const SHEET_ID = '1RiDhCY8npiiHkBjJBJA-5tOqgGt3--o8nAPxG3474JU';
+        const SHEET_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=0`;
+
+        async function loadEvents() {
+            const container = document.getElementById('events-container');
+            
+            try {
+                // Lade CSV-Daten vom Google Sheet
+                const response = await fetch(SHEET_URL);
+                const csvText = await response.text();
+                
+                // Parse CSV
+                const events = parseCSV(csvText);
+                
+                if (events.length === 0) {
+                    container.innerHTML = `
+                        <div class="empty-state">
+                            <h3>Noch keine Events eingereicht</h3>
+                            <p>Sei der erste und reiche dein Innovation Event ein!</p>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                // Zeige Events an
+                displayEvents(events, container);
+                
+            } catch (error) {
+                console.error('Fehler beim Laden der Events:', error);
+                container.innerHTML = `
+                    <div class="error">
+                        <h3>⚠️ Events konnten nicht geladen werden</h3>
+                        <p>Bitte versuche es später erneut oder kontaktiere uns.</p>
+                    </div>
+                `;
+            }
+        }
+
+        function parseCSV(csvText) {
+            const lines = csvText.split('\n');
+            const headers = lines[0].split(',').map(h => h.trim().replace(/"/g, ''));
+            const events = [];
+
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (!line) continue;
+
+                const values = parseCSVLine(line);
+                if (values.length < headers.length) continue;
+
+                const event = {};
+                headers.forEach((header, index) => {
+                    event[header] = values[index] ? values[index].replace(/"/g, '').trim() : '';
+                });
+
+                // Nur Events mit Namen hinzufügen
+                if (event['Event Name']) {
+                    events.push(event);
+                }
+            }
+
+            return events;
+        }
+
+        function parseCSVLine(line) {
+            const result = [];
+            let current = '';
+            let inQuotes = false;
+
+            for (let i = 0; i < line.length; i++) {
+                const char = line[i];
+                
+                if (char === '"') {
+                    inQuotes = !inQuotes;
+                } else if (char === ',' && !inQuotes) {
+                    result.push(current);
+                    current = '';
+                } else {
+                    current += char;
+                }
+            }
+            
+            result.push(current);
+            return result;
+        }
+
+        function displayEvents(events, container) {
+            container.innerHTML = `
+                <div class="events-grid">
+                    ${events.map(event => createEventCard(event)).join('')}
+                </div>
+            `;
+        }
+
+        function createEventCard(event) {
+            const eventName = event['Event Name'] || 'Unbekanntes Event';
+            const eventDate = formatDate(event['Datum']);
+            const eventTime = event['Uhrzeit'] || '';
+            const eventLocation = event['Ort'] || '';
+            const eventDescription = event['Warum dieser Event wichtig für KI-Impact Group ist?'] || '';
+            const eventUrl = event['Event URL'] || '';
+            const eventComments = event['Kommentare oder Anregungen?'] || '';
+
+            const dateTimeDisplay = eventTime ? `${eventDate} • ${eventTime}` : eventDate;
+
+            return `
+                <div class="event-card">
+                    <div class="event-header">
+                        <div>
+                            <h3 class="event-title">${eventName}</h3>
+                            ${eventLocation ? `
+                                <div class="event-location">
+                                    📍 ${eventLocation}
+                                </div>
+                            ` : ''}
+                        </div>
+                        <div class="event-date">${dateTimeDisplay}</div>
+                    </div>
+                    
+                    <div class="event-type">KI-Impact Group Event</div>
+                    
+                    ${eventDescription ? `
+                        <div class="event-description">${eventDescription}</div>
+                    ` : ''}
+                    
+                    ${eventComments ? `
+                        <div class="event-description"><strong>Kommentar:</strong> ${eventComments}</div>
+                    ` : ''}
+                    
+                    <div class="event-actions">
+                        ${eventUrl ? `
+                            <a href="${eventUrl}" target="_blank" class="btn btn-primary">
+                                🌐 Event Info
+                            </a>
+                        ` : ''}
+                        <button class="btn btn-secondary" onclick="shareEvent('${eventName}', '${eventUrl}')">
+                            📤 Teilen
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function formatDate(dateString) {
+            if (!dateString) return 'TBD';
+            
+            try {
+                const date = new Date(dateString);
+                if (isNaN(date.getTime())) return dateString;
+                
+                return date.toLocaleDateString('de-DE', {
+                    weekday: 'short',
+                    day: '2-digit',
+                    month: 'short',
+                    year: 'numeric'
+                });
+            } catch (error) {
+                return dateString;
+            }
+        }
+
+        function shareEvent(eventName, eventUrl) {
+            if (navigator.share) {
+                navigator.share({
+                    title: eventName,
+                    text: `Schau dir dieses Event von der KI-Impact Group an: ${eventName}`,
+                    url: eventUrl
+                });
+            } else {
+                // Fallback: Copy to clipboard
+                const text = `${eventName} - ${eventUrl}`;
+                navigator.clipboard.writeText(text).then(() => {
+                    alert('Event-Link wurde in die Zwischenablage kopiert!');
+                });
+            }
+        }
+
+        // Lade Events beim Seitenladen
+        document.addEventListener('DOMContentLoaded', loadEvents);
+
+        // Aktualisiere Events alle 5 Minuten
+        setInterval(loadEvents, 5 * 60 * 1000);
+    </script>
+</body>
+</html>
