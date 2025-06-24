@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KI-Impact Group Events</title>
     <style>
-        body { font-family: sans-serif; background-color: #f4f4f4; color: #333; margin: 0; padding: 20px; }
-        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        h1, h2 { text-align: center; }
-        .event-card { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 5px; }
-        .event-card h3 { margin-top: 0; }
-        .add-event-btn { display: block; width: 200px; margin: 20px auto; padding: 10px 15px; background-color: #ffd700; color: black; text-align: center; text-decoration: none; border-radius: 5px; font-weight: bold; }
+      body { font-family: sans-serif; background-color: #f4f4f4; color: #333; margin: 0; padding: 20px; }
+      .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+      h1 { text-align: center; }
+      .poster-img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px; }
+      .event-card { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 5px; }
+      .event-card h3 { margin-top: 0; }
+      .add-event-btn { display: block; width: 200px; margin: 20px auto; padding: 10px 15px; background-color: #ffd700; color: black; text-align: center; text-decoration: none; border-radius: 5px; font-weight: bold; }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>KI-Impact Group Events</h1>
-        <a href="https://forms.gle/TiWcBjudXAxCZwvC7" target="_blank" class="add-event-btn">Neues Event eintragen</a>
-        <div id="events-container">
+      <img src="poster.jpg" alt="KI-Impact Group Event Poster" class="poster-img" />
+      <h1>KI-Impact Group Events</h1>
+      <a href="https://forms.gle/TiWcBjudXAxCZwvC7" target="_blank" class="add-event-btn">Neues Event eintragen</a>
+      <div id="events-container">
+        <div class="event-card">
+          <h3>KI Festival</h3>
+          <p><strong>Datum:</strong> 19.07.2025</p>
+          <p><strong>Ort:</strong> Wohlgelegen Heilbronn</p>
+          <p><strong>Beschreibung:</strong> Heilbronn entwickelt sich zum KI Zentrum von Europa. Das ist der Event um zu erleben was dort alles passiert und um sich mit anderen mit den gleichen Interessen zu treffen. :-)</p>
+          <a href="https://ki-festival.de/" target="_blank">Zur Event-Seite</a>
+        </div>
 
-            <div class="event-card">
-                <h3>KI Festival</h3>
-                <p><strong>Datum:</strong> 19.07.2025</p>
-                <p><strong>Ort:</strong> Wohlgelegen Heilbronn</p>
-                <p><strong>Beschreibung:</strong> Heilbronn entwickelt sich zum KI Zentrum von Europa. Das ist der Event um zu erleben was dort alles passiert und um sich mit anderen mit den gleichen Interessen zu treffen. :-)</p>
-                <a href="https://ki-festival.de/" target="_blank">Zur Event-Seite</a>
-            </div>
+        <div class="event-card">
+          <h3>Käpsele Innovation Festival</h3>
+          <p><strong>Datum:</strong> 06.07.2025</p>
+          <p><strong>Ort:</strong> Schramberg</p>
+          <p><strong>Beschreibung:</strong> Das erste Innovationsfestival im Schwarzwald. Wir wollen zeigen, dass wir mehr zu bieten haben als Kuckucksuhren und Bollenhüte.</p>
+          <a href="https://www.blackforest-valley.de/kaepsele-2025" target="_blank">Zur Event-Seite</a>
+        </div>
 
-            <div class="event-card">
-                <h3>Käpsele Innovation Festival</h3>
-                <p><strong>Datum:</strong> 06.07.2025</p>
-                <p><strong>Ort:</strong> Schramberg</p>
-                <p><strong>Beschreibung:</strong> Das erste Innovationsfestival im Schwarzwald. Wir wollen zeigen, dass wir mehr zu bieten haben als Kuckucksuhren und Bollenhüte.</p>
-                <a href="https://www.blackforest-valley.de/kaepsele-2025" target="_blank">Zur Event-Seite</a>
-            </div>
-
-            <div class="event-card">
-                <h3>Stuttgart Digital Summit</h3>
-                <p><strong>Datum:</strong> 15.10.2025</p>
-                <p><strong>Ort:</strong> Haus der Wirtschaft Stuttgart</p>
-                <p><strong>Beschreibung:</strong> Die Digitalisierung verändert unsere Arbeits- und Lebenswelt. Der Stuttgart Digital Summit ist die Plattform für den Austausch über die neuesten Trends.</p>
-                <a href="https://stuttgart-digital-summit.de/" target="_blank">Zur Event-Seite</a>
-            </div>
+        <div class="event-card">
+          <h3>Stuttgart Digital Summit</h3>
+          <p><strong>Datum:</strong> 15.10.2025</p>
+          <p><strong>Ort:</strong> Haus der Wirtschaft Stuttgart</p>
+          <p><strong>Beschreibung:</strong> Die Digitalisierung verändert unsere Arbeits- und Lebenswelt. Der Stuttgart Digital Summit ist die Plattform für den Austausch über die neuesten Trends.</p>
+          <a href="https://stuttgart-digital-summit.de/" target="_blank">Zur Event-Seite</a>
+        </div>
 
         </div>
     </div>
-</body>
+  </body>
 </html>
