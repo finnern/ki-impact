@@ -78,7 +78,10 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .event-card h3 { margin-top: 0; }
+        .event-card h3 { margin-top: 0; font-size: 1.2rem; }
+        .event-card p { color: #5a6c7d; margin-bottom: 1rem; font-size: 0.95rem; }
+        .event-card a { font-size: 0.9rem; text-decoration: none; color: white; background-color: #6c7b7f; padding: 8px 16px; border-radius: 6px; }
+
         .footer {
             margin-top: 3rem;
             color: #7f8c8d;
@@ -87,4 +90,56 @@
         @media (max-width: 768px) {
             h1 { font-size: 2.2rem; }
             .subtitle { font-size: 1.4rem; }
-            .action-
+            .action-buttons { flex-direction: column; align-items: center; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>KI-Impact Group</h1>
+        <p class="subtitle">Black Forest Tradition meets Silicon Valley Innovation!</p>
+    </div>
+    
+    <div class="poster-container">
+        <img src="poster.jpg" alt="Workshop für Marketer im Mittelstand - KI im Marketing" class="poster">
+    </div>
+    
+    <div class="action-buttons">
+        <a href="https://forms.gle/5J7AyzCr3zmHVehR6" class="btn btn-primary" target="_blank">🎯 Jetzt anmelden</a>
+        <a href="https://www.linkedin.com/groups/9804412/" class="btn btn-secondary" target="_blank">💼 KI-Impact Group</a>
+        <a href="mailto:mark@finnern.com" class="btn btn-contact">📧 Kontakt</a>
+    </div>
+
+    <div class="events-section">
+        <h2 style="text-align: center; color: #2c3e50; margin-bottom: 2rem;">Kommende Events</h2>
+        
+        <div class="event-card">
+            <h3>Käpsele Innovation Festival 2025</h3>
+            <p><strong>Datum:</strong> Do, 26. Juni 2025 (Ab 14 Uhr)</p>
+            <p><strong>Ort:</strong> SICK-ARENA, Messe Freiburg</p>
+            <p><strong>Beschreibung:</strong> Das ist der Innovations event im Südwesten Deutschlands. Ich mag, das es als Festival angelegt ist. :-)</p>
+            <a href="https://www.innovation-festival.de/" target="_blank">Zur Event-Seite</a>
+        </div>
+
+        <div class="event-card">
+            <h3>KI im Marketing After Work-Shop</h3>
+            <p><strong>Datum:</strong> Mi, 2. Juli 2025 (18-21 Uhr)</p>
+            <p><strong>Ort:</strong> Schramberger Wohnungsbau, Oberndorfer Str. 1, Schramberg</p>
+            <p><strong>Beschreibung:</strong> KI fürs Marketing Workshop -- Live-Fallstudie mit Eurer Marketing Aufgabe!</p>
+            <a href="https://www.linkedin.com/events/kif-rsmarketingworkshop7334175672539533312/comments/" target="_blank">Zur Event-Seite</a>
+        </div>
+
+        <div class="event-card">
+            <h3>KI Festival</h3>
+            <p><strong>Datum:</strong> Sa, 19. Juli 2025 (Ganzes Wochenende)</p>
+            <p><strong>Ort:</strong> Wohlgelegen Heilbronn</p>
+            <p><strong>Beschreibung:</strong> Heilbronn etwickelt sich zum KI Zentrum von Europa. Das ist der Event um zu erleben was dort alles passiert und um sich mit anderen mit den gleichen Interessen zu treffen. :-)</p>
+            <a href="https://ki-festival.de/" target="_blank">Zur Event-Seite</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Nit schwätza - macha! :-)</p>
+    </div>
+</body>
+</html>
