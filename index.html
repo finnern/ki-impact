@@ -11,91 +11,39 @@
         .event-card { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 5px; }
         .event-card h3 { margin-top: 0; }
         .add-event-btn { display: block; width: 200px; margin: 20px auto; padding: 10px 15px; background-color: #ffd700; color: black; text-align: center; text-decoration: none; border-radius: 5px; font-weight: bold; }
-        #status { text-align: center; padding: 10px; margin-top: 20px; border-radius: 5px; }
-        .status-loading { background-color: #e0e0e0; }
-        .status-error { background-color: #ffdddd; color: #d8000c; }
-        .status-success { background-color: #ddffdd; color: #4f8a10; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>KI-Impact Group Events</h1>
         <a href="https://forms.gle/TiWcBjudXAxCZwvC7" target="_blank" class="add-event-btn">Neues Event eintragen</a>
-        <div id="events-container"></div>
-        <div id="status"></div>
+        <div id="events-container">
+
+            <div class="event-card">
+                <h3>KI Festival</h3>
+                <p><strong>Datum:</strong> 19.07.2025</p>
+                <p><strong>Ort:</strong> Wohlgelegen Heilbronn</p>
+                <p><strong>Beschreibung:</strong> Heilbronn entwickelt sich zum KI Zentrum von Europa. Das ist der Event um zu erleben was dort alles passiert und um sich mit anderen mit den gleichen Interessen zu treffen. :-)</p>
+                <a href="https://ki-festival.de/" target="_blank">Zur Event-Seite</a>
+            </div>
+
+            <div class="event-card">
+                <h3>Käpsele Innovation Festival</h3>
+                <p><strong>Datum:</strong> 06.07.2025</p>
+                <p><strong>Ort:</strong> Schramberg</p>
+                <p><strong>Beschreibung:</strong> Das erste Innovationsfestival im Schwarzwald. Wir wollen zeigen, dass wir mehr zu bieten haben als Kuckucksuhren und Bollenhüte.</p>
+                <a href="https://www.blackforest-valley.de/kaepsele-2025" target="_blank">Zur Event-Seite</a>
+            </div>
+
+            <div class="event-card">
+                <h3>Stuttgart Digital Summit</h3>
+                <p><strong>Datum:</strong> 15.10.2025</p>
+                <p><strong>Ort:</strong> Haus der Wirtschaft Stuttgart</p>
+                <p><strong>Beschreibung:</strong> Die Digitalisierung verändert unsere Arbeits- und Lebenswelt. Der Stuttgart Digital Summit ist die Plattform für den Austausch über die neuesten Trends.</p>
+                <a href="https://stuttgart-digital-summit.de/" target="_blank">Zur Event-Seite</a>
+            </div>
+
+        </div>
     </div>
-
-    <script>
-        const eventsContainer = document.getElementById('events-container');
-        const statusDiv = document.getElementById('status');
-        const sheetURL = '/.netlify/functions/get-events';
-
-        function setStatus(message, type) {
-            statusDiv.textContent = message;
-            statusDiv.className = `status-${type}`;
-        }
-
-        async function fetchEvents() {
-            setStatus('Lade Events...', 'loading');
-            try {
-                const response = await fetch(sheetURL);
-                if (!response.ok) {
-                    throw new Error(`Netzwerk-Antwort war nicht ok. Status: ${response.status}`);
-                }
-                const csvData = await response.text();
-                const events = parseCSV(csvData);
-
-                if(events.length === 0) {
-                     setStatus('Keine Events gefunden. Das Google Sheet ist eventuell leer.', 'error');
-                     return;
-                }
-
-                displayEvents(events);
-                setStatus(`Erfolgreich ${events.length} Event(s) geladen.`, 'success');
-
-            } catch (error) {
-                console.error('Fehler beim Abrufen der Events:', error);
-                setStatus(`Fehler beim Laden der Events. Prüfe die Browser-Konsole für Details. (${error.message})`, 'error');
-            }
-        }
-
-        function parseCSV(csv) {
-            const lines = csv.split('\\n').slice(1); // Skip header row
-            const events = [];
-            lines.forEach(line => {
-                const columns = line.split(',');
-                if (columns.length > 4) { // Ensure there's enough data
-                    const event = {
-                        name: columns[1].trim().replace(/^"|"$/g, ''),
-                        date: columns[2].trim().replace(/^"|"$/g, ''),
-                        location: columns[3].trim().replace(/^"|"$/g, ''),
-                        reason: columns[4].trim().replace(/^"|"$/g, ''),
-                        url: columns.length > 5 ? columns[5].trim().replace(/^"|"$/g, '') : ''
-                    };
-                    events.push(event);
-                }
-            });
-            return events;
-        }
-
-        function displayEvents(events) {
-            eventsContainer.innerHTML = '';
-            events.forEach(event => {
-                const card = document.createElement('div');
-                card.className = 'event-card';
-                let html = `<h3>${event.name}</h3>`;
-                html += `<p><strong>Datum:</strong> ${event.date}</p>`;
-                html += `<p><strong>Ort:</strong> ${event.location}</p>`;
-                html += `<p><strong>Beschreibung:</strong> ${event.reason}</p>`;
-                if (event.url && event.url !== '') {
-                    html += `<a href="${event.url}" target="_blank">Zur Event-Seite</a>`;
-                }
-                card.innerHTML = html;
-                eventsContainer.appendChild(card);
-            });
-        }
-
-        fetchEvents();
-    </script>
 </body>
 </html>
