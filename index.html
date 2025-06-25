@@ -39,6 +39,12 @@
         .poster {
             width: 100%;
             display: block;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            cursor: pointer;
+        }
+        .poster:hover {
+            transform: scale(1.02);
+            filter: brightness(1.1);
         }
         .action-buttons {
             display: flex;
@@ -101,7 +107,9 @@
     </div>
     
     <div class="poster-container">
-        <img src="poster.jpg" alt="Workshop für Marketer im Mittelstand - KI im Marketing" class="poster">
+        <a href="https://forms.gle/5J7AyzCr3zmHVehR6" target="_blank">
+            <img src="poster.jpg" alt="Workshop für Marketer im Mittelstand - KI im Marketing" class="poster">
+        </a>
     </div>
     
     <div class="action-buttons">
