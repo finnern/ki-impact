@@ -3,430 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KI-Impact Group - Community Events Integration</title>
+    <title>KI-Impact Group - Black Forest Tradition meets Silicon Valley Innovation</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #f8f9fb, #e8ecf2);
-            min-height: 100vh;
+            background-color: #f8f9fb;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             padding: 20px;
+            margin: 0;
         }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
         .header {
             text-align: center;
             margin-bottom: 2rem;
             color: #2c3e50;
         }
-        
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 0.5rem;
         }
-        
-        .events-section {
-            margin-top: 2rem;
-            width: 100%;
-        }
-        
-        .events-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-        
-        .events-title {
-            color: #2c3e50;
+        .subtitle {
             font-size: 1.8rem;
-            margin: 0;
+            color: #5a6c7d;
+            font-weight: 400;
         }
-        
-        .add-event-btn {
-            background: linear-gradient(45deg, #6c7b7f, #5a6c7d);
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            border: none;
+        .poster-container {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto 2rem auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .poster {
+            width: 100%;
+            display: block;
+            transition: transform 0.3s ease, filter 0.3s ease;
             cursor: pointer;
         }
-        
-        .add-event-btn:hover {
-            background: linear-gradient(45deg, #5a6c7d, #4a5a68);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(90, 108, 125, 0.3);
+        .poster:hover {
+            transform: scale(1.02);
+            filter: brightness(1.1);
         }
-        
-        .event-cards {
+        .action-buttons {
             display: flex;
-            flex-direction: column;
-            gap: 1rem;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 3rem;
         }
-        
-        .event-card {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .event-card:hover {
-            transform: translateY(-2px);
-        }
-        
-        .event-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 0.5rem;
-        }
-        
-        .event-title {
-            color: #2c3e50;
-            margin: 0;
-            font-size: 1.2rem;
-        }
-        
-        .event-date {
-            color: #e74c3c;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-        
-        .event-location {
-            color: #7f8c8d;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .event-description {
-            color: #5a6c7d;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-            line-height: 1.4;
-        }
-        
-        .event-source {
-            font-size: 0.8rem;
-            color: #95a5a6;
-            font-style: italic;
-        }
-        
-        .event-btn {
-            background: #6c7b7f;
-            color: white;
-            padding: 8px 16px;
+        .btn {
+            padding: 15px 30px;
             text-decoration: none;
-            border-radius: 6px;
-            font-size: 0.9rem;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
-        }
-        
-        .event-btn:hover {
-            background: #5a6c7d;
-            transform: translateY(-1px);
-        }
-        
-        .loading {
             text-align: center;
+            min-width: 200px;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .btn-primary { background: linear-gradient(45deg, #6c7b7f, #5a6c7d); }
+        .btn-secondary { background: linear-gradient(45deg, #5a6c7d, #4a5a68); }
+        .btn-contact { background: linear-gradient(45deg, #4a5a68, #3a4a55); }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(90, 108, 125, 0.3);
+        }
+        .events-section {
+             width: 100%;
+             max-width: 800px;
+        }
+        .event-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .event-card h3 { margin-top: 0; font-size: 1.2rem; }
+        .event-card p { color: #5a6c7d; margin-bottom: 1rem; font-size: 0.95rem; }
+        .event-card a { font-size: 0.9rem; text-decoration: none; color: white; background-color: #6c7b7f; padding: 8px 16px; border-radius: 6px; }
+
+        .footer {
+            margin-top: 3rem;
             color: #7f8c8d;
-            padding: 2rem;
+            font-size: 1.4rem;
         }
-        
-        .error {
-            background: #fee;
-            border: 1px solid #fcc;
-            color: #c33;
-            padding: 1rem;
-            border-radius: 4px;
-            margin: 1rem 0;
-        }
-        
         @media (max-width: 768px) {
-            .events-header {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
-            
-            .add-event-btn {
-                width: 100%;
-            }
-            
-            .event-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.5rem;
-            }
+            h1 { font-size: 2.2rem; }
+            .subtitle { font-size: 1.4rem; }
+            .action-buttons { flex-direction: column; align-items: center; gap: 1rem; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>KI-Impact Group Events</h1>
-            <p>Community-driven Innovation Events</p>
-        </div>
+    <div class="header">
+        <h1>KI-Impact Group</h1>
+        <p class="subtitle">Black Forest Tradition meets Silicon Valley Innovation!</p>
+    </div>
+    
+    <div class="poster-container">
+        <a href="https://forms.gle/5J7AyzCr3zmHVehR6" target="_blank">
+            <img src="poster.jpg" alt="Workshop für Marketer im Mittelstand - KI im Marketing" class="poster">
+        </a>
+    </div>
+    
+    <div class="action-buttons">
+        <a href="https://forms.gle/5J7AyzCr3zmHVehR6" class="btn btn-primary" target="_blank">🎯 Jetzt anmelden</a>
+        <a href="https://www.linkedin.com/groups/9804412/" class="btn btn-secondary" target="_blank">💼 KI-Impact Group</a>
+        <a href="mailto:mark@finnern.com" class="btn btn-contact">📧 Kontakt</a>
+    </div>
+
+    <div class="events-section">
+        <h2 style="text-align: center; color: #2c3e50; margin-bottom: 2rem;">Kommende Events</h2>
         
-        <!-- Static Events Section (your existing events) -->
-        <div class="events-section">
-            <div class="events-header">
-                <h2 class="events-title">Kommende Events</h2>
-                <a href="https://forms.gle/QxKATu7h9prH5uQb8" class="add-event-btn" target="_blank">
-                    🚀 Add Your Innovation Event
-                </a>
-            </div>
-            
-            <div class="event-cards">
-                <!-- KI im Marketing Workshop -->
-                <div class="event-card">
-                    <div class="event-header">
-                        <h3 class="event-title">KI fürs Marketing Workshop - Live-Fallstudie</h3>
-                        <span class="event-date">Mi, 2. Juli • 18-21h</span>
-                    </div>
-                    <div class="event-location">📍 Wirtschaftsförderung Schramberg, Oberndorfer Str. 1</div>
-                    <p class="event-description">
-                        Live-Demo mit echtem Marketing-Case aus dem Publikum! Holger Siegel (Schramberg) und Marc Millenet präsentieren KIQI - die KI-Assistentin für generatives Marketing. Story Based Marketing-Konzept meets KI.
-                    </p>
-                    <div class="event-source">KI-Impact Group Event</div>
-                    <a href="https://forms.gle/5J7AyzCr3zmHVehR6" class="event-btn" target="_blank">
-                        🎯 Anmelden
-                    </a>
-                </div>
+        <div class="event-card">
+            <h3>Käpsele Innovation Festival 2025</h3>
+            <p><strong>Datum:</strong> Do, 26. Juni 2025 (Ab 14 Uhr)</p>
+            <p><strong>Ort:</strong> SICK-ARENA, Messe Freiburg</p>
+            <p><strong>Beschreibung:</strong> Das ist der Innovations event im Südwesten Deutschlands. Ich mag, das es als Festival angelegt ist. :-)</p>
+            <a href="https://www.innovation-festival.de/" target="_blank">Zur Event-Seite</a>
+        </div>
 
-                <!-- SICOS BW Supercomputing Workshop -->
-                <div class="event-card">
-                    <div class="event-header">
-                        <h3 class="event-title">Mehr Power für Dein Business: Supercomputing für Alle</h3>
-                        <span class="event-date">Di, 1. Juli • 14-15h</span>
-                    </div>
-                    <div class="event-location">📍 Online Workshop</div>
-                    <p class="event-description">
-                        SICOS BW Online-Workshop über Supercomputing-Technologien für Unternehmen. Erfahren Sie, wie High-Performance Computing Ihr Business voranbringen kann.
-                    </p>
-                    <div class="event-source">Community Event - Baden-Württemberg</div>
-                    <a href="https://www.sicos-bw.de/" class="event-btn" target="_blank">
-                        💻 SICOS BW Info
-                    </a>
-                </div>
+        <div class="event-card">
+            <h3>KI im Marketing After Work-Shop</h3>
+            <p><strong>Datum:</strong> Mi, 2. Juli 2025 (18-21 Uhr)</p>
+            <p><strong>Ort:</strong> Schramberger Wohnungsbau, Oberndorfer Str. 1, Schramberg</p>
+            <p><strong>Beschreibung:</strong> KI fürs Marketing Workshop -- Live-Fallstudie mit Eurer Marketing Aufgabe!</p>
+            <a href="https://www.linkedin.com/events/kif-rsmarketingworkshop7334175672539533312/comments/" target="_blank">Zur Event-Seite</a>
+        </div>
 
-                <!-- Social Innovation Night Freiburg -->
-                <div class="event-card">
-                    <div class="event-header">
-                        <h3 class="event-title">Social Innovation Night Vol. XIV</h3>
-                        <span class="event-date">Mi, 1. Oktober • 18:30-21h</span>
-                    </div>
-                    <div class="event-location">📍 Freiburg</div>
-                    <p class="event-description">
-                        Innovative Ansätze für gesellschaftliche Herausforderungen. Networking-Event für Social Entrepreneurs und Change Maker in Baden-Württemberg.
-                    </p>
-                    <div class="event-source">Community Event - Baden-Württemberg</div>
-                    <a href="https://social-innovation-lab.org/events/social-innovation-night-vol-xiv/" class="event-btn" target="_blank">
-                        🌱 Social Innovation Lab
-                    </a>
-                </div>
-
-                <!-- Machine Learning Conference Tübingen -->
-                <div class="event-card">
-                    <div class="event-header">
-                        <h3 class="event-title">7th Annual Conference "Machine Learning in Science"</h3>
-                        <span class="event-date">30. Sep - 1. Okt • ganztägig</span>
-                    </div>
-                    <div class="event-location">📍 Universität Tübingen</div>
-                    <p class="event-description">
-                        Hochkarätige Konferenz zu Machine Learning in der Wissenschaft. Top-Networking-Event für KI-Enthusiasten in Baden-Württemberg.
-                    </p>
-                    <div class="event-source">Community Event - Baden-Württemberg</div>
-                    <a href="https://uni-tuebingen.de/cluster-ml/" class="event-btn" target="_blank">
-                        🎓 Cluster ML Events
-                    </a>
-                </div>
-
-                <!-- AI and Law Conference Tübingen -->
-                <div class="event-card">
-                    <div class="event-header">
-                        <h3 class="event-title">Tübingen Conference for AI and Law</h3>
-                        <span class="event-date">5.-6. Nov • ganztägig</span>
-                    </div>
-                    <div class="event-location">📍 Universität Tübingen</div>
-                    <p class="event-description">
-                        Innovative Konferenz zu KI und Rechtsfragen. Wichtiges Thema für Unternehmen, die KI verantwortungsvoll einsetzen wollen.
-                    </p>
-                    <div class="event-source">Community Event - Baden-Württemberg</div>
-                    <a href="https://ai-law-institute.de/" class="event-btn" target="_blank">
-                        ⚖️ AI Law Institute
-                    </a>
-                </div>
-                
-                <!-- Community Events will be loaded here -->
-                <div id="community-events-container"></div>
-            </div>
+        <div class="event-card">
+            <h3>KI Festival</h3>
+            <p><strong>Datum:</strong> Sa, 19. Juli 2025 (Ganzes Wochenende)</p>
+            <p><strong>Ort:</strong> Wohlgelegen Heilbronn</p>
+            <p><strong>Beschreibung:</strong> Heilbronn etwickelt sich zum KI Zentrum von Europa. Das ist der Event um zu erleben was dort alles passiert und um sich mit anderen mit den gleichen Interessen zu treffen. :-)</p>
+            <a href="https://ki-festival.de/" target="_blank">Zur Event-Seite</a>
         </div>
     </div>
 
-    <script>
-        // Configuration
-        const SHEET_ID = '1RiDhCY8npiiHkBjJBJA-5tOqgGt3--o8nAPxG3474JU';
-        const SHEET_NAME = 'Form Responses 1'; // Default name for Google Forms responses
-        const API_KEY = 'YOUR_GOOGLE_SHEETS_API_KEY'; // You'll need to get this from Google Cloud Console
-        
-        // Alternative: Use CSV export URL (simpler, no API key needed)
-        const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=0`;
-        
-        async function loadCommunityEvents() {
-            const container = document.getElementById('community-events-container');
-            container.innerHTML = '<div class="loading">Loading community events...</div>';
-            
-            try {
-                // For demo purposes, let's use mock data
-                // In production, you'd fetch from the Google Sheet
-                const mockEvents = [
-                    {
-                        timestamp: '2025-06-24T10:30:00',
-                        title: 'AI Meetup Stuttgart',
-                        date: '15.07.2025',
-                        time: '19:00',
-                        location: 'Stuttgart',
-                        url: 'https://meetup.com/ai-stuttgart',
-                        relevance: 'Perfect networking opportunity for KI-Impact Group members to connect with the broader AI community in Baden-Württemberg and share our Schramberg innovations.',
-                        submitter: 'Community Member'
-                    },
-                    {
-                        timestamp: '2025-06-24T11:15:00',
-                        title: 'Innovation Lab Workshop',
-                        date: '20.07.2025',
-                        time: '14:00',
-                        location: 'Villingen-Schwenningen',
-                        url: '',
-                        relevance: 'Hands-on workshop about rapid prototyping and innovation methods, directly applicable to our Black Forest innovation approach.',
-                        submitter: 'Community Member'
-                    }
-                ];
-                
-                displayCommunityEvents(mockEvents);
-                
-                // Uncomment this for real Google Sheets integration:
-                // const events = await fetchEventsFromSheet();
-                // displayCommunityEvents(events);
-                
-            } catch (error) {
-                container.innerHTML = '<div class="error">Error loading community events. Please try again later.</div>';
-                console.error('Error loading events:', error);
-            }
-        }
-        
-        async function fetchEventsFromSheet() {
-            // Method 1: Using Google Sheets API (requires API key)
-            /*
-            const response = await fetch(
-                `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_NAME}?key=${API_KEY}`
-            );
-            const data = await response.json();
-            return parseSheetData(data.values);
-            */
-            
-            // Method 2: Using CSV export (simpler, no API key)
-            const response = await fetch(CSV_URL);
-            const csvText = await response.text();
-            return parseCSVData(csvText);
-        }
-        
-        function parseCSVData(csvText) {
-            const lines = csvText.split('\n');
-            const headers = lines[0].split(',');
-            const events = [];
-            
-            for (let i = 1; i < lines.length; i++) {
-                if (lines[i].trim()) {
-                    const values = lines[i].split(',');
-                    // Updated field mapping based on your new form order:
-                    // 0: Timestamp, 1: Event Name, 2: Datum, 3: Uhrzeit, 4: Ort, 5: Event URL, 6: Warum wichtig, 7: Kommentare
-                    const event = {
-                        timestamp: values[0],
-                        title: values[1],      // Event Name
-                        date: values[2],       // Datum
-                        time: values[3],       // Uhrzeit
-                        location: values[4],   // Ort
-                        url: values[5],        // Event URL
-                        relevance: values[6],  // Warum wichtig
-                        comments: values[7],   // Kommentare
-                        submitter: 'Community Member'
-                    };
-                    
-                    // Only include future events
-                    if (isEventInFuture(event.date)) {
-                        events.push(event);
-                    }
-                }
-            }
-            
-            return events.sort((a, b) => new Date(a.date) - new Date(b.date));
-        }
-        
-        function isEventInFuture(dateString) {
-            const [day, month, year] = dateString.split('.');
-            const eventDate = new Date(year, month - 1, day);
-            return eventDate >= new Date();
-        }
-        
-        function displayCommunityEvents(events) {
-            const container = document.getElementById('community-events-container');
-            
-            if (events.length === 0) {
-                container.innerHTML = '<div class="loading">No community events yet. Be the first to add one!</div>';
-                return;
-            }
-            
-            const eventsHTML = events.map(event => `
-                <div class="event-card">
-                    <div class="event-header">
-                        <h3 class="event-title">${escapeHtml(event.title)}</h3>
-                        <span class="event-date">${formatDate(event.date)} • ${event.time}</span>
-                    </div>
-                    <div class="event-location">📍 ${escapeHtml(event.location)}</div>
-                    <p class="event-description">
-                        ${escapeHtml(event.relevance)}
-                    </p>
-                    <div class="event-source">Community Event</div>
-                    ${event.url ? `<a href="${escapeHtml(event.url)}" class="event-btn" target="_blank">🔗 Event Info</a>` : ''}
-                </div>
-            `).join('');
-            
-            container.innerHTML = eventsHTML;
-        }
-        
-        function formatDate(dateString) {
-            const [day, month, year] = dateString.split('.');
-            const date = new Date(year, month - 1, day);
-            const options = { weekday: 'short', day: 'numeric', month: 'short' };
-            return date.toLocaleDateString('de-DE', options);
-        }
-        
-        function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
-        }
-        
-        // Load events when page loads
-        document.addEventListener('DOMContentLoaded', loadCommunityEvents);
-        
-        // Refresh events every 5 minutes
-        setInterval(loadCommunityEvents, 5 * 60 * 1000);
-    </script>
+    <div class="footer">
+        <p>Nit schwätza - macha! :-)</p>
+    </div>
 </body>
 </html>
