@@ -29,11 +29,17 @@
         }
         
         .logo {
-            max-width: 400px;
+            max-width: 500px;
             width: 100%;
             height: auto;
             box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
             border-radius: 15px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .logo:hover {
+            transform: scale(1.02);
         }
         
         h1 {
@@ -56,7 +62,7 @@
         }
         
         .poster-container {
-            max-width: 600px;
+            max-width: 500px;
             width: 100%;
             margin: 0 auto 2rem auto;
             border-radius: 15px;
@@ -314,7 +320,9 @@
 <body>
     <div class="header">
         <div class="logo-container">
-            <img src="ki-impact-logo-banner.png" alt="KI-Impact Group - Silicon Valley meets Black Forest" class="logo">
+            <a href="https://www.linkedin.com/groups/9804412/" target="_blank">
+                <img src="ki-impact-logo-banner.png" alt="KI-Impact Group - Silicon Valley meets Black Forest" class="logo">
+            </a>
         </div>
     </div>
     
@@ -358,46 +366,20 @@
             </a>
         </div>
         
-        <!-- AI and Law Conference Tübingen - November -->
+        <!-- SICOS BW Supercomputing Workshop - Juli 1 -->
         <div class="event-card">
             <div class="event-header">
-                <a href="https://ai-law-institute.de/" class="event-title-link" target="_blank">
-                    <h3>Tübingen Conference for AI and Law</h3>
+                <a href="https://www.sicos-bw.de/" class="event-title-link" target="_blank">
+                    <h3>Mehr Power für Dein Business: Supercomputing für Alle</h3>
                 </a>
-                <span class="event-date">5.-6. Nov</span>
+                <span class="event-date">Di, 1. Juli • 14-15h</span>
             </div>
-            <div class="event-location">📍 Universität Tübingen</div>
-            <p>Innovative Konferenz zu KI und Rechtsfragen. Wichtiges Thema für Unternehmen, die KI verantwortungsvoll einsetzen wollen.</p>
+            <div class="event-location">📍 Online Workshop</div>
+            <p>SICOS BW Online-Workshop über Supercomputing-Technologien für Unternehmen. Erfahren Sie, wie High-Performance Computing Ihr Business voranbringen kann.</p>
             <div class="event-source">Community Event - Baden-Württemberg</div>
         </div>
 
-        <!-- Social Innovation Night Freiburg - Oktober -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://social-innovation-lab.org/events/social-innovation-night-vol-xiv/" class="event-title-link" target="_blank">
-                    <h3>Social Innovation Night Vol. XIV</h3>
-                </a>
-                <span class="event-date">Mi, 1. Okt • 18:30-21h</span>
-            </div>
-            <div class="event-location">📍 Freiburg</div>
-            <p>Innovative Ansätze für gesellschaftliche Herausforderungen. Networking-Event für Social Entrepreneurs und Change Maker in Baden-Württemberg.</p>
-            <div class="event-source">Community Event - Baden-Württemberg</div>
-        </div>
-
-        <!-- Machine Learning Conference Tübingen - September -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://uni-tuebingen.de/cluster-ml/" class="event-title-link" target="_blank">
-                    <h3>7th Annual Conference "Machine Learning in Science"</h3>
-                </a>
-                <span class="event-date">30. Sep - 1. Okt</span>
-            </div>
-            <div class="event-location">📍 Universität Tübingen</div>
-            <p>Hochkarätige Konferenz zu Machine Learning in der Wissenschaft. Top-Networking-Event für KI-Enthusiasten in Baden-Württemberg.</p>
-            <div class="event-source">Community Event - Baden-Württemberg</div>
-        </div>
-
-        <!-- KI Festival Heilbronn -->
+        <!-- KI Festival Heilbronn - Juli 19 -->
         <div class="event-card">
             <div class="event-header">
                 <a href="https://ki-festival.de/" class="event-title-link" target="_blank">
@@ -410,16 +392,42 @@
             <div class="event-source">Community Event - Baden-Württemberg</div>
         </div>
 
-        <!-- SICOS BW Supercomputing Workshop - Juli -->
+        <!-- Machine Learning Conference Tübingen - September 30 -->
         <div class="event-card">
             <div class="event-header">
-                <a href="https://www.sicos-bw.de/" class="event-title-link" target="_blank">
-                    <h3>Mehr Power für Dein Business: Supercomputing für Alle</h3>
+                <a href="https://uni-tuebingen.de/cluster-ml/" class="event-title-link" target="_blank">
+                    <h3>7th Annual Conference "Machine Learning in Science"</h3>
                 </a>
-                <span class="event-date">Di, 1. Juli • 14-15h</span>
+                <span class="event-date">30. Sep - 1. Okt</span>
             </div>
-            <div class="event-location">📍 Online Workshop</div>
-            <p>SICOS BW Online-Workshop über Supercomputing-Technologien für Unternehmen. Erfahren Sie, wie High-Performance Computing Ihr Business voranbringen kann.</p>
+            <div class="event-location">📍 Universität Tübingen</div>
+            <p>Hochkarätige Konferenz zu Machine Learning in der Wissenschaft. Top-Networking-Event für KI-Enthusiasten in Baden-Württemberg.</p>
+            <div class="event-source">Community Event - Baden-Württemberg</div>
+        </div>
+
+        <!-- Social Innovation Night Freiburg - Oktober 1 -->
+        <div class="event-card">
+            <div class="event-header">
+                <a href="https://social-innovation-lab.org/events/social-innovation-night-vol-xiv/" class="event-title-link" target="_blank">
+                    <h3>Social Innovation Night Vol. XIV</h3>
+                </a>
+                <span class="event-date">Mi, 1. Okt • 18:30-21h</span>
+            </div>
+            <div class="event-location">📍 Freiburg</div>
+            <p>Innovative Ansätze für gesellschaftliche Herausforderungen. Networking-Event für Social Entrepreneurs und Change Maker in Baden-Württemberg.</p>
+            <div class="event-source">Community Event - Baden-Württemberg</div>
+        </div>
+
+        <!-- AI and Law Conference Tübingen - November 5 -->
+        <div class="event-card">
+            <div class="event-header">
+                <a href="https://ai-law-institute.de/" class="event-title-link" target="_blank">
+                    <h3>Tübingen Conference for AI and Law</h3>
+                </a>
+                <span class="event-date">5.-6. Nov</span>
+            </div>
+            <div class="event-location">📍 Universität Tübingen</div>
+            <p>Innovative Konferenz zu KI und Rechtsfragen. Wichtiges Thema für Unternehmen, die KI verantwortungsvoll einsetzen wollen.</p>
             <div class="event-source">Community Event - Baden-Württemberg</div>
         </div>
     </div>
