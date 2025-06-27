@@ -3,31 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KI-Impact Group - Black Forest Tradition meets Silicon Valley Innovation</title>
+    <title>KI-Impact Group - Silicon Valley meets Black Forest</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f8f9fb;
+            background: linear-gradient(135deg, #fffef7, #fffce0);
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px;
             margin: 0;
         }
+        
         .header {
             text-align: center;
             margin-bottom: 2rem;
             color: #2c3e50;
         }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .logo {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+        }
+        
         h1 {
             font-size: 2.8rem;
-            margin-bottom: 0.5rem;
+            margin: 0;
+            color: #2c3e50;
         }
+        
         .subtitle {
             font-size: 1.8rem;
             color: #5a6c7d;
             font-weight: 400;
+            margin-bottom: 0.5rem;
         }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
         .poster-container {
             max-width: 600px;
             width: 100%;
@@ -36,16 +63,19 @@
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
+        
         .poster {
             width: 100%;
             display: block;
             transition: transform 0.3s ease, filter 0.3s ease;
             cursor: pointer;
         }
+        
         .poster:hover {
             transform: scale(1.02);
             filter: brightness(1.1);
         }
+        
         .action-buttons {
             display: flex;
             gap: 1.5rem;
@@ -53,6 +83,7 @@
             justify-content: center;
             margin-bottom: 3rem;
         }
+        
         .btn {
             padding: 15px 30px;
             text-decoration: none;
@@ -65,45 +96,226 @@
             color: white;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        .btn-primary { background: linear-gradient(45deg, #6c7b7f, #5a6c7d); }
-        .btn-secondary { background: linear-gradient(45deg, #5a6c7d, #4a5a68); }
-        .btn-contact { background: linear-gradient(45deg, #4a5a68, #3a4a55); }
+        
+        .btn-primary { 
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #2c3e50;
+            border: 2px solid #2c3e50;
+        }
+        
+        .btn-secondary { 
+            background: linear-gradient(45deg, #2c3e50, #1a2a3a);
+            color: #ffd700;
+        }
+        
+        .btn-contact { 
+            background: linear-gradient(45deg, #5a6c7d, #4a5a68);
+            color: white;
+        }
+        
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(90, 108, 125, 0.3);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
         }
+        
+        .add-event-btn {
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #2c3e50;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #2c3e50;
+            font-size: 1rem;
+        }
+        
+        .add-event-btn:hover {
+            background: linear-gradient(45deg, #ffed4e, #ffd700);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+        }
+        
         .events-section {
-             width: 100%;
-             max-width: 800px;
+            width: 100%;
+            max-width: 800px;
+            margin-top: 2rem;
         }
+        
+        .events-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .events-title {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin: 0;
+        }
+        
+        /* Featured Event Styling */
+        .featured-section {
+            margin-bottom: 3rem;
+        }
+        
+        .featured-title {
+            color: #2c3e50;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .featured-event {
+            background: linear-gradient(135deg, #fffacd, #fff8dc);
+            border: 3px solid #ffd700;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+            position: relative;
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: #ffd700;
+            color: #2c3e50;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border: 2px solid #2c3e50;
+        }
+        
+        /* Regular Event Cards */
         .event-card {
             background-color: white;
-            border: 1px solid #ddd;
+            border: 1px solid #e8e8e8;
             padding: 1.5rem;
             margin-bottom: 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .event-card h3 { margin-top: 0; font-size: 1.2rem; }
-        .event-card p { color: #5a6c7d; margin-bottom: 1rem; font-size: 0.95rem; }
-        .event-card a { font-size: 0.9rem; text-decoration: none; color: white; background-color: #6c7b7f; padding: 8px 16px; border-radius: 6px; }
-
+        
+        .event-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+        
+        .event-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+        }
+        
+        .event-card h3 { 
+            margin: 0;
+            font-size: 1.2rem;
+            color: #2c3e50;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .event-card h3:hover {
+            color: #ffd700;
+        }
+        
+        .event-title-link {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .event-title-link:hover h3 {
+            color: #ffd700;
+        }
+        
+        .event-date {
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 0.9rem;
+            background: #2c3e50;
+            padding: 4px 8px;
+            border-radius: 6px;
+        }
+        
+        .event-location {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .event-card p { 
+            color: #5a6c7d;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        
+        .event-source {
+            font-size: 0.8rem;
+            color: #95a5a6;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+        
+        .event-btn {
+            font-size: 0.9rem;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(45deg, #2c3e50, #1a2a3a);
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .event-btn:hover {
+            background: linear-gradient(45deg, #1a2a3a, #2c3e50);
+            transform: translateY(-1px);
+        }
+        
         .footer {
             margin-top: 3rem;
             color: #7f8c8d;
             font-size: 1.4rem;
+            text-align: center;
         }
+        
         @media (max-width: 768px) {
             h1 { font-size: 2.2rem; }
             .subtitle { font-size: 1.4rem; }
-            .action-buttons { flex-direction: column; align-items: center; gap: 1rem; }
+            .action-buttons { 
+                flex-direction: column; 
+                align-items: center; 
+                gap: 1rem; 
+            }
+            .events-header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            .add-event-btn {
+                width: 100%;
+            }
+            .event-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>KI-Impact Group</h1>
-        <p class="subtitle">Black Forest Tradition meets Silicon Valley Innovation!</p>
+        <div class="logo-container">
+            <img src="ki-impact-logo-banner.png" alt="KI-Impact Group - Silicon Valley meets Black Forest" class="logo">
+        </div>
     </div>
     
     <div class="poster-container">
@@ -113,36 +325,102 @@
     </div>
     
     <div class="action-buttons">
-        <a href="https://forms.gle/5J7AyzCr3zmHVehR6" class="btn btn-primary" target="_blank">🎯 Jetzt anmelden</a>
-        <a href="https://www.linkedin.com/groups/9804412/" class="btn btn-secondary" target="_blank">💼 KI-Impact Group</a>
-        <a href="mailto:mark@finnern.com" class="btn btn-contact">📧 Kontakt</a>
+        <a href="https://forms.gle/5J7AyzCr3zmHVehR6" class="btn btn-primary" target="_blank">Jetzt anmelden</a>
+        <a href="https://www.linkedin.com/groups/9804412/" class="btn btn-secondary" target="_blank">KI-Impact Group</a>
+        <a href="mailto:mark@finnern.com" class="btn btn-contact">Kontakt</a>
     </div>
 
     <div class="events-section">
-        <h2 style="text-align: center; color: #2c3e50; margin-bottom: 2rem;">Kommende Events</h2>
+        <!-- Featured Event Section -->
+        <div class="featured-section">
+            <h2 class="featured-title">⭐ Featured Event</h2>
+            <div class="featured-event">
+                <div class="featured-badge">KI-IMPACT HIGHLIGHT</div>
+                <div class="event-header">
+                    <h3>KI fürs Marketing Workshop - Live-Fallstudie</h3>
+                    <span class="event-date">Mi, 2. Juli • 18-21h</span>
+                </div>
+                <div class="event-location">📍 Wirtschaftsförderung Schramberg, Oberndorfer Str. 1</div>
+                <p>
+                    <strong>Live-Demo mit echtem Marketing-Case aus dem Publikum!</strong><br>
+                    Holger Siegel (aus Schramberg!) und Marc Millenet präsentieren KIQI - die KI-Assistentin für generatives Marketing. 25 Jahre Story Based Marketing-Expertise meets KI.
+                </p>
+                <div class="event-source">Exklusives KI-Impact Group Event</div>
+                <a href="https://forms.gle/5J7AyzCr3zmHVehR6" class="event-btn" target="_blank">Jetzt anmelden</a>
+            </div>
+        </div>
+
+        <!-- Upcoming Events Section -->
+        <div class="events-header">
+            <h2 class="events-title">Kommende Events</h2>
+            <a href="https://forms.gle/QxKATu7h9prH5uQb8" class="add-event-btn" target="_blank">
+                Eigenes Event hinzufügen
+            </a>
+        </div>
         
+        <!-- AI and Law Conference Tübingen - November -->
         <div class="event-card">
-            <h3>Käpsele Innovation Festival 2025</h3>
-            <p><strong>Datum:</strong> Do, 26. Juni 2025 (Ab 14 Uhr)</p>
-            <p><strong>Ort:</strong> SICK-ARENA, Messe Freiburg</p>
-            <p><strong>Beschreibung:</strong> Das ist der Innovations event im Südwesten Deutschlands. Ich mag, das es als Festival angelegt ist. :-)</p>
-            <a href="https://www.innovation-festival.de/" target="_blank">Zur Event-Seite</a>
+            <div class="event-header">
+                <a href="https://ai-law-institute.de/" class="event-title-link" target="_blank">
+                    <h3>Tübingen Conference for AI and Law</h3>
+                </a>
+                <span class="event-date">5.-6. Nov</span>
+            </div>
+            <div class="event-location">📍 Universität Tübingen</div>
+            <p>Innovative Konferenz zu KI und Rechtsfragen. Wichtiges Thema für Unternehmen, die KI verantwortungsvoll einsetzen wollen.</p>
+            <div class="event-source">Community Event - Baden-Württemberg</div>
         </div>
 
+        <!-- Social Innovation Night Freiburg - Oktober -->
         <div class="event-card">
-            <h3>KI im Marketing After Work-Shop</h3>
-            <p><strong>Datum:</strong> Mi, 2. Juli 2025 (18-21 Uhr)</p>
-            <p><strong>Ort:</strong> Schramberger Wohnungsbau, Oberndorfer Str. 1, Schramberg</p>
-            <p><strong>Beschreibung:</strong> KI fürs Marketing Workshop -- Live-Fallstudie mit Eurer Marketing Aufgabe!</p>
-            <a href="https://www.linkedin.com/events/kif-rsmarketingworkshop7334175672539533312/comments/" target="_blank">Zur Event-Seite</a>
+            <div class="event-header">
+                <a href="https://social-innovation-lab.org/events/social-innovation-night-vol-xiv/" class="event-title-link" target="_blank">
+                    <h3>Social Innovation Night Vol. XIV</h3>
+                </a>
+                <span class="event-date">Mi, 1. Okt • 18:30-21h</span>
+            </div>
+            <div class="event-location">📍 Freiburg</div>
+            <p>Innovative Ansätze für gesellschaftliche Herausforderungen. Networking-Event für Social Entrepreneurs und Change Maker in Baden-Württemberg.</p>
+            <div class="event-source">Community Event - Baden-Württemberg</div>
         </div>
 
+        <!-- Machine Learning Conference Tübingen - September -->
         <div class="event-card">
-            <h3>KI Festival</h3>
-            <p><strong>Datum:</strong> Sa, 19. Juli 2025 (Ganzes Wochenende)</p>
-            <p><strong>Ort:</strong> Wohlgelegen Heilbronn</p>
-            <p><strong>Beschreibung:</strong> Heilbronn etwickelt sich zum KI Zentrum von Europa. Das ist der Event um zu erleben was dort alles passiert und um sich mit anderen mit den gleichen Interessen zu treffen. :-)</p>
-            <a href="https://ki-festival.de/" target="_blank">Zur Event-Seite</a>
+            <div class="event-header">
+                <a href="https://uni-tuebingen.de/cluster-ml/" class="event-title-link" target="_blank">
+                    <h3>7th Annual Conference "Machine Learning in Science"</h3>
+                </a>
+                <span class="event-date">30. Sep - 1. Okt</span>
+            </div>
+            <div class="event-location">📍 Universität Tübingen</div>
+            <p>Hochkarätige Konferenz zu Machine Learning in der Wissenschaft. Top-Networking-Event für KI-Enthusiasten in Baden-Württemberg.</p>
+            <div class="event-source">Community Event - Baden-Württemberg</div>
+        </div>
+
+        <!-- KI Festival Heilbronn -->
+        <div class="event-card">
+            <div class="event-header">
+                <a href="https://ki-festival.de/" class="event-title-link" target="_blank">
+                    <h3>KI Festival</h3>
+                </a>
+                <span class="event-date">Sa, 19. Juli</span>
+            </div>
+            <div class="event-location">📍 Wohlgelegen Heilbronn</div>
+            <p>Heilbronn entwickelt sich zum KI Zentrum von Europa. Das ist der Event um zu erleben was dort alles passiert und um sich mit anderen mit den gleichen Interessen zu treffen. :-)</p>
+            <div class="event-source">Community Event - Baden-Württemberg</div>
+        </div>
+
+        <!-- SICOS BW Supercomputing Workshop - Juli -->
+        <div class="event-card">
+            <div class="event-header">
+                <a href="https://www.sicos-bw.de/" class="event-title-link" target="_blank">
+                    <h3>Mehr Power für Dein Business: Supercomputing für Alle</h3>
+                </a>
+                <span class="event-date">Di, 1. Juli • 14-15h</span>
+            </div>
+            <div class="event-location">📍 Online Workshop</div>
+            <p>SICOS BW Online-Workshop über Supercomputing-Technologien für Unternehmen. Erfahren Sie, wie High-Performance Computing Ihr Business voranbringen kann.</p>
+            <div class="event-source">Community Event - Baden-Württemberg</div>
         </div>
     </div>
 
