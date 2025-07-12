@@ -1,4 +1,421 @@
-<!-- Make it in Schramberg INSIGHT - July 16 -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KI-Impact Group - Silicon Valley meets Black Forest</title>
+    
+    <!-- Open Graph Meta Tags for LinkedIn Preview -->
+    <meta property="og:title" content="KI-Impact Group - Silicon Valley meets Black Forest">
+    <meta property="og:description" content="Innovations-Community in Baden-Württemberg. Featured Events, KI-Workshops und Community-Events für Unternehmer, Tech-Enthusiasten und Forward-Thinker im Schwarzwald. Von Käpsele Festival bis KI-Workshops - wir vernetzen die Innovations-Szene.">
+    <meta property="og:image" content="https://ki-impact.org/ki-impact-logo-banner.png">
+    <meta property="og:url" content="https://ki-impact.org">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="KI-Impact Group">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="description" content="KI-Impact Group - Innovations-Community in Baden-Württemberg. Featured Events, KI-Workshops und Community-Events für Unternehmer und Tech-Enthusiasten im Schwarzwald.">
+    <meta name="keywords" content="KI, Künstliche Intelligenz, Innovation, Baden-Württemberg, Schwarzwald, Schramberg, Community, Events, Workshops">
+    <meta name="author" content="KI-Impact Group">
+    
+    <!-- Twitter Card Meta Tags (Bonus) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KI-Impact Group - Silicon Valley meets Black Forest">
+    <meta name="twitter:description" content="Innovations-Community in Baden-Württemberg. Featured Events, KI-Workshops und Community-Events für Unternehmer im Schwarzwald.">
+    <meta name="twitter:image" content="https://ki-impact.org/ki-impact-logo-banner.png">
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #fffef7, #fffce0);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .logo {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .logo:hover {
+            transform: scale(1.02);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin: 0;
+            color: #2c3e50;
+        }
+        
+        .subtitle {
+            font-size: 1.8rem;
+            color: #5a6c7d;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
+        .poster-container {
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto 2rem auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .poster {
+            width: 100%;
+            display: block;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .poster:hover {
+            transform: scale(1.02);
+            filter: brightness(1.1);
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-align: center;
+            min-width: 200px;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn-primary { 
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #2c3e50;
+            border: 2px solid #2c3e50;
+        }
+        
+        .btn-secondary { 
+            background: linear-gradient(45deg, #2c3e50, #1a2a3a);
+            color: #ffd700;
+        }
+        
+        .btn-contact { 
+            background: linear-gradient(45deg, #5a6c7d, #4a5a68);
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+        }
+        
+        .add-event-btn {
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #2c3e50;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #2c3e50;
+            font-size: 1rem;
+        }
+        
+        .add-event-btn:hover {
+            background: linear-gradient(45deg, #ffed4e, #ffd700);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+        }
+        
+        .events-section {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 2rem;
+        }
+        
+        .events-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .events-title {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin: 0;
+        }
+        
+        /* Featured Event Styling */
+        .featured-section {
+            margin-bottom: 3rem;
+        }
+        
+        .featured-title {
+            color: #2c3e50;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .featured-event {
+            background: linear-gradient(135deg, #fffacd, #fff8dc);
+            border: 3px solid #ffd700;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+            position: relative;
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: #ffd700;
+            color: #2c3e50;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border: 2px solid #2c3e50;
+        }
+        
+        /* Regular Event Cards */
+        .event-card {
+            background-color: white;
+            border: 1px solid #e8e8e8;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+        
+        .event-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+        }
+        
+        .event-card h3 { 
+            margin: 0;
+            font-size: 1.2rem;
+            color: #2c3e50;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .event-card h3:hover {
+            color: #ffd700;
+        }
+        
+        .event-title-link {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .event-title-link:hover h3 {
+            color: #ffd700;
+        }
+        
+        .event-date {
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 0.9rem;
+            background: #2c3e50;
+            padding: 4px 8px;
+            border-radius: 6px;
+            white-space: nowrap;
+        }
+        
+        .event-location {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .event-card p { 
+            color: #5a6c7d;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        
+        .event-source {
+            font-size: 0.8rem;
+            color: #95a5a6;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+        
+        .event-btn {
+            font-size: 0.9rem;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(45deg, #2c3e50, #1a2a3a);
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .event-btn:hover {
+            background: linear-gradient(45deg, #1a2a3a, #2c3e50);
+            transform: translateY(-1px);
+        }
+        
+        .location-change {
+            background: linear-gradient(135deg, #fffacd, #fff8dc);
+            border: 2px solid #ff6b6b;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .location-change-header {
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .location-change p {
+            margin: 0.25rem 0;
+            color: #2c3e50;
+            font-size: 0.9rem;
+        }
+        
+        .footer {
+            margin-top: 3rem;
+            color: #7f8c8d;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .subtitle { font-size: 1.4rem; }
+            .action-buttons { 
+                flex-direction: column; 
+                align-items: center; 
+                gap: 1rem; 
+            }
+            .events-header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            .add-event-btn {
+                width: 100%;
+            }
+            .event-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <a href="https://www.linkedin.com/groups/9804412/" target="_blank">
+                <img src="ki-impact-logo-banner.png" alt="KI-Impact Group - Silicon Valley meets Black Forest" class="logo">
+            </a>
+        </div>
+    </div>
+    
+    <div class="poster-container">
+        <a href="https://forms.gle/jzVEBR6hDEb8Ce2F6" target="_blank">
+            <img src="poster.jpg" alt="Prozesse mit KI Orchestrieren - N8N Workshop" class="poster">
+        </a>
+    </div>
+    
+    <div class="action-buttons">
+        <a href="https://forms.gle/jzVEBR6hDEb8Ce2F6" class="btn btn-primary" target="_blank">Jetzt anmelden</a>
+        <a href="https://www.linkedin.com/groups/9804412/" class="btn btn-secondary" target="_blank">KI-Impact Group</a>
+        <a href="mailto:mark@finnern.com" class="btn btn-contact">Kontakt</a>
+    </div>
+
+    <div class="events-section">
+        <!-- Featured Event Section -->
+        <div class="featured-section">
+            <h2 class="featured-title">⭐ Featured Event ⭐</h2>
+            <div class="featured-event">
+                <div class="featured-badge">KI-IMPACT HIGHLIGHT</div>
+                
+                <div class="event-header">
+                    <h3>Prozesse mit KI Orchestrieren!</h3>
+                    <span class="event-date">Di, 30. Sep • 18-21h</span>
+                </div>
+                <div class="event-location">📍 Räume der Wirtschaftsförderung, Oberndorfer Straße 1 (beim Rathaus), Schramberg</div>
+                <p>
+                    <strong>N8N kennenlernen - Das Open Source Automatisierungstool</strong><br>
+                    <strong>Intelligente Workflows erstellen</strong><br><br>
+                    
+                    <strong>Live Praxis-Beispiele:</strong><br>
+                    • Brugger: <strong>Lieferschein-Erkennung → automatische Bestellzuordnung</strong><br>
+                    • Simon: <strong>PDF-Kundenanfrage → KI-Preisberechnung → CAD-Modell</strong><br>
+                    • <strong>Medienbrüche durch KI umgehen!</strong><br><br>
+                    
+                    Kostenfrei! Anmeldung über http://ki-impact.org oder QR-Code
+                </p>
+                <div class="event-source">Exklusives KI-Impact Group Event</div>
+                <a href="https://forms.gle/jzVEBR6hDEb8Ce2F6" class="event-btn" target="_blank">Jetzt anmelden</a>
+            </div>
+        </div>
+
+        <!-- Upcoming Events Section -->
+        <div class="events-header">
+            <h2 class="events-title">Kommende Events</h2>
+            <a href="https://forms.gle/QxKATu7h9prH5uQb8" class="add-event-btn" target="_blank">
+                Eigenes Event hinzufügen
+            </a>
+        </div>
+        
+        <!-- Make it in Schramberg INSIGHT - July 16 -->
         <div class="event-card">
             <div class="event-header">
                 <h3>Make it in Schramberg INSIGHT - Mittelstand im Umbruch</h3>
@@ -111,3 +528,10 @@
             <p>Innovative Konferenz zu KI und Rechtsfragen. Wichtiges Thema für Unternehmen, die KI verantwortungsvoll einsetzen wollen.</p>
             <div class="event-source">Community Event - Baden-Württemberg</div>
         </div>
+    </div>
+
+    <div class="footer">
+        <p>Nit schwätza - macha! :-)</p>
+    </div>
+</body>
+</html>
