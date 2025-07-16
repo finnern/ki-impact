@@ -788,15 +788,17 @@
             const datenschutz = document.getElementById('datenschutz');
             
             // Close datenschutz if open
-            if (datenschutz.style.display === 'block') {
+            if (datenschutz && datenschutz.style.display === 'block') {
                 datenschutz.style.display = 'none';
             }
             
-            if (impressum.style.display === 'none' || impressum.style.display === '') {
-                impressum.style.display = 'block';
-                impressum.scrollIntoView({ behavior: 'smooth' });
-            } else {
-                impressum.style.display = 'none';
+            if (impressum) {
+                if (impressum.style.display === 'none' || impressum.style.display === '') {
+                    impressum.style.display = 'block';
+                    impressum.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    impressum.style.display = 'none';
+                }
             }
         }
 
@@ -805,15 +807,28 @@
             const impressum = document.getElementById('impressum');
             
             // Close impressum if open
-            if (impressum.style.display === 'block') {
+            if (impressum && impressum.style.display === 'block') {
                 impressum.style.display = 'none';
             }
             
-            if (datenschutz.style.display === 'none' || datenschutz.style.display === '') {
-                datenschutz.style.display = 'block';
-                datenschutz.scrollIntoView({ behavior: 'smooth' });
-            } else {
-                datenschutz.style.display = 'none';
+            if (datenschutz) {
+                if (datenschutz.style.display === 'none' || datenschutz.style.display === '') {
+                    datenschutz.style.display = 'block';
+                    datenschutz.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    datenschutz.style.display = 'none';
+                }
+            }
+        }
+
+        // Test function to debug
+        function testDatenschutz() {
+            console.log('Testing datenschutz...');
+            const element = document.getElementById('datenschutz');
+            console.log('Element found:', element);
+            if (element) {
+                element.style.display = 'block';
+                element.scrollIntoView({ behavior: 'smooth' });
             }
         }
     </script>
