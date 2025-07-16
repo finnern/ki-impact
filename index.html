@@ -604,8 +604,8 @@
     <div class="footer">
         <p>Nit schwätza - macha! :-)</p>
         <p style="margin-top: 1rem;">
-            <a href="#impressum" onclick="toggleImpressum(); return false;" style="color: #7f8c8d; text-decoration: underline; cursor: pointer; margin-right: 2rem;">Impressum</a>
-            <a href="#datenschutz" onclick="toggleDatenschutz(); return false;" style="color: #7f8c8d; text-decoration: underline; cursor: pointer;">Datenschutzerklärung</a>
+            <a href="#impressum" style="color: #7f8c8d; text-decoration: underline; cursor: pointer; margin-right: 2rem;">Impressum</a>
+            <a href="#datenschutz" style="color: #7f8c8d; text-decoration: underline; cursor: pointer;">Datenschutzerklärung</a>
         </p>
     </div>
 
@@ -783,82 +783,95 @@
     </div>
 
     <script>
-        function toggleImpressum() {
-            const impressum = document.getElementById('impressum');
-            const datenschutz = document.getElementById('datenschutz');
-            
-            // Close datenschutz if open
-            if (datenschutz && datenschutz.style.display === 'block') {
-                datenschutz.style.display = 'none';
-            }
-            
-            if (impressum) {
-                if (impressum.style.display === 'none' || impressum.style.display === '') {
-                    impressum.style.display = 'block';
-                    impressum.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                    impressum.style.display = 'none';
-                }
-            }
-        }
-
-        function toggleDatenschutz() {
-            const datenschutz = document.getElementById('datenschutz');
-            const impressum = document.getElementById('impressum');
-            
-            // Close impressum if open
-            if (impressum && impressum.style.display === 'block') {
-                impressum.style.display = 'none';
-            }
-            
-            if (datenschutz) {
-                if (datenschutz.style.display === 'none' || datenschutz.style.display === '') {
-                    datenschutz.style.display = 'block';
-                    datenschutz.scrollIntoView({ behavior: 'smooth' });
-                } else {
+        document.addEventListener('DOMContentLoaded', function() {
+            function toggleImpressum() {
+                var impressum = document.getElementById('impressum');
+                var datenschutz = document.getElementById('datenschutz');
+                
+                if (datenschutz && datenschutz.style.display === 'block') {
                     datenschutz.style.display = 'none';
                 }
-            }
-        }
-
-        // Handle URL hash navigation
-        function handleHashChange() {
-            const hash = window.location.hash;
-            if (hash === '#datenschutz') {
-                const datenschutz = document.getElementById('datenschutz');
-                const impressum = document.getElementById('impressum');
-                if (impressum) impressum.style.display = 'none';
-                if (datenschutz) {
-                    datenschutz.style.display = 'block';
-                    datenschutz.scrollIntoView({ behavior: 'smooth' });
-                }
-            } else if (hash === '#impressum') {
-                const datenschutz = document.getElementById('datenschutz');
-                const impressum = document.getElementById('impressum');
-                if (datenschutz) datenschutz.style.display = 'none';
+                
                 if (impressum) {
-                    impressum.style.display = 'block';
-                    impressum.scrollIntoView({ behavior: 'smooth' });
+                    if (impressum.style.display === 'none' || impressum.style.display === '') {
+                        impressum.style.display = 'block';
+                        impressum.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        impressum.style.display = 'none';
+                    }
                 }
             }
-        }
 
-        // Listen for hash changes
-        window.addEventListener('hashchange', handleHashChange);
-        
-        // Handle initial page load with hash
-        window.addEventListener('load', handleHashChange);
-
-        // Test function to debug
-        function testDatenschutz() {
-            console.log('Testing datenschutz...');
-            const element = document.getElementById('datenschutz');
-            console.log('Element found:', element);
-            if (element) {
-                element.style.display = 'block';
-                element.scrollIntoView({ behavior: 'smooth' });
+            function toggleDatenschutz() {
+                var datenschutz = document.getElementById('datenschutz');
+                var impressum = document.getElementById('impressum');
+                
+                if (impressum && impressum.style.display === 'block') {
+                    impressum.style.display = 'none';
+                }
+                
+                if (datenschutz) {
+                    if (datenschutz.style.display === 'none' || datenschutz.style.display === '') {
+                        datenschutz.style.display = 'block';
+                        datenschutz.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        datenschutz.style.display = 'none';
+                    }
+                }
             }
-        }
+
+            // Handle URL hash navigation
+            function handleHashChange() {
+                var hash = window.location.hash;
+                if (hash === '#datenschutz') {
+                    var datenschutz = document.getElementById('datenschutz');
+                    var impressum = document.getElementById('impressum');
+                    if (impressum) impressum.style.display = 'none';
+                    if (datenschutz) {
+                        datenschutz.style.display = 'block';
+                        setTimeout(function() {
+                            datenschutz.scrollIntoView({ behavior: 'smooth' });
+                        }, 100);
+                    }
+                } else if (hash === '#impressum') {
+                    var datenschutz = document.getElementById('datenschutz');
+                    var impressum = document.getElementById('impressum');
+                    if (datenschutz) datenschutz.style.display = 'none';
+                    if (impressum) {
+                        impressum.style.display = 'block';
+                        setTimeout(function() {
+                            impressum.scrollIntoView({ behavior: 'smooth' });
+                        }, 100);
+                    }
+                }
+            }
+
+            // Add event listeners to links
+            var impressumLink = document.querySelector('a[href="#impressum"]');
+            var datenschutzLink = document.querySelector('a[href="#datenschutz"]');
+            
+            if (impressumLink) {
+                impressumLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    toggleImpressum();
+                    window.location.hash = '#impressum';
+                });
+            }
+            
+            if (datenschutzLink) {
+                datenschutzLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    toggleDatenschutz();
+                    window.location.hash = '#datenschutz';
+                });
+            }
+
+            // Listen for hash changes
+            window.addEventListener('hashchange', handleHashChange);
+            
+            // Handle initial page load with hash
+            handleHashChange();
+        });
     </script>
 </body>
 </html>
