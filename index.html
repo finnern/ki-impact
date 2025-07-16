@@ -603,9 +603,9 @@
 
     <div class="footer">
         <p>Nit schwätza - macha! :-)</p>
-        <p>
-            <a href="#impressum" onclick="toggleImpressum()" style="color: #7f8c8d; text-decoration: underline; cursor: pointer; margin-right: 2rem;">Impressum</a>
-            <a href="#datenschutz" onclick="toggleDatenschutz()" style="color: #7f8c8d; text-decoration: underline; cursor: pointer;">Datenschutzerklärung</a>
+        <p style="margin-top: 1rem;">
+            <a href="#impressum" onclick="toggleImpressum(); return false;" style="color: #7f8c8d; text-decoration: underline; cursor: pointer; margin-right: 2rem;">Impressum</a>
+            <a href="#datenschutz" onclick="toggleDatenschutz(); return false;" style="color: #7f8c8d; text-decoration: underline; cursor: pointer;">Datenschutzerklärung</a>
         </p>
     </div>
 
@@ -820,6 +820,34 @@
                 }
             }
         }
+
+        // Handle URL hash navigation
+        function handleHashChange() {
+            const hash = window.location.hash;
+            if (hash === '#datenschutz') {
+                const datenschutz = document.getElementById('datenschutz');
+                const impressum = document.getElementById('impressum');
+                if (impressum) impressum.style.display = 'none';
+                if (datenschutz) {
+                    datenschutz.style.display = 'block';
+                    datenschutz.scrollIntoView({ behavior: 'smooth' });
+                }
+            } else if (hash === '#impressum') {
+                const datenschutz = document.getElementById('datenschutz');
+                const impressum = document.getElementById('impressum');
+                if (datenschutz) datenschutz.style.display = 'none';
+                if (impressum) {
+                    impressum.style.display = 'block';
+                    impressum.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
+
+        // Listen for hash changes
+        window.addEventListener('hashchange', handleHashChange);
+        
+        // Handle initial page load with hash
+        window.addEventListener('load', handleHashChange);
 
         // Test function to debug
         function testDatenschutz() {
