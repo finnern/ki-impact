@@ -327,6 +327,65 @@
             font-size: 0.9rem;
         }
         
+        /* Legal sections - CSS-only show/hide */
+        .legal-section {
+            display: none;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .legal-section:target {
+            display: block;
+        }
+        
+        .legal-section h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+        
+        .legal-section h3 {
+            color: #2c3e50;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .legal-section h4 {
+            color: #2c3e50;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .legal-section p {
+            margin-bottom: 1rem;
+            color: #5a6c7d;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .legal-section ul {
+            margin-bottom: 1rem;
+            color: #5a6c7d;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-left: 2rem;
+        }
+        
+        .close-btn {
+            background: linear-gradient(45deg, #2c3e50, #1a2a3a);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 2rem;
+        }
+        
         .footer {
             margin-top: 3rem;
             color: #7f8c8d;
@@ -610,11 +669,11 @@
     </div>
 
     <!-- Impressum Section -->
-    <div id="impressum" style="display: none; max-width: 800px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-        <h2 style="color: #2c3e50; margin-bottom: 1.5rem;">Impressum</h2>
+    <div id="impressum" class="legal-section">
+        <h2>Impressum</h2>
         
-        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">Angaben gemäß § 5 TMG</h3>
-        <p style="margin-bottom: 1rem; color: #5a6c7d;">
+        <h3>Angaben gemäß § 5 TMG</h3>
+        <p>
             <strong>KI-Impact Group</strong><br>
             Mark Finnern<br>
             Gewerbepark Majolika<br>
@@ -623,79 +682,79 @@
             Deutschland
         </p>
 
-        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">Kontakt</h3>
-        <p style="margin-bottom: 1rem; color: #5a6c7d;">
+        <h3>Kontakt</h3>
+        <p>
             E-Mail: mark@finnern.com<br>
             Telefon: +49 (0)170 668 8388<br>
             Website: <a href="https://ki-impact.org" style="color: #ffd700;">https://ki-impact.org</a>
         </p>
 
-        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
-        <p style="margin-bottom: 1rem; color: #5a6c7d;">
+        <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
+        <p>
             Mark Finnern<br>
             Gewerbepark Majolika<br>
             Schiltachstrasse 38<br>
             78713 Schramberg
         </p>
 
-        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">Haftungsausschluss</h3>
+        <h3>Haftungsausschluss</h3>
         
-        <h4 style="color: #2c3e50; margin-top: 1rem; margin-bottom: 0.5rem;">Haftung für Inhalte</h4>
-        <p style="margin-bottom: 1rem; color: #5a6c7d; font-size: 0.9rem; line-height: 1.4;">
+        <h4>Haftung für Inhalte</h4>
+        <p>
             Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
         </p>
 
-        <h4 style="color: #2c3e50; margin-top: 1rem; margin-bottom: 0.5rem;">Haftung für Links</h4>
-        <p style="margin-bottom: 1rem; color: #5a6c7d; font-size: 0.9rem; line-height: 1.4;">
+        <h4>Haftung für Links</h4>
+        <p>
             Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
         </p>
 
-        <h4 style="color: #2c3e50; margin-top: 1rem; margin-bottom: 0.5rem;">Urheberrecht</h4>
-        <p style="margin-bottom: 1rem; color: #5a6c7d; font-size: 0.9rem; line-height: 1.4;">
+        <h4>Urheberrecht</h4>
+        <p>
             Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
         </p>
 
-        <div style="margin-top: 2rem; text-align: center;">
-            <button onclick="toggleImpressum()" style="background: linear-gradient(45deg, #2c3e50, #1a2a3a); color: white; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Schließen</button>
+        <div style="text-align: center;">
+            <a href="#" class="close-btn">Schließen</a>
         </div>
     </div>
 
     <!-- Datenschutzerklärung Section -->
-    <div id="datenschutz" style="display: none; max-width: 800px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-        <h2 style="color: #2c3e50; margin-bottom: 1.5rem;">Datenschutzerklärung</h2>
+    <div id="datenschutz" class="legal-section">
+        <h2>Datenschutzerklärung</h2>
         
-        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">1. Datenschutz auf einen Blick</h3>
+        <h3>1. Datenschutz auf einen Blick</h3>
         
-        <h4 style="color: #2c3e50; margin-top: 1rem; margin-bottom: 0.5rem;">Allgemeine Hinweise</h4>
-        <p style="margin-bottom: 1rem; color: #5a6c7d; font-size: 0.9rem; line-height: 1.4;">
+        <h4>Allgemeine Hinweise</h4>
+        <p>
             Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
         </p>
 
-        <h4 style="color: #2c3e50; margin-top: 1rem; margin-bottom: 0.5rem;">Datenerfassung auf dieser Website</h4>
-        <p style="margin-bottom: 1rem; color: #5a6c7d; font-size: 0.9rem; line-height: 1.4;">
+        <h4>Datenerfassung auf dieser Website</h4>
+        <p>
             <strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br>
             Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.
         </p>
 
-        <p style="margin-bottom: 1rem; color: #5a6c7d; font-size: 0.9rem; line-height: 1.4;">
+        <p>
             <strong>Wie erfassen wir Ihre Daten?</strong><br>
             Diese Website erfasst keine personenbezogenen Daten automatisch. Daten werden nur übertragen, wenn Sie sich für Events über externe Plattformen anmelden oder uns direkt kontaktieren.
         </p>
 
-        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">2. Hosting</h3>
-        <p style="margin-bottom: 1rem; color: #5a6c7d; font-size: 0.9rem; line-height: 1.4;">
+        <h3>2. Hosting</h3>
+        <p>
             Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v.a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.
         </p>
 
-        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">3. Allgemeine Hinweise und Pflichtinformationen</h3>
+        <h3>3. Allgemeine Hinweise und Pflichtinformationen</h3>
         
-        <h4 style="color: #2c3e50; margin-top: 1rem; margin-bottom: 0.5rem;">Datenschutz</h4>
-        <p style="margin-bottom: 1rem; color: #5a6c7d; font-size: 0.9rem; line-height: 1.4;">
+        <h4>Datenschutz</h4>
+        <p>
             Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzbestimmungen sowie dieser Datenschutzerklärung.
         </p>
 
-        <h4 style="color: #2c3e50; margin-top: 1rem; margin-bottom: 0.5rem;">Hinweis zur verantwortlichen Stelle</h4>
-        <p style="margin-bottom: 1rem; color: #5a6c7d; font-size: 0.9rem; line-height: 1.4;">
+        <h4>Hinweis zur verantwortlichen Stelle</h4>
+        <p>
             Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:<br><br>
             Mark Finnern<br>
             Gewerbepark Majolika<br>
@@ -705,28 +764,28 @@
             Telefon: +49 (0)170 668 8388
         </p>
 
-        <h4 style="color: #2c3e50; margin-top: 1rem; margin-bottom: 0.5rem;">Speicherdauer</h4>
-        <p style="margin-bottom: 1rem; color: #5a6c7d; font-size: 0.9rem; line-height: 1.4;">
+        <h4>Speicherdauer</h4>
+        <p>
             Diese Website speichert keine personenbezogenen Daten. Soweit in dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wird, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt.
         </p>
 
-        <h4 style="color: #2c3e50; margin-top: 1rem; margin-bottom: 0.5rem;">Rechtsgrundlage für die Datenverarbeitung</h4>
-        <p style="margin-bottom: 1rem; color: #5a6c7d; font-size: 0.9rem; line-height: 1.4;">
+        <h4>Rechtsgrundlage für die Datenverarbeitung</h4>
+        <p>
             Soweit wir für Verarbeitungsvorgänge personenbezogener Daten eine Einwilligung der betroffenen Person einholen, dient Art. 6 Abs. 1 lit. a EU-Datenschutzgrundverordnung (DSGVO) als Rechtsgrundlage für die Verarbeitung personenbezogener Daten.
         </p>
 
-        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">4. Datenerfassung auf dieser Website</h3>
+        <h3>4. Datenerfassung auf dieser Website</h3>
         
-        <h4 style="color: #2c3e50; margin-top: 1rem; margin-bottom: 0.5rem;">Cookies</h4>
-        <p style="margin-bottom: 1rem; color: #5a6c7d; font-size: 0.9rem; line-height: 1.4;">
+        <h4>Cookies</h4>
+        <p>
             Diese Website verwendet keine Cookies.
         </p>
 
-        <h4 style="color: #2c3e50; margin-top: 1rem; margin-bottom: 0.5rem;">Server-Log-Dateien</h4>
-        <p style="margin-bottom: 1rem; color: #5a6c7d; font-size: 0.9rem; line-height: 1.4;">
+        <h4>Server-Log-Dateien</h4>
+        <p>
             Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind:
         </p>
-        <ul style="margin-bottom: 1rem; color: #5a6c7d; font-size: 0.9rem; line-height: 1.4; margin-left: 2rem;">
+        <ul>
             <li>Browsertyp und Browserversion</li>
             <li>verwendetes Betriebssystem</li>
             <li>Referrer URL</li>
@@ -735,32 +794,52 @@
             <li>IP-Adresse</li>
         </ul>
 
-        <h4 style="color: #2c3e50; margin-top: 1rem; margin-bottom: 0.5rem;">Kontaktformular / E-Mail-Kontakt</h4>
-        <p style="margin-bottom: 1rem; color: #5a6c7d; font-size: 0.9rem; line-height: 1.4;">
+        <h4>Kontaktformular / E-Mail-Kontakt</h4>
+        <p>
             Wenn Sie uns per E-Mail kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
         </p>
 
-        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">5. Externe Dienste</h3>
+        <h3>5. Externe Dienste</h3>
         
-        <h4 style="color: #2c3e50; margin-top: 1rem; margin-bottom: 0.5rem;">Google Forms</h4>
-        <p style="margin-bottom: 1rem; color: #5a6c7d; font-size: 0.9rem; line-height: 1.4;">
+        <h4>Google Forms</h4>
+        <p>
             Für Event-Anmeldungen verwenden wir Google Forms. Wenn Sie sich über Google Forms anmelden, gelten die Datenschutzbestimmungen von Google. Weitere Informationen finden Sie in der Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy" style="color: #ffd700;">https://policies.google.com/privacy</a>
         </p>
 
-        <h4 style="color: #2c3e50; margin-top: 1rem; margin-bottom: 0.5rem;">LinkedIn</h4>
-        <p style="margin-bottom: 1rem; color: #5a6c7d; font-size: 0.9rem; line-height: 1.4;">
+        <h4>LinkedIn</h4>
+        <p>
             Diese Website enthält Links zu LinkedIn. Wenn Sie auf diese Links klicken, werden Sie zu LinkedIn weitergeleitet. Für die Verarbeitung Ihrer Daten durch LinkedIn ist LinkedIn verantwortlich. Weitere Informationen finden Sie in der Datenschutzerklärung von LinkedIn: <a href="https://www.linkedin.com/legal/privacy-policy" style="color: #ffd700;">https://www.linkedin.com/legal/privacy-policy</a>
         </p>
 
-        <h3 style="color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">6. Ihre Rechte</h3>
-        <p style="margin-bottom: 1rem; color: #5a6c7d; font-size: 0.9rem; line-height: 1.4;">
+        <h3>6. Ihre Rechte</h3>
+        <p>
             Sie haben folgende Rechte:
         </p>
-        <ul style="margin-bottom: 1rem; color: #5a6c7d; font-size: 0.9rem; line-height: 1.4; margin-left: 2rem;">
+        <ul>
             <li><strong>Auskunftsrecht:</strong> Sie können Auskunft über Ihre von uns verarbeiteten personenbezogenen Daten verlangen.</li>
             <li><strong>Berichtigungsrecht:</strong> Sie haben das Recht, unverzüglich die Berichtigung unrichtiger oder die Vervollständigung unvollständiger personenbezogener Daten zu verlangen.</li>
             <li><strong>Löschungsrecht:</strong> Sie können die Löschung Ihrer personenbezogenen Daten verlangen.</li>
             <li><strong>Einschränkungsrecht:</strong> Sie haben das Recht, eine Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
+            <li><strong>Widerspruchsrecht:</strong> Sie können der Verarbeitung Ihrer personenbezogenen Daten widersprechen.</li>
+            <li><strong>Datenübertragbarkeit:</strong> Sie haben das Recht, Ihre personenbezogenen Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten.</li>
+            <li><strong>Beschwerde:</strong> Sie haben das Recht, sich bei einer Aufsichtsbehörde zu beschweren.</li>
+        </ul>
+
+        <h3>7. Kontakt</h3>
+        <p>
+            Bei Fragen zum Datenschutz können Sie sich jederzeit an uns wenden:<br>
+            E-Mail: mark@finnern.com<br>
+            Telefon: +49 (0)170 668 8388
+        </p>
+
+        <p style="font-style: italic; font-size: 0.8rem;">
+            Stand: Juli 2025
+        </p>
+
+        <div style="text-align: center;">
+            <a href="#" class="close-btn">Schließen</a>
+        </div>
+    </div>
             <li><strong>Widerspruchsrecht:</strong> Sie können der Verarbeitung Ihrer personenbezogenen Daten widersprechen.</li>
             <li><strong>Datenübertragbarkeit:</strong> Sie haben das Recht, Ihre personenbezogenen Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten.</li>
             <li><strong>Beschwerde:</strong> Sie haben das Recht, sich bei einer Aufsichtsbehörde zu beschweren.</li>
