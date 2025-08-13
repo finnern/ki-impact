@@ -1,643 +1,74 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KI-Impact Group - Silicon Valley meets Black Forest</title>
-    
-    <!-- Open Graph Meta Tags for LinkedIn Preview -->
-    <meta property="og:title" content="KI-Impact Group - Silicon Valley meets Black Forest">
-    <meta property="og:description" content="Innovations-Community in Baden-Württemberg. Featured Events, KI-Workshops und Community-Events für Unternehmer, Tech-Enthusiasten und Forward-Thinker im Schwarzwald. Von Käpsele Festival bis KI-Workshops - wir vernetzen die Innovations-Szene.">
-    <meta property="og:image" content="https://ki-impact.org/ki-impact-logo-banner.png">
-    <meta property="og:url" content="https://ki-impact.org">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="KI-Impact Group">
-    
-    <!-- Additional Meta Tags -->
-    <meta name="description" content="KI-Impact Group - Innovations-Community in Baden-Württemberg. Featured Events, KI-Workshops und Community-Events für Unternehmer und Tech-Enthusiasten im Schwarzwald.">
-    <meta name="keywords" content="KI, Künstliche Intelligenz, Innovation, Baden-Württemberg, Schwarzwald, Schramberg, Community, Events, Workshops">
-    <meta name="author" content="KI-Impact Group">
-    
-    <!-- Twitter Card Meta Tags (Bonus) -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="KI-Impact Group - Silicon Valley meets Black Forest">
-    <meta name="twitter:description" content="Innovations-Community in Baden-Württemberg. Featured Events, KI-Workshops und Community-Events für Unternehmer im Schwarzwald.">
-    <meta name="twitter:image" content="https://ki-impact.org/ki-impact-logo-banner.png">
-    
+    <title>Mark Finnern | Black Forest meets Silicon Valley</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #fffef7, #fffce0);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            margin: 0;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #2c3e50;
-        }
-        
-        .logo-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-        
-        .logo {
-            max-width: 500px;
-            width: 100%;
-            height: auto;
-            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
-            border-radius: 15px;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .logo:hover {
-            transform: scale(1.02);
-        }
-        
-        h1 {
-            font-size: 2.8rem;
-            margin: 0;
-            color: #2c3e50;
-        }
-        
-        .subtitle {
-            font-size: 1.8rem;
-            color: #5a6c7d;
-            font-weight: 400;
-            margin-bottom: 0.5rem;
-        }
-        
-        .tagline {
-            font-size: 1.2rem;
-            color: #7f8c8d;
-            font-style: italic;
-        }
-        
-        .poster-container {
-            max-width: 500px;
-            width: 100%;
-            margin: 0 auto 2rem auto;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        .poster {
-            width: 100%;
-            display: block;
-            transition: transform 0.3s ease, filter 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .poster:hover {
-            transform: scale(1.02);
-            filter: brightness(1.1);
-        }
-        
-        .action-buttons {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 3rem;
-        }
-        
-        .btn {
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            text-align: center;
-            min-width: 200px;
-            color: white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .btn-primary { 
-            background: linear-gradient(45deg, #ffd700, #ffed4e);
-            color: #2c3e50;
-            border: 2px solid #2c3e50;
-        }
-        
-        .btn-secondary { 
-            background: linear-gradient(45deg, #2c3e50, #1a2a3a);
-            color: #ffd700;
-        }
-        
-        .btn-contact { 
-            background: linear-gradient(45deg, #5a6c7d, #4a5a68);
-            color: white;
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
-        }
-        
-        .add-event-btn {
-            background: linear-gradient(45deg, #ffd700, #ffed4e);
-            color: #2c3e50;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            border: 2px solid #2c3e50;
-            font-size: 1rem;
-        }
-        
-        .add-event-btn:hover {
-            background: linear-gradient(45deg, #ffed4e, #ffd700);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
-        }
-        
-        .events-section {
-            width: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
             max-width: 800px;
-            margin-top: 2rem;
+            margin: 0 auto;
+            padding: 20px;
         }
-        
-        .events-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
+        header {
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
         }
-        
-        .events-title {
+        h1 {
             color: #2c3e50;
-            font-size: 1.8rem;
-            margin: 0;
         }
-        
-        /* Featured Event Styling */
-        .featured-section {
-            margin-bottom: 3rem;
+        h2 {
+            color: #3498db;
+            margin-top: 30px;
         }
-        
-        .featured-title {
-            color: #2c3e50;
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            text-align: center;
+        .contact {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 40px;
+        }
+        .highlight {
             font-weight: bold;
-        }
-        
-        .featured-event {
-            background: linear-gradient(135deg, #fffacd, #fff8dc);
-            border: 3px solid #ffd700;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
-            position: relative;
-        }
-        
-        .featured-badge {
-            position: absolute;
-            top: -10px;
-            right: 20px;
-            background: #ffd700;
-            color: #2c3e50;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            border: 2px solid #2c3e50;
-        }
-        
-        /* Regular Event Cards */
-        .event-card {
-            background-color: white;
-            border: 1px solid #e8e8e8;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .event-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-        }
-        
-        .event-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 0.5rem;
-        }
-        
-        .event-card h3 { 
-            margin: 0;
-            font-size: 1.2rem;
-            color: #2c3e50;
-            text-decoration: none;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-        
-        .event-card h3:hover {
-            color: #ffd700;
-        }
-        
-        .event-title-link {
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        .event-title-link:hover h3 {
-            color: #ffd700;
-        }
-        
-        .event-date {
-            color: #ffd700;
-            font-weight: bold;
-            font-size: 0.9rem;
-            background: #2c3e50;
-            padding: 4px 8px;
-            border-radius: 6px;
-            white-space: nowrap;
-        }
-        
-        .event-location {
-            color: #7f8c8d;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .event-card p { 
-            color: #5a6c7d;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-            line-height: 1.4;
-        }
-        
-        .event-source {
-            font-size: 0.8rem;
-            color: #95a5a6;
-            font-style: italic;
-            margin-bottom: 0.5rem;
-        }
-        
-        .event-btn {
-            font-size: 0.9rem;
-            text-decoration: none;
-            color: white;
-            background: linear-gradient(45deg, #2c3e50, #1a2a3a);
-            padding: 8px 16px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-        
-        .event-btn:hover {
-            background: linear-gradient(45deg, #1a2a3a, #2c3e50);
-            transform: translateY(-1px);
-        }
-        
-        .footer {
-            margin-top: 3rem;
-            color: #7f8c8d;
-            font-size: 1.4rem;
-            text-align: center;
-        }
-        
-        @media (max-width: 768px) {
-            h1 { font-size: 2.2rem; }
-            .subtitle { font-size: 1.4rem; }
-            .action-buttons { 
-                flex-direction: column; 
-                align-items: center; 
-                gap: 1rem; 
-            }
-            .events-header {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
-            .add-event-btn {
-                width: 100%;
-            }
-            .event-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.5rem;
-            }
+            color: #27ae60;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="logo-container">
-            <a href="https://www.linkedin.com/groups/9804412/" target="_blank">
-                <img src="ki-impact-logo-banner.png" alt="KI-Impact Group - Silicon Valley meets Black Forest" class="logo">
-            </a>
-        </div>
-    </div>
-    
-    <div class="poster-container">
-        <a href="https://forms.gle/jzVEBR6hDEb8Ce2F6" target="_blank">
-            <img src="poster.jpg" alt="Prozesse mit KI Orchestrieren - N8N Workshop" class="poster">
-        </a>
-    </div>
-    
-    <div class="action-buttons">
-        <a href="https://forms.gle/jzVEBR6hDEb8Ce2F6" class="btn btn-primary" target="_blank">Jetzt anmelden</a>
-        <a href="https://www.linkedin.com/groups/9804412/" class="btn btn-secondary" target="_blank">KI-Impact Group</a>
-        <a href="mailto:mark@finnern.com" class="btn btn-contact">Kontakt</a>
-    </div>
+    <header>
+        <h1>Mark Finnern</h1>
+        <p>AI Implementation Specialist | <span class="highlight">Black Forest meets Silicon Valley</span></p>
+    </header>
 
-    <div class="events-section">
-        <!-- Featured Event Section -->
-        <div class="featured-section">
-            <h2 class="featured-title">⭐ Featured Event ⭐</h2>
-            <div class="featured-event">
-                <div class="featured-badge">KI-IMPACT HIGHLIGHT</div>
-                
-                <div class="event-header">
-                    <h3>Prozesse mit KI Orchestrieren!</h3>
-                    <span class="event-date">Di, 30. Sep • 18-21h</span>
-                </div>
-                <div class="event-location">📍 Räume der Wirtschaftsförderung, Oberndorfer Straße 1 (beim Rathaus), Schramberg</div>
-                <p>
-                    <strong>N8N kennenlernen - Das Open Source Automatisierungstool</strong><br>
-                    <strong>Intelligente Workflows erstellen</strong><br><br>
-                    
-                    <strong>Live Praxis-Beispiele:</strong><br>
-                    • Brugger: <strong>Lieferschein-Erkennung → automatische Bestellzuordnung</strong><br>
-                    • Simon: <strong>PDF-Kundenanfrage → KI-Preisberechnung → CAD-Modell</strong><br>
-                    • <strong>Medienbrüche durch KI umgehen!</strong><br><br>
-                    
-                    Kostenfrei! Anmeldung über http://ki-impact.org oder QR-Code
-                </p>
-                <div class="event-source">Exklusives KI-Impact Group Event</div>
-                <a href="https://forms.gle/jzVEBR6hDEb8Ce2F6" class="event-btn" target="_blank">Jetzt anmelden</a>
-            </div>
-        </div>
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>With over 30 years of experience in community building, innovation leadership, and Silicon Valley expertise, I help middle-market companies harness the power of AI through practical, implementable solutions.</p>
+            <p>Now based in the Black Forest region of Germany, I bridge cutting-edge technology with traditional business wisdom.</p>
+        </section>
 
-        <!-- Upcoming Events Section -->
-        <div class="events-header">
-            <h2 class="events-title">Kommende Events</h2>
-            <a href="https://forms.gle/QxKATu7h9prH5uQb8" class="add-event-btn" target="_blank">
-                Eigenes Event hinzufügen
-            </a>
-        </div>
-        
-        <!-- Start-up BW Summit Stuttgart - June 3 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://summit.startupbw.de/" class="event-title-link" target="_blank">
-                    <h3>Start-up BW Summit 2025 - Das Startup-Event in Baden-Württemberg</h3>
-                </a>
-                <span class="event-date">Di, 3. Juni • 9-17h</span>
-            </div>
-            <div class="event-location">📍 Haus der Wirtschaft, Stuttgart</div>
-            <p><strong>Baden-Württembergs größtes Startup-Event!</strong><br><br>
-            <strong>Highlights:</strong><br>
-            • Deep-Tech Startups aus Polen, Litauen und Spanien (KI, Health-Tech, IoT)<br>
-            • Startup Pitches und Investor Matchmaking<br>
-            • Networking mit 150+ Startups<br>
-            • Hochkarätige Speaker und Panels<br><br>
-            <strong>💰 Kostenfrei!</strong> Das Must-Attend Event für die regionale Startup-Szene.</p>
-            <div class="event-source">Start-up BW & Baden-Württemberg</div>
-            <a href="https://summit.startupbw.de/" class="event-btn" target="_blank">Mehr Infos</a>
-        </div>
+        <section>
+            <h2>Services</h2>
+            <ul>
+                <li><strong>Standard AI Consulting</strong> - Analysis, strategy, and implementation of AI solutions</li>
+                <li><strong>InnoKURZ</strong> - Innovation workshops for companies in short-time work (Kurzarbeit)</li>
+                <li><strong>Personalized AI Assistants</strong> - Custom GPTs for individuals and small businesses</li>
+                <li><strong>Specialized AI Agents</strong> - Advanced AI tools for market and competitive analysis</li>
+            </ul>
+        </section>
 
-        <!-- STARTUP AUTOBAHN expo2025 Stuttgart - June 5 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://www.eni.uni-stuttgart.de/institut/aktuelles/veranstaltungen/STARTUP-AUTOBAHN-expo2025/" class="event-title-link" target="_blank">
-                    <h3>STARTUP AUTOBAHN expo2025 - "Tomorrow in Motion"</h3>
-                </a>
-                <span class="event-date">Do, 5. Juni</span>
-            </div>
-            <div class="event-location">📍 Stuttgart</div>
-            <p><strong>Die 14. Ausgabe des Premium Mobility-Events!</strong><br><br>
-            <strong>Was Sie erwartet:</strong><br>
-            • 1.800+ Teilnehmer, 120 internationale Speaker<br>
-            • 35 präsentierende Startups<br>
-            • Mercedes-Benz, Porsche, Bosch & internationale OEMs<br>
-            • CEO- & Vorstandsebene Insights<br>
-            • Innovations-Rundgang & Workshops<br><br>
-            <strong>🚗 Der Treffpunkt der globalen Mobilitätsbranche!</strong></p>
-            <div class="event-source">STARTUP AUTOBAHN powered by Plug and Play</div>
-            <a href="https://www.eni.uni-stuttgart.de/institut/aktuelles/veranstaltungen/STARTUP-AUTOBAHN-expo2025/" class="event-btn" target="_blank">Mehr Infos</a>
-        </div>
+        <section class="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:mark@finnern.com">mark@finnern.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/finnern" target="_blank">linkedin.com/in/finnern</a></p>
+        </section>
+    </main>
 
-        <!-- Käpsele Innovation Festival Freiburg - June 26 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://www.innovation-festival.de/" class="event-title-link" target="_blank">
-                    <h3>Käpsele Innovation Festival 2025 - Freiburg</h3>
-                </a>
-                <span class="event-date">Do, 26. Juni • ab 14h</span>
-            </div>
-            <div class="event-location">📍 SICK-Arena, Messe Freiburg</div>
-            <p><strong>"Raus aus der Bubble - rein in die Zukunft!"</strong><br><br>
-            <strong>Highlights:</strong><br>
-            • AI, Quantum Technology, Green Tech, Med Tech, Robotics<br>
-            • 21 Erlebnisstationen & 2 Masterclass Iglus<br>
-            • Live Podcast Bühne & Festival APP mit Matchmaking<br>
-            • Käpsele Startup Challenges für den Mittelstand<br>
-            • Uni Freiburg Technische Fakultät dabei<br><br>
-            <strong>🎪 Festival-Feeling meets Innovation!</strong></p>
-            <div class="event-source">FWTM & IHK Südlicher Oberrhein</div>
-            <a href="https://www.innovation-festival.de/" class="event-btn" target="_blank">Tickets & Info</a>
-        </div>
-
-        <!-- Stuttgart Finance Summit - September 18 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://www.startbase.com/news/stuttgart-finance-summit-2025-impulse-fuer-europas-zukunft" class="event-title-link" target="_blank">
-                    <h3>Stuttgart Finance Summit 2025 - "Boosting European Growth"</h3>
-                </a>
-                <span class="event-date">Do, 18. Sep</span>
-            </div>
-            <div class="event-location">📍 Haus der Wirtschaft, Stuttgart</div>
-            <p><strong>Business, Politik & Startups gestalten Europas Zukunft!</strong><br><br>
-            <strong>Fokus-Themen:</strong><br>
-            • Künstliche Intelligenz & Blockchain<br>
-            • Capital Markets Union & Regulatory Frameworks<br>
-            • 1000+ Teilnehmer, 30+ Top Speaker<br>
-            • 25+ Startups im Venture Day Competition<br>
-            • BW Startup Award & Matchmaking<br><br>
-            <strong>🏆 Industrie-Gipfel mit europaweiter Ausstrahlung!</strong></p>
-            <div class="event-source">Boerse Stuttgart Group & Stuttgart Financial</div>
-            <a href="https://www.startbase.com/news/stuttgart-finance-summit-2025-impulse-fuer-europas-zukunft" class="event-btn" target="_blank">Mehr Infos</a>
-        </div>
-
-        <!-- AIxIA Franco-German AI Conference Karlsruhe - October 14 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://ki-allianz.de/en/events/" class="event-title-link" target="_blank">
-                    <h3>AIxIA Franco-German AI Conference - "The Next Era of AI"</h3>
-                </a>
-                <span class="event-date">Di, 14. Okt</span>
-            </div>
-            <div class="event-location">📍 Karlsruhe</div>
-            <p><strong>Deutsch-Französische KI-Spitzenkonferenz!</strong><br><br>
-            <strong>Highlights:</strong><br>
-            • Leading AI experts & business leaders<br>
-            • Policy makers aus Berlin, Paris, Stuttgart & Strasbourg<br>
-            • Cutting-edge AI developments & regulatory challenges<br>
-            • Transformative innovations für alle Branchen<br>
-            • KI-Allianz Baden-Württemberg Event<br><br>
-            <strong>🇩🇪🇫🇷 Internationale KI-Kooperation auf höchstem Niveau!</strong></p>
-            <div class="event-source">KI-Allianz Baden-Württemberg</div>
-            <a href="https://ki-allianz.de/en/events/" class="event-btn" target="_blank">Mehr Infos</a>
-        </div>
-
-        <!-- InnovationFestival Karlsruhe - October 17 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://karlsruhe.digital/en/events/innovation-festival/" class="event-title-link" target="_blank">
-                    <h3>InnovationFestival @karlsruhe.digital 2025</h3>
-                </a>
-                <span class="event-date">Fr, 17. Okt</span>
-            </div>
-            <div class="event-location">📍 ZKM | Center for Art and Media, Karlsruhe</div>
-            <p><strong>Die 4. Ausgabe der digitalen Innovation!</strong><br><br>
-            <strong>Highlights:</strong><br>
-            • KIT, CyberForum & ZKM präsentieren Digital-Innovationen<br>
-            • AI, Smart City, Mobility & IT Security<br>
-            • Live vor Ort + Livestream<br>
-            • Keynotes von Digital-Experten<br>
-            • Karlsruhe TechnologyRegion im Fokus<br><br>
-            <strong>🎨 Wo Kunst auf Technologie trifft!</strong></p>
-            <div class="event-source">karlsruhe.digital Initiative</div>
-            <a href="https://karlsruhe.digital/en/events/innovation-festival/" class="event-btn" target="_blank">Mehr Infos</a>
-        </div>
-
-        <!-- Fraunhofer IPA Stuttgart - September 18 -->
-        <div class="event-card">
-            <div class="event-header">
-                <h3>Fraunhofer IPA Stuttgart - Digitalisierung und KI für die Fertigung</h3>
-                <span class="event-date">Do, 18. Sep • 17h</span>
-            </div>
-            <div class="event-location">📍 Fraunhofer IPA, Nobelstraße 12, Stuttgart</div>
-            <p><strong>Deutschlands größtes Produktionsforschungsinstitut hautnah erleben!</strong><br><br>
-            <strong>Live-Demonstrationen:</strong><br>
-            • Intelligente Mess- und Prüfsysteme mit KI-gestützter Qualitätskontrolle<br>
-            • 3D-Objekterkennung für automatisierte Handhabung ("Griff in die Kiste")<br>
-            • Predictive Maintenance durch KI-Signalanalyse<br>
-            • Digitale Zwillinge für Produktionsoptimierung<br><br>
-            <strong>💰 Kostenfrei!</strong> Anmeldung bis 15.09.2025<br>
-            <strong>Anmeldung:</strong> Corinna Specker, +49 (0) 7721 / 922149</p>
-            <div class="event-source">IHK SBH Exkursion - Technologiedialog-Serie 2025</div>
-            <a href="mailto:corinna.specker@vs.ihk.de?subject=Anmeldung Fraunhofer IPA Stuttgart&body=Hallo,%0D%0A%0D%0Aich möchte mich gerne für die Exkursion zum Fraunhofer IPA Stuttgart am 18.09.2025 anmelden und habe diesen Event über die KI-Impact Gruppe von Schramberg gefunden.%0D%0A%0D%0AViele Grüße" class="event-btn">Anmeldung per E-Mail</a>
-        </div>
-
-        <!-- STREIT@Work - AI Event - September 25 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://www.streit.de/events/streit-at-work-2025" class="event-title-link" target="_blank">
-                    <h3>STREIT@Work - Wenn Künstliche Intelligenz plötzlich Beine hat!</h3>
-                </a>
-                <span class="event-date">Do, 25. Sep • 14-19h</span>
-            </div>
-            <div class="event-location">📍 Streit Service & Solution GmbH, Kinzigpark 4, Gengenbach</div>
-            <p><strong>Die Arbeitswelt von morgen erleben!</strong> Dritte Ausgabe des Events mit humanoiden Robotern und KI-Einblicken.<br><br>
-            <strong>Highlights:</strong><br>
-            • 14:00h: Rundgänge durch STREIT New Work Arbeitswelt<br>
-            • 15:10h: Dr. Alexander Blass (NEURA Robotics): "Warum der Mensch keine Roboterarbeit erledigen muss"<br>
-            • 16:20h: Dr. Markus Langer (Uni Freiburg): "Mensch-Maschine-Beziehungen neu denken"<br>
-            • Mit dabei: Katrin Würtherle (Organisationsentwicklung & Coaching)<br><br>
-            <strong>⚠️ Anmeldung bis 15.09.2025 erforderlich!</strong> Torsten from KI-Impact Group wird dabei sein!</p>
-            <div class="event-source">Streit Service & Solution - Regionaler KI-Event</div>
-            <a href="https://www.streit.de/events/streit-at-work-2025" class="event-btn" target="_blank">Jetzt anmelden</a>
-        </div>
-
-        <!-- Green AI Day Stuttgart - September 25 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://green-ai-day.de/" class="event-title-link" target="_blank">
-                    <h3>Green AI Day 2025 - Nachhaltige KI für die Zukunft</h3>
-                </a>
-                <span class="event-date">Do, 25. Sep</span>
-            </div>
-            <div class="event-location">📍 Stuttgart</div>
-            <p>NEW Stuttgart und WRS veranstalten den dritten Green AI Day. Keynotes, interaktive Sessions und Networking rund um nachhaltige KI. Stuttgart positioniert sich als Vorreiter für Green AI in Europa!</p>
-            <div class="event-source">Community Event - Baden-Württemberg</div>
-        </div>
-
-        <!-- doubleSlash Friedrichshafen - September 30 -->
-        <div class="event-card">
-            <div class="event-header">
-                <h3>doubleSlash Net-Business GmbH, Friedrichshafen - KI-Vorreiter am Bodensee</h3>
-                <span class="event-date">Di, 30. Sep • 16-19h</span>
-            </div>
-            <div class="event-location">📍 doubleSlash Net-Business GmbH, Otto-Lilienthal-Straße 16, Friedrichshafen</div>
-            <p><strong>"Digital Valley der Bodenseeregion" hautnah erleben!</strong><br><br>
-            <strong>Live-Einblicke in KI-Development-Prozesse:</strong><br>
-            • Connected Mobility - Intelligente Mobilitätslösungen<br>
-            • IoT und Data Driven Solutions mit KI<br>
-            • Agile KI-Entwicklung bei BMW, Deutsche Post, ZF und Porsche<br>
-            • "Great Place to Work" Arbeitskultur kennenlernen<br><br>
-            <strong>💰 Kosten:</strong> 39€ zzgl. MwSt. (TechnologyMountains-Mitglieder) / 69€ zzgl. MwSt. (Nicht-Mitglieder)<br>
-            <strong>Anmeldung:</strong> Corinna Specker, +49 (0) 7721 / 922149</p>
-            <div class="event-source">IHK SBH Exkursion - TechnologyMountains</div>
-            <a href="mailto:corinna.specker@vs.ihk.de?subject=Anmeldung doubleSlash Friedrichshafen&body=Hallo,%0D%0A%0D%0Aich möchte mich gerne für die Exkursion zu doubleSlash Friedrichshafen am 30.09.2025 anmelden und habe diesen Event über die KI-Impact Gruppe von Schramberg gefunden.%0D%0A%0D%0AViele Grüße" class="event-btn">Anmeldung per E-Mail</a>
-        </div>
-
-        <!-- Social Innovation Night Freiburg - Oktober 1 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://social-innovation-lab.org/events/social-innovation-night-vol-xiv/" class="event-title-link" target="_blank">
-                    <h3>Social Innovation Night Vol. XIV</h3>
-                </a>
-                <span class="event-date">Mi, 1. Okt • 18:30-21h</span>
-            </div>
-            <div class="event-location">📍 Freiburg</div>
-            <p>Innovative Ansätze für gesellschaftliche Herausforderungen. Networking-Event für Social Entrepreneurs und Change Maker in Baden-Württemberg.</p>
-            <div class="event-source">Community Event - Baden-Württemberg</div>
-        </div>
-
-        <!-- Heilbronn SLUSH'D Event - October 23 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://www.heilbronnslushd.com/" class="event-title-link" target="_blank">
-                    <h3>SLUSH'D Heilbronn - The Ultimate Startup Festival</h3>
-                </a>
-                <span class="event-date">Do, 23. Okt 2025</span>
-            </div>
-            <div class="event-location">📍 Heilbronn</div>
-            <p><strong>⚠️ Bewerbung erforderlich!</strong> Das ultimative Festival für innovative Startups, zukunftsorientierte Investoren und führende Unternehmen. Networking, Pitches und Connections mit den Key Playern des Ökosystems in einer der dynamischsten Startup-Regionen Europas. Teil der internationalen SLUSH-Familie.</p>
-            <div class="event-source">Community Event - Baden-Württemberg</div>
-            <a href="https://www.heilbronnslushd.com/" class="event-btn" target="_blank">Jetzt bewerben</a>
-        </div>
-
-        <!-- AI and Law Conference Tübingen - November 5 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://ailawinstitute.de/conference-for-ai-and-law/" class="event-title-link" target="_blank">
-                    <h3>Tübingen Conference for AI and Law</h3>
-                </a>
-                <span class="event-date">Mi, 5. - Do, 6. Nov</span>
-            </div>
-            <div class="event-location">📍 Universität Tübingen</div>
-            <p>Innovative Konferenz zu KI und Rechtsfragen. Wichtiges Thema für Unternehmen, die KI verantwortungsvoll einsetzen wollen.</p>
-            <div class="event-source">Community Event - Baden-Württemberg</div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>Nit schwätza - macha! :-)</p>
-        <p style="margin-top: 1rem;">
-            <a href="impressum.html" style="color: #7f8c8d; text-decoration: underline; margin-right: 2rem;">Impressum</a>
-            <a href="datenschutz.html" style="color: #7f8c8d; text-decoration: underline;">Datenschutzerklärung</a>
-        </p>
-    </div>
+    <footer>
+        <p>&copy; 2025 Mark Finnern. All rights reserved.</p>
+    </footer>
 </body>
 </html>
