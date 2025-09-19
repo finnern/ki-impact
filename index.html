@@ -4,612 +4,334 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KI-Impact Group - Silicon Valley meets Black Forest</title>
-    
-    <!-- Open Graph Meta Tags for LinkedIn Preview -->
-    <meta property="og:title" content="KI-Impact Group - Silicon Valley meets Black Forest">
-    <meta property="og:description" content="Innovations-Community in Baden-Württemberg. Featured Events, KI-Workshops und Community-Events für Unternehmer, Tech-Enthusiasten und Forward-Thinker im Schwarzwald. Von Käpsele Festival bis KI-Workshops - wir vernetzen die Innovations-Szene.">
-    <meta property="og:image" content="https://ki-impact.org/ki-impact-logo-banner.png">
-    <meta property="og:url" content="https://ki-impact.org">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="KI-Impact Group">
-    
-    <!-- Additional Meta Tags -->
-    <meta name="description" content="KI-Impact Group - Innovations-Community in Baden-Württemberg. Featured Events, KI-Workshops und Community-Events für Unternehmer und Tech-Enthusiasten im Schwarzwald.">
-    <meta name="keywords" content="KI, Künstliche Intelligenz, Innovation, Baden-Württemberg, Schwarzwald, Schramberg, Community, Events, Workshops">
-    <meta name="author" content="KI-Impact Group">
-    
-    <!-- Twitter Card Meta Tags (Bonus) -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="KI-Impact Group - Silicon Valley meets Black Forest">
-    <meta name="twitter:description" content="Innovations-Community in Baden-Württemberg. Featured Events, KI-Workshops und Community-Events für Unternehmer im Schwarzwald.">
-    <meta name="twitter:image" content="https://ki-impact.org/ki-impact-logo-banner.png">
-
-    <!-- Structured Data for Events -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "KI-Impact Group",
-        "description": "Innovations-Community in Baden-Württemberg für KI und Tech-Events",
-        "url": "https://ki-impact.org",
-        "logo": "https://ki-impact.org/ki-impact-logo-banner.png",
-        "sameAs": [
-            "https://www.linkedin.com/groups/9804412/"
-        ],
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Schramberg",
-            "addressRegion": "Baden-Württemberg",
-            "addressCountry": "DE"
-        }
-    }
-    </script>
-    
+    <meta name="description" content="AI Innovation Community im Schwarzwald - Workshops, Events und Networking für Unternehmer und Tech-Enthusiasten in Baden-Württemberg">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #fffef7, #fffce0);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
         .header {
             text-align: center;
-            margin-bottom: 2rem;
-            color: #2c3e50;
+            padding: 3rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
         }
-        
+
         .logo-container {
             display: flex;
             align-items: center;
             justify-content: center;
+            gap: 2rem;
             margin-bottom: 1rem;
         }
-        
+
         .logo {
-            max-width: 500px;
-            width: 100%;
-            height: auto;
-            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
-            border-radius: 15px;
-            transition: transform 0.3s ease;
-            cursor: pointer;
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #f9d71c 0%, #f7c52d 100%);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            box-shadow: 0 8px 32px rgba(247, 197, 45, 0.3);
         }
-        
-        .logo:hover {
-            transform: scale(1.02);
+
+        .brand-text {
+            color: white;
         }
-        
-        h1 {
-            font-size: 2.8rem;
-            margin: 0;
-            color: #2c3e50;
-        }
-        
-        .subtitle {
-            font-size: 1.8rem;
-            color: #5a6c7d;
-            font-weight: 400;
+
+        .brand-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: -2px;
             margin-bottom: 0.5rem;
         }
-        
-        .tagline {
+
+        .brand-subtitle {
             font-size: 1.2rem;
-            color: #7f8c8d;
-            font-style: italic;
+            opacity: 0.9;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
-        
-        .poster-container {
-            max-width: 500px;
-            width: 100%;
-            margin: 0 auto 2rem auto;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        .poster {
-            width: 100%;
-            display: block;
-            transition: transform 0.3s ease, filter 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .poster:hover {
-            transform: scale(1.02);
-            filter: brightness(1.1);
-        }
-        
-        .action-buttons {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 3rem;
-        }
-        
-        .btn {
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            text-align: center;
-            min-width: 200px;
-            color: white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .btn-primary { 
-            background: linear-gradient(45deg, #ffd700, #ffed4e);
-            color: #2c3e50;
-            border: 2px solid #2c3e50;
-        }
-        
-        .btn-secondary { 
-            background: linear-gradient(45deg, #2c3e50, #1a2a3a);
-            color: #ffd700;
-        }
-        
-        .btn-contact { 
-            background: linear-gradient(45deg, #5a6c7d, #4a5a68);
-            color: white;
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
-        }
-        
-        .add-event-btn {
-            background: linear-gradient(45deg, #ffd700, #ffed4e);
-            color: #2c3e50;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            border: 2px solid #2c3e50;
-            font-size: 1rem;
-        }
-        
-        .add-event-btn:hover {
-            background: linear-gradient(45deg, #ffed4e, #ffd700);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
-        }
-        
-        .events-section {
-            width: 100%;
+
+        .event-card {
             max-width: 800px;
-            margin-top: 2rem;
-        }
-        
-        .events-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
-        
-        .events-title {
-            color: #2c3e50;
-            font-size: 1.8rem;
-            margin: 0;
-        }
-        
-        /* Featured Event Styling */
-        .featured-section {
-            margin-bottom: 3rem;
-        }
-        
-        .featured-title {
-            color: #2c3e50;
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            text-align: center;
-            font-weight: bold;
-        }
-        
-        .featured-event {
-            background: linear-gradient(135deg, #fffacd, #fff8dc);
-            border: 3px solid #ffd700;
-            border-radius: 12px;
+            margin: 2rem auto;
+            background: linear-gradient(135deg, #f9d71c 0%, #f7c52d 100%);
+            border-radius: 20px;
             padding: 2rem;
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+            box-shadow: 0 8px 32px rgba(247, 197, 45, 0.3);
+            color: #2c3e50;
+        }
+
+        .event-card.upcoming {
+            background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+            box-shadow: 0 8px 32px rgba(74, 144, 226, 0.3);
+            color: white;
+        }
+
+        .event-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .event-image {
+            width: 100%;
+            max-width: 400px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin: 1rem auto;
+            display: block;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-details {
+            margin: 1.5rem 0;
+        }
+
+        .event-details h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .event-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .event-details li {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
             position: relative;
         }
-        
-        .featured-badge {
+
+        .event-details li:before {
+            content: "•";
             position: absolute;
-            top: -10px;
-            right: 20px;
-            background: #ffd700;
-            color: #2c3e50;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
+            left: 0;
             font-weight: bold;
-            border: 2px solid #2c3e50;
         }
-        
-        /* Regular Event Cards */
-        .event-card {
-            background-color: white;
-            border: 1px solid #e8e8e8;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .event-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-        }
-        
-        .event-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 0.5rem;
-        }
-        
-        .event-card h3 { 
-            margin: 0;
-            font-size: 1.2rem;
-            color: #2c3e50;
-            text-decoration: none;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-        
-        .event-card h3:hover {
-            color: #ffd700;
-        }
-        
-        .event-title-link {
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        .event-title-link:hover h3 {
-            color: #ffd700;
-        }
-        
-        .event-date {
-            color: #ffd700;
-            font-weight: bold;
-            font-size: 0.9rem;
-            background: #2c3e50;
-            padding: 4px 8px;
-            border-radius: 6px;
-            white-space: nowrap;
-        }
-        
+
         .event-location {
-            color: #7f8c8d;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .event-card p { 
-            color: #5a6c7d;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-            line-height: 1.4;
-        }
-        
-        .event-source {
-            font-size: 0.8rem;
-            color: #95a5a6;
-            font-style: italic;
-            margin-bottom: 0.5rem;
-        }
-        
-        .event-btn {
-            font-size: 0.9rem;
-            text-decoration: none;
-            color: white;
-            background: linear-gradient(45deg, #2c3e50, #1a2a3a);
-            padding: 8px 16px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-        
-        .event-btn:hover {
-            background: linear-gradient(45deg, #1a2a3a, #2c3e50);
-            transform: translateY(-1px);
-        }
-
-        /* KI-Impact Community Highlight */
-        .community-highlight {
-            background: linear-gradient(135deg, #fff8dc, #fffacd);
-            border-left: 4px solid #ffd700;
+            background: rgba(255, 255, 255, 0.2);
             padding: 1rem;
-            margin: 1rem 0;
             border-radius: 8px;
-            font-size: 0.9rem;
-        }
-
-        .community-highlight strong {
-            color: #2c3e50;
-        }
-
-        .speaker-badge {
-            display: inline-block;
-            background: #2c3e50;
-            color: #ffd700;
-            padding: 3px 8px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
-            margin-left: 8px;
-        }
-        
-        .footer {
-            margin-top: 3rem;
-            color: #7f8c8d;
-            font-size: 1.4rem;
+            margin: 1rem 0;
             text-align: center;
         }
-        
+
+        .event-date {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-actions {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin: 0.5rem;
+        }
+
+        .btn-primary {
+            background: rgba(255, 255, 255, 0.9);
+            color: #2c3e50;
+        }
+
+        .btn-primary:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        .event-card.upcoming .btn-primary {
+            background: rgba(255, 255, 255, 0.9);
+            color: #357abd;
+        }
+
+        .qr-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .qr-code {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            margin-top: 2rem;
+        }
+
         @media (max-width: 768px) {
-            h1 { font-size: 2.2rem; }
-            .subtitle { font-size: 1.4rem; }
-            .action-buttons { 
-                flex-direction: column; 
-                align-items: center; 
-                gap: 1rem; 
-            }
-            .events-header {
+            .logo-container {
                 flex-direction: column;
                 gap: 1rem;
-                text-align: center;
             }
-            .add-event-btn {
-                width: 100%;
+
+            .brand-title {
+                font-size: 2.5rem;
             }
-            .event-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.5rem;
+
+            .event-card {
+                margin: 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="header">
+    <header class="header">
         <div class="logo-container">
-            <a href="https://www.linkedin.com/groups/9804412/" target="_blank">
-                <img src="ki-impact-logo-banner.png" alt="KI-Impact Group - Silicon Valley meets Black Forest" class="logo">
-            </a>
+            <div class="logo">🦌</div>
+            <div class="brand-text">
+                <h1 class="brand-title">KI iMPACT GROUP</h1>
+                <p class="brand-subtitle">Silicon Valley meets Black Forest</p>
+            </div>
         </div>
-    </div>
-    
-    <div class="poster-container">
-        <a href="https://forms.gle/jzVEBR6hDEb8Ce2F6" target="_blank">
-            <img src="poster.jpg" alt="Prozesse mit KI Orchestrieren - N8N Workshop" class="poster">
-        </a>
-    </div>
-    
-    <div class="action-buttons">
-        <a href="https://forms.gle/jzVEBR6hDEb8Ce2F6" class="btn btn-primary" target="_blank">Jetzt anmelden</a>
-        <a href="https://www.linkedin.com/groups/9804412/" class="btn btn-secondary" target="_blank">KI-Impact Group</a>
-        <a href="mailto:mark@finnern.com" class="btn btn-contact">Kontakt</a>
-    </div>
+    </header>
 
-    <div class="events-section">
-        <!-- Featured Event Section -->
-        <div class="featured-section">
-            <h2 class="featured-title">⭐ Featured Event ⭐</h2>
-            <div class="featured-event">
-                <div class="featured-badge">KI-IMPACT HIGHLIGHT</div>
+    <main>
+        <!-- Original September 30 Event -->
+        <article class="event-card">
+            <h2 class="event-title">Prozesse mit KI Orchestrieren!</h2>
+            
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAyAFADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD5/ooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//" alt="Prozesse mit KI Orchestrieren Workshop" class="event-image">
+
+            <div class="event-details">
+                <p><strong>Was lernen wir:</strong></p>
+                <ul>
+                    <li><strong>N8N kennenlernen</strong> - Das Open Source Automatisierungstool</li>
+                    <li><strong>Intelligente Workflows</strong> erstellen</li>
+                </ul>
                 
-                <div class="event-header">
-                    <h3>Prozesse mit KI Orchestrieren!</h3>
-                    <span class="event-date">Di, 30. Sep • 18-21h</span>
+                <p><strong>Live Praxis-Beispiele:</strong></p>
+                <ul>
+                    <li>Brugger: <strong>Lieferschein-Erkennung + automatische Bestellzuordnung</strong></li>
+                    <li>Simon: <strong>PDF-Kundenanfrage + KI-Preisberechnung + CAD-Modell</strong></li>
+                    <li><strong>Medienbrüche durch KI umgehen!</strong></li>
+                </ul>
+            </div>
+
+            <div class="event-location">
+                <div class="event-date">Dienstag 30. September 2025<br>18 – 21 Uhr</div>
+                <strong>Räume der Wirtschaftsförderung</strong><br>
+                Oberndorfer Straße 1<br>
+                (beim Rathaus)<br>
+                <strong>Schramberg</strong>
+            </div>
+
+            <div class="event-actions">
+                <a href="http://ki-impact.org" class="btn btn-primary">Anmeldung + Info</a>
+            </div>
+
+            <div class="qr-section">
+                <div>
+                    <strong>Kostenfrei!</strong><br>
+                    <small>Hier Anmelden >></small>
                 </div>
-                <div class="event-location">📍 Räume der Wirtschaftsförderung, Oberndorfer Straße 1 (beim Rathaus), Schramberg</div>
-                <p>
-                    <strong>N8N kennenlernen - Das Open Source Automatisierungstool</strong><br>
-                    <strong>Intelligente Workflows erstellen</strong><br><br>
-                    
-                    <strong>Live Praxis-Beispiele:</strong><br>
-                    • Brugger: <strong>Lieferschein-Erkennung → automatische Bestellzuordnung</strong><br>
-                    • Simon: <strong>PDF-Kundenanfrage → KI-Preisberechnung → CAD-Modell</strong><br>
-                    • <strong>Medienbrüche durch KI umgehen!</strong><br><br>
-                    
-                    Kostenfrei! Anmeldung über http://ki-impact.org oder QR-Code
-                </p>
-                <div class="event-source">Exklusives KI-Impact Group Event</div>
-                <a href="https://forms.gle/jzVEBR6hDEb8Ce2F6" class="event-btn" target="_blank">Jetzt anmelden</a>
+                <div class="qr-code">📱</div>
             </div>
-        </div>
+        </article>
 
-        <!-- Upcoming Events Section -->
-        <div class="events-header">
-            <h2 class="events-title">Kommende Events</h2>
-            <a href="https://forms.gle/QxKATu7h9prH5uQb8" class="add-event-btn" target="_blank">
-                Eigenes Event hinzufügen
-            </a>
-        </div>
-        
-        <!-- STREIT@Work - AI Event - September 25 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://www.streit.de/events/streit-at-work-2025" class="event-title-link" target="_blank">
-                    <h3>STREIT@Work - Wenn Künstliche Intelligenz plötzlich Beine hat!</h3>
-                </a>
-                <span class="event-date">Do, 25. Sep • 14-19h</span>
-            </div>
-            <div class="event-location">📍 Streit Service & Solution GmbH, Kinzigpark 4, Gengenbach</div>
-            <p><strong>Die Arbeitswelt von morgen erleben!</strong> Dritte Ausgabe des Events mit humanoiden Robotern und KI-Einblicken.<br><br>
-            <strong>Highlights:</strong><br>
-            • 14:00h: Rundgänge durch STREIT New Work Arbeitswelt<br>
-            • 15:10h: Dr. Alexander Blass (NEURA Robotics): "Warum der Mensch keine Roboterarbeit erledigen muss"<br>
-            • 16:20h: Dr. Markus Langer (Uni Freiburg): "Mensch-Maschine-Beziehungen neu denken"<br>
-            • Mit dabei: Katrin Würtherle (Organisationsentwicklung & Coaching)<br><br>
-            <strong>⚠️ Anmeldung bis 15.09.2025 erforderlich!</strong> Torsten from KI-Impact Group wird dabei sein!</p>
-            <div class="event-source">Streit Service & Solution - Regionaler KI-Event</div>
-            <a href="https://www.streit.de/events/streit-at-work-2025" class="event-btn" target="_blank">Jetzt anmelden</a>
-        </div>
-
-        <!-- Green AI Day Stuttgart - September 25 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://green-ai-day.de/" class="event-title-link" target="_blank">
-                    <h3>Green AI Day 2025 - Nachhaltige KI für die Zukunft</h3>
-                </a>
-                <span class="event-date">Do, 25. Sep</span>
-            </div>
-            <div class="event-location">📍 Stuttgart</div>
-            <p>NEW Stuttgart und WRS veranstalten den dritten Green AI Day. Keynotes, interaktive Sessions und Networking rund um nachhaltige KI. Stuttgart positioniert sich als Vorreiter für Green AI in Europa!</p>
-            <div class="event-source">Community Event - Baden-Württemberg</div>
-        </div>
-
-        <!-- doubleSlash Friedrichshafen - September 30 -->
-        <div class="event-card">
-            <div class="event-header">
-                <h3>doubleSlash Net-Business GmbH, Friedrichshafen - KI-Vorreiter am Bodensee</h3>
-                <span class="event-date">Di, 30. Sep • 16-19h</span>
-            </div>
-            <div class="event-location">📍 doubleSlash Net-Business GmbH, Otto-Lilienthal-Straße 16, Friedrichshafen</div>
-            <p><strong>"Digital Valley der Bodenseeregion" hautnah erleben!</strong><br><br>
-            <strong>Live-Einblicke in KI-Development-Prozesse:</strong><br>
-            • Connected Mobility - Intelligente Mobilitätslösungen<br>
-            • IoT und Data Driven Solutions mit KI<br>
-            • Agile KI-Entwicklung bei BMW, Deutsche Post, ZF und Porsche<br>
-            • "Great Place to Work" Arbeitskultur kennenlernen<br><br>
-            <strong>💰 Kosten:</strong> 39€ zzgl. MwSt. (TechnologyMountains-Mitglieder) / 69€ zzgl. MwSt. (Nicht-Mitglieder)<br>
-            <strong>Anmeldung:</strong> Corinna Specker, +49 (0) 7721 / 922149</p>
-            <div class="event-source">IHK SBH Exkursion - TechnologyMountains</div>
-            <a href="mailto:corinna.specker@vs.ihk.de?subject=Anmeldung doubleSlash Friedrichshafen&body=Hallo,%0D%0A%0D%0Aich möchte mich gerne für die Exkursion zu doubleSlash Friedrichshafen am 30.09.2025 anmelden und habe diesen Event über die KI-Impact Gruppe von Schramberg gefunden.%0D%0A%0D%0AViele Grüße" class="event-btn">Anmeldung per E-Mail</a>
-        </div>
-
-        <!-- Social Innovation Night Freiburg - Oktober 1 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://social-innovation-lab.org/events/social-innovation-night-vol-xiv/" class="event-title-link" target="_blank">
-                    <h3>Social Innovation Night Vol. XIV</h3>
-                </a>
-                <span class="event-date">Mi, 1. Okt • 18:30-21h</span>
-            </div>
-            <div class="event-location">📍 Freiburg</div>
-            <p>Innovative Ansätze für gesellschaftliche Herausforderungen. Networking-Event für Social Entrepreneurs und Change Maker in Baden-Württemberg.</p>
-            <div class="event-source">Community Event - Baden-Württemberg</div>
-        </div>
-
-        <!-- Black Forest Space 2025 - October 14-15 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://blackforestspace.de/" class="event-title-link" target="_blank">
-                    <h3>Black Forest Space 2025 - Das Festival für die Digital- und Technologieszene 
-                        <span class="speaker-badge">KI-IMPACT SPEAKER</span>
-                    </h3>
-                </a>
-                <span class="event-date">Di-Mi, 14.-15. Okt</span>
-            </div>
-            <div class="event-location">📍 Messe Offenburg, Offenburg</div>
-            <p><strong>Die Konferenz für Digitales Marketing, Tech & KI im Schwarzwald!</strong><br><br>
-            <strong>Highlights:</strong><br>
-            • 50+ Speaker & 3 Bühnen für aktuelle Digital-Trends<br>
-            • 20+ Masterclasses zu KI im Marketing<br>
-            • Expo mit 30+ Ausstellern aus der Digitalwirtschaft<br>
-            • Networking mit Entscheidern und Innovatoren<br>
-            • Fokus: KI-Anwendungen, Automatisierung & Digitale Geschäftsmodelle<br><br>
-            <strong>Idealer Event für Unternehmer, Marketer und Tech-Enthusiasten!</strong></p>
+        <!-- New October 6 Event -->
+        <article class="event-card upcoming">
+            <h2 class="event-title">FZI Tag der KI</h2>
             
-            <div class="community-highlight">
-                <strong>🎤 KI-Impact Community Speaker:</strong> <strong>Steffen Erath</strong> (Head of Innovation & Sustainability bei Hansgrohe SE) wird als Speaker dabei sein! Steffen ist aktives Mitglied unserer KI-Impact Group und bringt das Thema <em>#PlanetCenteredInnovation</em> auf die Bühne. Eine perfekte Gelegenheit zum Networking mit einem echten Innovations-Experten aus der Region!
+            <div class="event-details">
+                <div class="event-date">Montag, 6. Oktober 2025<br>9:00 – 17:00 Uhr</div>
+                
+                <p><strong>Deep-dive KI-Konferenz mit Tech-Tracks (vormittags) und Anwendungs-Tracks (nachmittags)</strong></p>
+                
+                <h3>Highlights:</h3>
+                <ul>
+                    <li><strong>Living Labs Erfahrung</strong> - Erleben Sie KI-Innovationen hautnah</li>
+                    <li><strong>B2B Matchmaking</strong> - Vernetzen Sie sich mit Branchenexperten</li>
+                    <li><strong>KI-Anwendungen in:</strong> Mobility, Robotics, Industrial & Healthcare</li>
+                    <li><strong>Praxisnahe Workshops</strong> und Demos</li>
+                </ul>
             </div>
+
+            <div class="event-location">
+                <div class="event-date">Montag, 6. Oktober 2025<br>9:00 – 17:00 Uhr</div>
+                <strong>FZI House of Living Labs</strong><br>
+                Haid-und-Neu-Straße 10-14<br>
+                76131 Karlsruhe
+            </div>
+
+            <div class="event-actions">
+                <a href="https://www.fzi.de/veranstaltungen/fzi-tag-der-ki-2025/" class="btn btn-primary" target="_blank">Anmeldung + Info</a>
+                <a href="#" class="btn btn-primary" onclick="addToCalendar()">📅 Kalender</a>
+            </div>
+
+            <div class="qr-section">
+                <div>
+                    <strong>In Kooperation mit FZI Karlsruhe</strong><br>
+                    <small>Empfehlung der KI-Impact Group</small>
+                </div>
+                <div class="qr-code">🏛️</div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 KI-Impact Group - Silicon Valley meets Black Forest</p>
+        <p>Kontakt: mark@ki-impact.org | LinkedIn: KI-Impact Group</p>
+    </footer>
+
+    <script>
+        function addToCalendar() {
+            const event = {
+                title: 'FZI Tag der KI 2025',
+                start: '2025-10-06T09:00:00',
+                end: '2025-10-06T17:00:00',
+                location: 'FZI House of Living Labs, Haid-und-Neu-Straße 10-14, 76131 Karlsruhe',
+                description: 'Deep-dive KI-Konferenz mit Tech-Tracks und Anwendungs-Tracks'
+            };
             
-            <div class="event-source">Community Event - Baden-Württemberg</div>
-            <a href="https://blackforestspace.de/" class="event-btn" target="_blank">Mehr Infos</a>
-        </div>
-
-        <!-- AIxIA Franco-German AI Conference Karlsruhe - October 14 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://ki-allianz.de/en/events/" class="event-title-link" target="_blank">
-                    <h3>AIxIA Franco-German AI Conference - "The Next Era of AI"</h3>
-                </a>
-                <span class="event-date">Di, 14. Okt</span>
-            </div>
-            <div class="event-location">📍 Karlsruhe</div>
-            <p><strong>Deutsch-Französische KI-Spitzenkonferenz!</strong><br><br>
-            <strong>Highlights:</strong><br>
-            • Leading AI experts & business leaders<br>
-            • Policy makers aus Berlin, Paris, Stuttgart & Strasbourg<br>
-            • Cutting-edge AI developments & regulatory challenges<br>
-            • Transformative innovations für alle Branchen<br>
-            • KI-Allianz Baden-Württemberg Event<br><br>
-            <strong>🇩🇪🇫🇷 Internationale KI-Kooperation auf höchstem Niveau!</strong></p>
-            <div class="event-source">KI-Allianz Baden-Württemberg</div>
-            <a href="https://ki-allianz.de/en/events/" class="event-btn" target="_blank">Mehr Infos</a>
-        </div>
-
-        <!-- InnovationFestival Karlsruhe - October 17 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://karlsruhe.digital/en/events/innovation-festival/" class="event-title-link" target="_blank">
-                    <h3>InnovationFestival @karlsruhe.digital 2025</h3>
-                </a>
-                <span class="event-date">Fr, 17. Okt</span>
-            </div>
-            <div class="event-location">📍 ZKM | Center for Art and Media, Karlsruhe</div>
-            <p><strong>Die 4. Ausgabe der digitalen Innovation!</strong><br><br>
-            <strong>Highlights:</strong><br>
-            • KIT, CyberForum & ZKM präsentieren Digital-Innovationen<br>
-            • AI, Smart City, Mobility & IT Security<br>
-            • Live vor Ort + Livestream<br>
-            • Keynotes von Digital-Experten<br>
-            • Karlsruhe TechnologyRegion im Fokus<br><br>
-            <strong>🎨 Wo Kunst auf Technologie trifft!</strong></p>
-            <div class="event-source">karlsruhe.digital Initiative</div>
-            <a href="https://karlsruhe.digital/en/events/innovation-festival/" class="event-btn" target="_blank">Mehr Infos</a>
-        </div>
-
-        <!-- Heilbronn SLUSH'D Event - October 23 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://www.heilbronnslushd.com/" class="event-title-link" target="_blank">
-                    <h3>SLUSH'D Heilbronn - The Ultimate Startup Festival</h3>
-                </a>
-                <span class="event-date">Do, 23. Okt 2025</span>
-            </div>
-            <div class="event-location">📍 Heilbronn</div>
-            <p><strong>⚠️ Bewerbung erforderlich!</strong> Das ultimative Festival für innovative Startups, zukunftsorientierte Investoren und führende Unternehmen. Networking, Pitches und Connections mit den Key Playern des Ökosystems in einer der dynamischsten Startup-Regionen Europas. Teil der internationalen SLUSH-Familie.</p>
-            <div class="event-source">Community Event - Baden-Württemberg</div>
-            <a href="https://www.heilbronnslushd.com/" class="event-btn" target="_blank">Jetzt bewerben</a>
-        </div>
-
-        <!-- AI and Law Conference Tübingen - November 5 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://ailawinstitute.de/conference-for-ai-and-law/" class="event-title-link" target="_blank">
-                    <h3>Tübingen Conference for AI and Law</h3>
-                </a>
-                <span class="event-date">Mi, 5. - Do, 6. Nov</span>
-            </div>
-            <div class="event-location">📍 Universität Tübingen</div>
-            <p>Innovative Konferenz zu KI und Rechtsfragen. Wichtiges Thema für Unternehmen, die KI verantwortungsvoll einsetzen wollen.</p>
-            <div class="event-source">Community Event - Baden-Württemberg</div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>Nit schwätza - macha! :-)</p>
-        <p style="margin-top: 1rem;">
-            <a href="impressum.html" style="color: #7f8c8d; text-decoration: underline; margin-right: 2rem;">Impressum</a>
-            <a href="datenschutz.html" style="color: #7f8c8d; text-decoration: underline;">Datenschutzerklärung</a>
-        </p>
-    </div>
+            const startDate = new Date(event.start).toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+            const endDate = new Date(event.end).toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+            
+            const googleUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${startDate}/${endDate}&location=${encodeURIComponent(event.location)}&details=${encodeURIComponent(event.description)}`;
+            
+            window.open(googleUrl, '_blank');
+        }
+    </script>
 </body>
 </html>
