@@ -1,651 +1,90 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KI-Impact Group - Silicon Valley meets Black Forest</title>
-    
-    <!-- Open Graph Meta Tags for LinkedIn Preview -->
-    <meta property="og:title" content="KI-Impact Group - Silicon Valley meets Black Forest">
-    <meta property="og:description" content="Innovations-Community in Baden-Württemberg. Featured Events, KI-Workshops und Community-Events für Unternehmer, Tech-Enthusiasten und Forward-Thinker im Schwarzwald. Von Käpsele Festival bis KI-Workshops - wir vernetzen die Innovations-Szene.">
-    <meta property="og:image" content="https://ki-impact.org/ki-impact-logo-banner.png">
-    <meta property="og:url" content="https://ki-impact.org">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="KI-Impact Group">
-    
-    <!-- Additional Meta Tags -->
-    <meta name="description" content="KI-Impact Group - Innovations-Community in Baden-Württemberg. Featured Events, KI-Workshops und Community-Events für Unternehmer und Tech-Enthusiasten im Schwarzwald.">
-    <meta name="keywords" content="KI, Künstliche Intelligenz, Innovation, Baden-Württemberg, Schwarzwald, Schramberg, Community, Events, Workshops">
-    <meta name="author" content="KI-Impact Group">
-    
-    <!-- Twitter Card Meta Tags (Bonus) -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="KI-Impact Group - Silicon Valley meets Black Forest">
-    <meta name="twitter:description" content="Innovations-Community in Baden-Württemberg. Featured Events, KI-Workshops und Community-Events für Unternehmer im Schwarzwald.">
-    <meta name="twitter:image" content="https://ki-impact.org/ki-impact-logo-banner.png">
+<div id="ki-impact-group">
 
-    <!-- Structured Data for Events -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "KI-Impact Group",
-        "description": "Innovations-Community in Baden-Württemberg für KI und Tech-Events",
-        "url": "https://ki-impact.org",
-        "logo": "https://ki-impact.org/ki-impact-logo-banner.png",
-        "sameAs": [
-            "https://www.linkedin.com/groups/9804412/"
-        ],
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Schramberg",
-            "addressRegion": "Baden-Württemberg",
-            "addressCountry": "DE"
-        }
-    }
-    </script>
-    
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #fffef7, #fffce0);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            margin: 0;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #2c3e50;
-        }
-        
-        .logo-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-        
-        .logo {
-            max-width: 500px;
-            width: 100%;
-            height: auto;
-            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
-            border-radius: 15px;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .logo:hover {
-            transform: scale(1.02);
-        }
-        
-        h1 {
-            font-size: 2.8rem;
-            margin: 0;
-            color: #2c3e50;
-        }
-        
-        .subtitle {
-            font-size: 1.8rem;
-            color: #5a6c7d;
-            font-weight: 400;
-            margin-bottom: 0.5rem;
-        }
-        
-        .tagline {
-            font-size: 1.2rem;
-            color: #7f8c8d;
-            font-style: italic;
-        }
-        
-        .poster-container {
-            max-width: 500px;
-            width: 100%;
-            margin: 0 auto 2rem auto;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        .poster {
-            width: 100%;
-            display: block;
-            transition: transform 0.3s ease, filter 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .poster:hover {
-            transform: scale(1.02);
-            filter: brightness(1.1);
-        }
-        
-        .action-buttons {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 3rem;
-        }
-        
-        .btn {
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            text-align: center;
-            min-width: 200px;
-            color: white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .btn-primary { 
-            background: linear-gradient(45deg, #ffd700, #ffed4e);
-            color: #2c3e50;
-            border: 2px solid #2c3e50;
-        }
-        
-        .btn-secondary { 
-            background: linear-gradient(45deg, #2c3e50, #1a2a3a);
-            color: #ffd700;
-        }
-        
-        .btn-contact { 
-            background: linear-gradient(45deg, #5a6c7d, #4a5a68);
-            color: white;
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
-        }
-        
-        .add-event-btn {
-            background: linear-gradient(45deg, #ffd700, #ffed4e);
-            color: #2c3e50;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            border: 2px solid #2c3e50;
-            font-size: 1rem;
-        }
-        
-        .add-event-btn:hover {
-            background: linear-gradient(45deg, #ffed4e, #ffd700);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
-        }
-        
-        .events-section {
-            width: 100%;
-            max-width: 800px;
-            margin-top: 2rem;
-        }
-        
-        .events-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
-        
-        .events-title {
-            color: #2c3e50;
-            font-size: 1.8rem;
-            margin: 0;
-        }
-        
-        /* Featured Event Styling */
-        .featured-section {
-            margin-bottom: 3rem;
-        }
-        
-        .featured-title {
-            color: #2c3e50;
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            text-align: center;
-            font-weight: bold;
-        }
-        
-        .featured-event {
-            background: linear-gradient(135deg, #fffacd, #fff8dc);
-            border: 3px solid #ffd700;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
-            position: relative;
-        }
-        
-        .featured-badge {
-            position: absolute;
-            top: -10px;
-            right: 20px;
-            background: #ffd700;
-            color: #2c3e50;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            border: 2px solid #2c3e50;
-        }
-        
-        /* Regular Event Cards */
-        .event-card {
-            background-color: white;
-            border: 1px solid #e8e8e8;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .event-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-        }
-        
-        .event-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 0.5rem;
-        }
-        
-        .event-card h3 { 
-            margin: 0;
-            font-size: 1.2rem;
-            color: #2c3e50;
-            text-decoration: none;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-        
-        .event-card h3:hover {
-            color: #ffd700;
-        }
-        
-        .event-title-link {
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        .event-title-link:hover h3 {
-            color: #ffd700;
-        }
-        
-        .event-date {
-            color: #ffd700;
-            font-weight: bold;
-            font-size: 0.9rem;
-            background: #2c3e50;
-            padding: 4px 8px;
-            border-radius: 6px;
-            white-space: nowrap;
-        }
-        
-        .event-location {
-            color: #7f8c8d;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .event-card p { 
-            color: #5a6c7d;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-            line-height: 1.4;
-        }
-        
-        .event-source {
-            font-size: 0.8rem;
-            color: #95a5a6;
-            font-style: italic;
-            margin-bottom: 0.5rem;
-        }
-        
-        .event-btn {
-            font-size: 0.9rem;
-            text-decoration: none;
-            color: white;
-            background: linear-gradient(45deg, #2c3e50, #1a2a3a);
-            padding: 8px 16px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-        
-        .event-btn:hover {
-            background: linear-gradient(45deg, #1a2a3a, #2c3e50);
-            transform: translateY(-1px);
-        }
+    <h2>KI-Impact Group</h2>
 
-        /* KI-Impact Community Highlight */
-        .community-highlight {
-            background: linear-gradient(135deg, #fff8dc, #fffacd);
-            border-left: 4px solid #ffd700;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 8px;
-            font-size: 0.9rem;
-        }
-
-        .community-highlight strong {
-            color: #2c3e50;
-        }
-
-        .speaker-badge {
-            display: inline-block;
-            background: #2c3e50;
-            color: #ffd700;
-            padding: 3px 8px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
-            margin-left: 8px;
-        }
-        
-        .footer {
-            margin-top: 3rem;
-            color: #7f8c8d;
-            font-size: 1.4rem;
-            text-align: center;
-        }
-        
-        @media (max-width: 768px) {
-            h1 { font-size: 2.2rem; }
-            .subtitle { font-size: 1.4rem; }
-            .action-buttons { 
-                flex-direction: column; 
-                align-items: center; 
-                gap: 1rem; 
-            }
-            .events-header {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
-            .add-event-btn {
-                width: 100%;
-            }
-            .event-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.5rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <div class="logo-container">
-            <a href="https://www.linkedin.com/groups/9804412/" target="_blank">
-                <img src="ki-impact-logo-banner.png" alt="KI-Impact Group - Silicon Valley meets Black Forest" class="logo">
-            </a>
-        </div>
-    </div>
-    
-    <div class="poster-container">
-        <a href="https://forms.gle/htDYvX5vpoKHehhx9" target="_blank">
-            <img src="poster.jpg" alt="Innovative Bildungskonzepte mit Künstlicher Intelligenz - 13. November 2025" class="poster">
-        </a>
-    </div>
-    
-    <div class="action-buttons">
-        <a href="https://forms.gle/htDYvX5vpoKHehhx9" class="btn btn-primary" target="_blank">Jetzt anmelden</a>
-        <a href="https://www.linkedin.com/groups/9804412/" class="btn btn-secondary" target="_blank">KI-Impact Group</a>
-        <a href="mailto:mark@finnern.com" class="btn btn-contact">Kontakt</a>
+    <!-- Contact Information (Derived from Impressum) -->
+    <div id="contact-info">
+        <h3>Kontakt</h3>
+        <p>E-Mail: mark@finnern.com</p>
+        <p>Telefon: +49 (0)170 668 8388</p>
+        <p>Website: <a href="https://ki-impact.org">https://ki-impact.org</a></p>
     </div>
 
-    <div class="events-section">
-        <!-- Featured Event Section -->
-        <div class="featured-section">
-            <h2 class="featured-title">⭐ Featured Event ⭐</h2>
-            <div class="featured-event">
-                <div class="featured-badge">KI-IMPACT HIGHLIGHT</div>
-                
-                <div class="event-header">
-                    <h3>Innovative Bildungskonzepte mit Künstlicher Intelligenz</h3>
-                    <span class="event-date">Do, 13. Nov • 18:00-20:30h</span>
-                </div>
-                <div class="event-location">📍 Räume der Wirtschaftsförderung, Oberndorfer Straße 1 (beim Rathaus), Schramberg</div>
-                <p>
-                    <strong>Mit KI Lernen neu aufsetzen - Silicon Valley meets Schwarzwald</strong><br><br>
-                    
-                    <strong>Unsere Top-Speaker:</strong><br>
-                    • <strong>Thomas Bornheim</strong> (Mitte) - Leiter 42 Heilbronn, 7 Jahre Google Silicon Valley, Peer-Learning Pioneer<br>
-                    • <strong>Mark Finnern</strong> (rechts) - 25+ Jahre SAP + Silicon Valley, Future Salon Host: Education<br><br>
-                    
-                    <strong>Kernthemen:</strong><br>
-                    • KI als persönlicher Lern-Coach für Jeden<br>
-                    • 42 Heilbronn: Peer-Learning statt Frontalunterricht<br>
-                    • Podiumsdiskussion: Tech-Talente im Schwarzwald entwickeln<br><br>
-                    
-                    <strong>Format:</strong> Vortrag + Podiumsdiskussion + Networking<br>
-                    <strong>Ausklang:</strong> Rocklore Irish Pub<br><br>
-                    
-                    <strong>Zielgruppe:</strong> Bildungsakteure, Unternehmer, Eltern & alle Neugierigen (besonders Rektoren/Schulleiter)<br><br>
-                    
-                    Kostenfrei!
-                </p>
-                <div class="event-source">Exklusives KI-Impact Group Event</div>
-                <a href="https://forms.gle/htDYvX5vpoKHehhx9" class="event-btn" target="_blank">Jetzt anmelden</a>
-            </div>
-        </div>
+    <!-- FEATURED EVENT (Updated per User Request & Poster content) -->
+    <h3 class="featured-event-star">⭐ Featured Event ⭐</h3>
+    <div id="featured-event">
+        <h4>Innovative Bildungskonzepte mit Künstlicher Intelligenz</h4>
 
-        <!-- Upcoming Events Section -->
-        <div class="events-header">
-            <h2 class="events-title">Kommende Events</h2>
-            <a href="https://forms.gle/QxKATu7h9prH5uQb8" class="add-event-btn" target="_blank">
-                Eigenes Event hinzufügen
-            </a>
-        </div>
+        <!-- Date & Location Updated per User Request -->
+        <p><strong>Di, 11th</strong></p>
+        <p>📍 <strong>Gewerbepark Majolika, Schiltachstrasse 38, 78713 Schramberg</strong></p>
 
-        <!-- INNoptimists Rottweil - October 9 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://www.innoptimists.de/" class="event-title-link" target="_blank">
-                    <h3>INNoptimists 2025 - Die Zukunft startet hier!</h3>
-                </a>
-                <span class="event-date">Mi, 9. Okt • 17:00-21h</span>
-            </div>
-            <div class="event-location">📍 Kraftwerk Rottweil, Turbinensaal (Saalöffnung: 16:00 Uhr)</div>
-            <p><strong>Das Event für Macher, Denker und Visionäre aus der Region Schwarzwald-Baar-Heuberg!</strong><br><br>
-            <strong>Top-Speaker:</strong><br>
-            • <strong>Sven Gábor Jánszky</strong> - "Mr. Future", Deutschlands gefragtester Zukunftsexperte<br>
-            • <strong>Christiane Stein</strong> - LinkedIn Top Voice für Tech & Innovation (Moderation)<br>
-            • <strong>Prof. Dr. Christoph Reich</strong> - HFU Prorektor für Forschung & KI-Experte<br><br>
-            <strong>Programm:</strong><br>
-            • Keynote von Sven Gábor Jánszky<br>
-            • INNsights Themeninseln mit Praxisbezug<br>
-            • Panel-Diskussion & Workshops<br>
-            • Netzwerken beim Apero<br><br>
-            <strong>Themen:</strong> Unternehmenstransformation, Startup-Szene, Finanzierungsmodelle, Innovation</p>
-            <div class="event-source">Community Event - Schwarzwald-Baar-Heuberg</div>
-            <a href="https://www.innoptimists.de/" class="event-btn" target="_blank">Mehr Infos & Anmeldung</a>
-        </div>
+        <!-- Content derived from poster [1, 11] -->
+        <p><strong>Mit KI Lernen neu aufsetzen - Silicon Valley meets Schwarzwald</strong></p>
 
-        <!-- FZI Tag der KI - October 6 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://www.fzi.de/" class="event-title-link" target="_blank">
-                    <h3>FZI Tag der KI 2025 - Deep-Dive AI Conference</h3>
-                </a>
-                <span class="event-date">Mo, 6. Okt</span>
-            </div>
-            <div class="event-location">📍 FZI House of Living Labs, Karlsruhe</div>
-            <p><strong>Die KI-Konferenz für Technical Deep-Dive und praktische Anwendungen!</strong><br><br>
-            <strong>Programm:</strong><br>
-            • Vormittags: Tech-Tracks für Entwickler und KI-Spezialisten<br>
-            • Nachmittags: Application-Tracks für Business-Anwendungen<br>
-            • Living Labs Experience - KI zum Anfassen<br>
-            • B2B-Matchmaking für konkrete KI-Projekte<br>
-            • AI in Mobility, Robotics, Industrial & Healthcare<br><br>
-            <strong>🔬 Perfekte Kombination aus technischer Tiefe und praktischen Anwendungen!</strong></p>
-            <div class="event-source">FZI Forschungszentrum Informatik - Karlsruhe</div>
-            <a href="https://www.fzi.de/" class="event-btn" target="_blank">Mehr Infos</a>
-        </div>
+        <h5>Unsere Top-Speaker:</h5>
+        <ul>
+            <!-- Correction applied: "Leiter 42 Heilbronn" removed as requested. Source content: 7 years Google Silicon Valley, Peer-Learning Pioneer [1] -->
+            <li><strong>Thomas Bornheim</strong> – 7 Jahre Google Silicon Valley, Peer-Learning Pioneer</li>
+            <li><strong>Mark Finnern</strong> – 25+ Jahre SAP + Silicon Valley, Future Salon Host: Education</li>
+        </ul>
 
-        <!-- Black Forest Space 2025 - October 14-15 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://blackforestspace.de/" class="event-title-link" target="_blank">
-                    <h3>Black Forest Space 2025 - Das Festival für die Digital- und Technologieszene 
-                        <span class="speaker-badge">KI-IMPACT SPEAKER</span>
-                    </h3>
-                </a>
-                <span class="event-date">Di-Mi, 14.-15. Okt</span>
-            </div>
-            <div class="event-location">📍 Messe Offenburg, Offenburg</div>
-            <p><strong>Die Konferenz für Digitales Marketing, Tech & KI im Schwarzwald!</strong><br><br>
-            <strong>Highlights:</strong><br>
-            • 50+ Speaker & 3 Bühnen für aktuelle Digital-Trends<br>
-            • 20+ Masterclasses zu KI im Marketing<br>
-            • Expo mit 30+ Ausstellern aus der Digitalwirtschaft<br>
-            • Networking mit Entscheidern und Innovatoren<br>
-            • Fokus: KI-Anwendungen, Automatisierung & Digitale Geschäftsmodelle<br><br>
-            <strong>Idealer Event für Unternehmer, Marketer und Tech-Enthusiasten!</strong></p>
-            
-            <div class="community-highlight">
-                <strong>🎤 KI-Impact Community Speaker:</strong> <strong>Steffen Erath</strong> (Head of Innovation & Sustainability bei Hansgrohe SE) wird als Speaker dabei sein! Steffen ist aktives Mitglied unserer KI-Impact Group und bringt das Thema <em>#PlanetCenteredInnovation</em> auf die Bühne. Eine perfekte Gelegenheit zum Networking mit einem echten Innovations-Experten aus der Region!
-            </div>
-            
-            <div class="event-source">Community Event - Baden-Württemberg</div>
-            <a href="https://blackforestspace.de/" class="event-btn" target="_blank">Mehr Infos</a>
-        </div>
+        <h5>Kernthemen:</h5>
+        <ul>
+            <li>KI als persönlicher Lern-Coach für Jeden</li>
+            <li>42 Heilbronn: Peer-Learning statt Frontalunterricht</li>
+            <li>Podiumsdiskussion: Tech-Talente im Schwarzwald entwickeln</li>
+        </ul>
 
-        <!-- AIxIA Franco-German AI Conference Karlsruhe - October 14 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://ki-allianz.de/en/events/" class="event-title-link" target="_blank">
-                    <h3>AIxIA Franco-German AI Conference - "The Next Era of AI"</h3>
-                </a>
-                <span class="event-date">Di, 14. Okt</span>
-            </div>
-            <div class="event-location">📍 Karlsruhe</div>
-            <p><strong>Deutsch-Französische KI-Spitzenkonferenz!</strong><br><br>
-            <strong>Highlights:</strong><br>
-            • Leading AI experts & business leaders<br>
-            • Policy makers aus Berlin, Paris, Stuttgart & Strasbourg<br>
-            • Cutting-edge AI developments & regulatory challenges<br>
-            • Transformative innovations für alle Branchen<br>
-            • KI-Allianz Baden-Württemberg Event<br><br>
-            <strong>🇩🇪🇫🇷 Internationale KI-Kooperation auf höchstem Niveau!</strong></p>
-            <div class="event-source">KI-Allianz Baden-Württemberg</div>
-            <a href="https://ki-allianz.de/en/events/" class="event-btn" target="_blank">Mehr Infos</a>
-        </div>
-
-        <!-- InnovationFestival Karlsruhe - October 17 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://karlsruhe.digital/en/events/innovation-festival/" class="event-title-link" target="_blank">
-                    <h3>InnovationFestival @karlsruhe.digital 2025</h3>
-                </a>
-                <span class="event-date">Fr, 17. Okt</span>
-            </div>
-            <div class="event-location">📍 ZKM | Center for Art and Media, Karlsruhe</div>
-            <p><strong>Die 4. Ausgabe der digitalen Innovation!</strong><br><br>
-            <strong>Highlights:</strong><br>
-            • KIT, CyberForum & ZKM präsentieren Digital-Innovationen<br>
-            • AI, Smart City, Mobility & IT Security<br>
-            • Live vor Ort + Livestream<br>
-            • Keynotes von Digital-Experten<br>
-            • Karlsruhe TechnologyRegion im Fokus<br><br>
-            <strong>🎨 Wo Kunst auf Technologie trifft!</strong></p>
-            <div class="event-source">karlsruhe.digital Initiative</div>
-            <a href="https://karlsruhe.digital/en/events/innovation-festival/" class="event-btn" target="_blank">Mehr Infos</a>
-        </div>
-
-        <!-- KI-READY on TOUR bei ZEISER - October 20 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://ki-ready.com/on-tour-bei-zeiser" class="event-title-link" target="_blank">
-                    <h3>KI-READY on TOUR bei ZEISER - KI-Praxis vor Ort erleben</h3>
-                </a>
-                <span class="event-date">Mo, 20. Okt • 17:00-21h</span>
-            </div>
-            <div class="event-location">📍 ZEISER GmbH, Friedrich-Wöhler-Str. 11, Emmingen-Liptingen</div>
-            <p><strong>Künstliche Intelligenz im Mittelstand - nicht irgendwann, sondern jetzt!</strong><br><br>
-            <strong>Erleben Sie KI dort, wo sie wirkt:</strong><br>
-            • Reale Use Cases direkt aus der Region<br>
-            • Lokale KI-Lösungen ohne Cloud - sicher & DSGVO-konform<br>
-            • Zwei spannende Impulse von Tech- & Beratungsexperten<br>
-            • Interne Dokumente mit KI analysieren - ohne Datenschutzrisiken<br>
-            • Networking mit anderen Machern aus der Region<br><br>
-            <strong>Fokus:</strong> KI-Anwendungen für mittelständische Unternehmen mit hohen Compliance-Anforderungen. Praxisnah, inspirierend, umsetzbar.<br><br>
-            <strong>💡 Kostenfrei, aber begrenzte Plätze!</strong> Perfekt für Entscheider aus dem Schwarzwald-Baar-Raum.</p>
-            <div class="event-source">KI-READY Tour - Mittelstand-Event</div>
-            <a href="https://ki-ready.com/on-tour-bei-zeiser" class="event-btn" target="_blank">Jetzt anmelden</a>
-        </div>
-
-        <!-- Heilbronn SLUSH'D Event - October 23 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://www.heilbronnslushd.com/" class="event-title-link" target="_blank">
-                    <h3>SLUSH'D Heilbronn - The Ultimate Startup Festival</h3>
-                </a>
-                <span class="event-date">Do, 23. Okt 2025</span>
-            </div>
-            <div class="event-location">📍 Heilbronn</div>
-            <p><strong>⚠️ Bewerbung erforderlich!</strong> Das ultimative Festival für innovative Startups, zukunftsorientierte Investoren und führende Unternehmen. Networking, Pitches und Connections mit den Key Playern des Ökosystems in einer der dynamischsten Startup-Regionen Europas. Teil der internationalen SLUSH-Familie.</p>
-            <div class="event-source">Community Event - Baden-Württemberg</div>
-            <a href="https://www.heilbronnslushd.com/" class="event-btn" target="_blank">Jetzt bewerben</a>
-        </div>
-
-        <!-- KI-Woche Baden-Württemberg - November 3-4 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://www.baden-wuerttemberg.datenschutz.de/ki-woche-2025/" class="event-title-link" target="_blank">
-                    <h3>KI-Woche Baden-Württemberg 2025 - KI, Macht, Daten</h3>
-                </a>
-                <span class="event-date">Mo-Di, 3.-4. Nov</span>
-            </div>
-            <div class="event-location">📍 Baden-Württemberg (Location tba)</div>
-            <p><strong>Die 4. KI-Woche vom Landesbeauftragten für Datenschutz!</strong><br><br>
-            <strong>Tag 1 (ab 14:00 Uhr):</strong><br>
-            • Warm-up-Workshops zu Datenschutz & KI-Anwendungen<br>
-            • Eröffnungskeynote von Prof. Rainer Mühlhoff: "KI, Macht, Daten"<br>
-            • Dokumentarfilm: "Watching you – Die Welt von Palantir"<br>
-            • Filmgespräch mit Regisseur Klaus Stern<br><br>
-            <strong>Tag 2:</strong><br>
-            • KI und Recht<br>
-            • KI und (politisches) Targeting<br>
-            • Digitale Souveränität in der Praxis<br>
-            • Mit Jessica Flint (JUN Legal), Martin Andree, Frauke Goll (appliedAI IPAI Heilbronn)<br><br>
-            <strong>💡 Interdisziplinärer Austausch über gesellschaftliche Folgen von KI!</strong><br>
-            Kostenfreie Teilnahme. Vor Ort + Livestream.</p>
-            <div class="event-source">Landesbeauftragter für Datenschutz BW</div>
-            <a href="https://www.baden-wuerttemberg.datenschutz.de/ki-woche-2025/" class="event-btn" target="_blank">Mehr Infos & Anmeldung</a>
-        </div>
-
-        <!-- AI and Law Conference Tübingen - November 5 -->
-        <div class="event-card">
-            <div class="event-header">
-                <a href="https://ailawinstitute.de/conference-for-ai-and-law/" class="event-title-link" target="_blank">
-                    <h3>Tübingen Conference for AI and Law</h3>
-                </a>
-                <span class="event-date">Mi, 5. - Do, 6. Nov</span>
-            </div>
-            <div class="event-location">📍 Universität Tübingen</div>
-            <p>Innovative Konferenz zu KI und Rechtsfragen. Wichtiges Thema für Unternehmen, die KI verantwortungsvoll einsetzen wollen.</p>
-            <div class="event-source">Community Event - Baden-Württemberg</div>
-        </div>
+        <h5>Details:</h5>
+        <ul>
+            <li>Format: Vortrag + Podiumsdiskussion + Networking</li>
+            <li>Ausklang: Rocklore Irish Pub</li>
+            <li>Zielgruppe: Bildungsakteure, Unternehmer, Eltern & alle Neugierigen (besonders Rektoren/Schulleiter) [1]</li>
+            <li>Kostenfrei!</li>
+        </ul>
+        <p><a href="#anmeldung-link">Jetzt anmelden</a></p>
     </div>
 
-    <div class="footer">
-        <p>Nit schwätza - macha! :-)</p>
-        <p style="margin-top: 1rem;">
-            <a href="impressum.html" style="color: #7f8c8d; text-decoration: underline; margin-right: 2rem;">Impressum</a>
-            <a href="datenschutz.html" style="color: #7f8c8d; text-decoration: underline;">Datenschutzerklärung</a>
-        </p>
+    <!-- ONGOING KI & INNOVATION HUBS (Replacing old events) -->
+    <div id="ongoing-opportunities">
+        <h3>Regionale KI- und Innovations-Angebote in Baden-Württemberg</h3>
+        <p>Nutzen Sie diese regionalen Anlaufstellen und Ökosysteme, um KI-Anwendungen in die Praxis umzusetzen und sich über neueste Entwicklungen auszutauschen. Diese Angebote sind besonders wertvoll für KMU und Bildungsakteure:</p>
+
+        <div class="opportunity-group">
+            <h5>Regionale KI-Labs – Lokale Ansprechpartner für KMU</h5>
+            <p>Die 16 KI-Labs in Baden-Württemberg bieten kostenlose Beratungen, Workshops und Demonstratoren, um KI branchenübergreifend in die Unternehmen zu tragen [7, 12].</p>
+            <ul>
+                <li><strong>KI-Lab Region Stuttgart:</strong> Bietet kostenlose Artificial-Intelligence-Readiness-(AIR)-Analysen zur Bestimmung des KI-Reifegrads Ihrer Organisation [10].</li>
+                <li><strong>KI-Lab Nordschwarzwald:</strong> Stellt Serverkapazitäten und Software zur Verfügung, um gemeinsam mit Experten KI-Modelle zu trainieren [8].</li>
+                <li><strong>KI-Labor Südbaden:</strong> Arbeitet an der Erweiterung des KI-Periodensystems um die Dimensionen "Einfluss auf die Arbeitswelt" und "Nachhaltigkeit" zur umfassenden Darstellung von Use Cases [9].</li>
+                <li><strong>HubWerk01 (KI 2.0):</strong> Bietet branchenoffene Beratungssprechstunden mit Fokus auf das Sozial- und Gesundheitswesen [13].</li>
+                <li><strong>KI-Lab Kirchheim/Nürtingen:</strong> Bietet regelmäßige Online-Events und Workshops zur Vertiefung des KI-Verständnisses und zum Networking [13].</li>
+            </ul>
+        </div>
+
+        <div class="opportunity-group">
+            <h5>Zentrale KI-Ökosysteme und Transferzentren</h5>
+            <p>Baden-Württemberg verfügt über führende Institutionen, die Forschung und Anwendung verzahnen und den Transfer in die Wirtschaft beschleunigen:</p>
+            <ul>
+                <li><strong>Cyber Valley (Stuttgart/Tübingen):</strong> Europas einzigartiges Forschungszentrum für intelligente Systeme und Nukleus für KI-Sprunginnovationen [14-17].</li>
+                <li><strong>Innovation Park AI (IPAI) Heilbronn:</strong> Unterstützt Unternehmen dabei, Forschungsergebnisse schnell in ihre Wertschöpfungsketten zu integrieren [18-20].</li>
+                <li><strong>Digital Hub Artificial Intelligence (de:hub) Karlsruhe:</strong> Fungiert als Plattform für die Anwendung und Kommerzialisierung von KI und den Wissenstransfer an KMU [3, 4, 6].</li>
+                <li><strong>S-TEC (Stuttgarter Technologie- und Innovationscampus):</strong> Konzentriert sich auf anwendungsnahe KI-Forschung in Bereichen wie Maschinelles Lernen und Robotik, um KMU Zugang zu neuen Technologien zu ermöglichen [2, 5, 21].</li>
+                <li><strong>Steinbeis Network:</strong> Bietet über Transfer Center hinweg Unterstützung für Technologie- und Wissenstransfer in die Wirtschaft und Bildung [22, 23].</li>
+            </ul>
+        </div>
+
+        <div class="opportunity-group">
+            <h5>Bildung und Qualifikation</h5>
+            <p>Diese Einrichtungen sind zentral für die Vorbereitung von Fachkräften und dienen als Demonstrationszentren für die Industrie:</p>
+            <ul>
+                <li><strong>Lernfabriken 4.0:</strong> Ein bundesweit einzigartiges Netz an Lernorten an Berufsschulen, die moderne Industrie-4.0-Automatisierungslösungen nach realen Industriestandards abbilden. Diese Labore dienen auch als Demonstrationszentren zur Information des Mittelstands über Industrie-4.0-Technologien [24-26].</li>
+            </ul>
+        </div>
+
     </div>
-</body>
-</html>
+
+    <p style="text-align: right;">Nit schwätza - macha! :-)</p>
+
+</div>
