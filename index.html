@@ -6,64 +6,104 @@
     <title>KI-Impact Group - Schramberg</title>
     <style>
         body { font-family: 'Arial', sans-serif; background: #fffef7; color: #2c3e50; margin: 0; padding: 20px; line-height: 1.6; }
-        .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 3rem; }
-        .logo { max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .container { max-width: 850px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 2rem; }
+        .logo-banner { width: 100%; max-width: 600px; height: auto; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
         
         /* Event Cards */
-        .card { background: white; border-radius: 15px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left: 6px solid #ffd700; }
-        .featured { border: 3px solid #ffd700; background: #fffdf2; }
+        .card { background: white; border-radius: 15px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left: 6px solid #ffd700; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-3px); }
+        .featured { border: 2px solid #ffd700; background: #fffdf2; }
         
-        .event-img { width: 100%; max-width: 500px; border-radius: 10px; margin: 1rem 0; display: block; margin-left: auto; margin-right: auto; }
+        .event-img { width: 100%; max-width: 500px; border-radius: 10px; margin: 1.5rem auto; display: block; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
         .mario-flex { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
-        .mario-img { width: 120px; border-radius: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .mario-img { width: 130px; border-radius: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         
-        .btn { display: inline-block; padding: 12px 25px; background: #2c3e50; color: #ffd700; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 10px; }
-        .tag { background: #2c3e50; color: white; padding: 4px 12px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; }
-        h2.section-title { border-bottom: 3px solid #ffd700; display: inline-block; margin-top: 3rem; }
+        .btn { display: inline-block; padding: 12px 25px; background: #2c3e50; color: #ffd700; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 10px; text-align: center; }
+        .tag { background: #2c3e50; color: white; padding: 4px 12px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; }
+        h2.section-title { border-bottom: 3px solid #ffd700; display: inline-block; margin: 3rem 0 1.5rem 0; padding-bottom: 5px; }
+        .event-date { font-weight: bold; color: #e67e22; display: block; margin-bottom: 5px; }
+        
+        @media (max-width: 600px) { .mario-flex { flex-direction: column; text-align: center; } }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <img src="ki-impact-logo-banner.png" alt="KI-Impact Group" class="logo">
-            <h1>KI-Impact Group</h1>
-            <p>Silicon Valley meets Black Forest</p>
+            <img src="ki-impact-logo-banner.png" alt="KI-Impact Group Banner" class="logo-banner">
+            <h1 style="margin-top: 1.5rem;">KI-Impact Group</h1>
+            <p style="font-size: 1.2rem;">Silicon Valley meets Black Forest</p>
         </div>
 
         <div class="card featured">
-            <span class="tag">TOP HIGHLIGHT</span>
-            <h3>Vom Kopf ins Leben: Buch-Inspirationen mit KI aktivieren</h3>
-            <p><strong>5. Feb 2026, 18:00h | Mediathek Schramberg</strong></p>
+            <span class="tag">Highlight Event</span>
+            <h2 style="margin-top: 10px;">Vom Kopf ins Leben: Buch-Inspirationen mit KI aktivieren</h2>
+            <span class="event-date">📅 Donnerstag, 5. Feb 2026, 18:00h | Mediathek Schramberg</span>
             
             <img src="ideenfunken.jpg" alt="Workshop Poster" class="event-img">
             
             <p>Wir zeigen live, wie KI abstrakte Buch-Ideen (z.B. von Rick Rubin oder Ray Kurzweil) in konkrete Alltagsprojekte verwandelt. Inklusive offizieller Übergabe der Buchspende durch die SIMONGROUP.</p>
             
-            <a href="https://forms.gle/5B1pYVevpfKCeSho8" class="btn">Kostenlos anmelden</a>
+            <a href="https://forms.gle/5B1pYVevpfKCeSho8" class="btn">Jetzt Platz sichern (kostenlos)</a>
         </div>
 
         <div class="card">
             <div class="mario-flex">
                 <div style="flex: 1; min-width: 200px;">
-                    <span class="tag">FRÜHJAHR 2026</span>
-                    <h3>Homo Syntheticus – Mario Herger</h3>
-                    <p>Mario bringt die neuesten Trends aus San Francisco direkt zu uns. Diskussion über humanoide Roboter und die Zukunft unserer Arbeit.</p>
+                    <span class="tag">In Planung: Frühjahr 2026</span>
+                    <h3>Homo Syntheticus – Talk mit Mario Herger</h3>
+                    <p>Mario bringt die neuesten Trends aus San Francisco direkt zu uns in den Schwarzwald. Wir diskutieren über humanoide Roboter und wie sie unsere Wirtschaft verändern werden.</p>
                 </div>
-                <img src="homo-syntheticus.jpg" alt="Homo Syntheticus" class="mario-img">
+                <img src="homo-syntheticus.jpg" alt="Homo Syntheticus Buch" class="mario-img">
             </div>
         </div>
 
-        <h2 class="section-title">Weitere KI-Events in BW</h2>
+        <h2 class="section-title">Eigene Angebote & Training</h2>
         
         <div class="card">
-            <h3>KI-Woche Baden-Württemberg</h3>
-            <p>Juni 2026 | Landesweite Innovationen erleben.</p>
-            <a href="https://ki-allianz.de/" style="color: #2c3e50;">Mehr erfahren</a>
+            <span class="tag">IHK Akademie SBH</span>
+            <h3>KI-gestützte Prozessautomation mit n8n</h3>
+            <span class="event-date">📅 Start: 20. Jan 2026 (Grundlagen) & 27. Jan (Aufbaukurs)</span>
+            <p>Vom Proof of Concept zur Enterprise-Automation. Wir bauen live stabile Workflows für den Mittelstand.</p>
+            <a href="https://www.ihkakademie-sbh.de/" class="btn">Details & Anmeldung</a>
         </div>
-        
-        <div style="text-align: center; margin-top: 4rem; color: #7f8c8d;">
+
+        <h2 class="section-title">KI-Events in Baden-Württemberg</h2>
+
+        <div class="card">
+            <h3>AI Conference Science x Business</h3>
+            <span class="event-date">📅 14.–15. April 2026 | Heidelberg Innovation Park</span>
+            <p>Die Brücke zwischen Forschung und Wirtschaft. Über 100 Speaker und Best Practices.</p>
+            <a href="https://www.dcyphr.io/conference" style="color: #2c3e50; font-weight: bold;">Zur Konferenz →</a>
+        </div>
+
+        <div class="card">
+            <h3>Käpsele Innovation Festival 2026</h3>
+            <span class="event-date">📅 16. Juli 2026 | Messe Freiburg</span>
+            <p>Das größte Innovationsfestival im Südwesten. Raus aus der Bubble, rein in die Zukunft.</p>
+            <a href="https://www.innovation-festival.de/" style="color: #2c3e50; font-weight: bold;">Zum Festival →</a>
+        </div>
+
+        <div class="card">
+            <h3>KI-Festival 2026 Heilbronn</h3>
+            <span class="event-date">📅 25.–26. Juli 2026 | IPAI Heilbronn</span>
+            <p>KI zum Anfassen im Innovationspark IPAI. Eintritt frei, keine Anmeldung nötig.</p>
+            <a href="https://ki-festival.de/" style="color: #2c3e50; font-weight: bold;">Details ansehen →</a>
+        </div>
+
+        <div class="card">
+            <h3>KI-Woche Baden-Württemberg</h3>
+            <span class="event-date">📅 Juni 2026 | Landesweit</span>
+            <p>Landesweite Eventreihe der KI-Allianz. Innovationen hautnah erleben.</p>
+            <a href="https://ki-allianz.de/" style="color: #2c3e50; font-weight: bold;">Mehr erfahren →</a>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem; color: #7f8c8d; font-style: italic;">
             <p>Nit schwätza - macha! :-)</p>
+            <p style="font-size: 0.8rem; margin-top: 20px;">
+                <a href="impressum.html" style="color: #7f8c8d;">Impressum</a> | 
+                <a href="datenschutz.html" style="color: #7f8c8d;">Datenschutz</a>
+            </p>
         </div>
     </div>
 </body>
