@@ -14,14 +14,12 @@
         .featured { border: 2px solid #ffd700; background: #fffdf2; }
         .death-themed { border-left: 6px solid #2c3e50; background: #f4f4f4; }
         .event-img { width: 100%; max-width: 500px; border-radius: 10px; margin: 1.5rem auto; display: block; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .mario-flex { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
-        .mario-img { width: 130px; border-radius: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         .btn { display: inline-block; padding: 12px 25px; background: #2c3e50; color: #ffd700; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 10px; margin-right: 10px; text-align: center; }
         .btn-linkedin { background: #0077b5; color: white; }
         .tag { background: #2c3e50; color: white; padding: 4px 12px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; }
         h2.section-title { border-bottom: 3px solid #ffd700; display: inline-block; margin: 3rem 0 1.5rem 0; padding-bottom: 5px; }
         .event-date { font-weight: bold; color: #e67e22; display: block; margin-bottom: 5px; }
-        @media (max-width: 600px) { .mario-flex { flex-direction: column; text-align: center; } .btn { display: block; margin-bottom: 10px; } }
+        @media (max-width: 600px) { .btn { display: block; margin-bottom: 10px; } }
     </style>
 </head>
 <body>
@@ -37,18 +35,18 @@
             <h2 style="margin-top: 10px;">Zu Grabe getragen: Die Schramberger Sammelbestattung für tote Ideen</h2>
             <span class="event-date">📅 Mittwoch, 14. April 2026, 18:00h | Bestattungshaus Hauser</span>
             <img src="zu-grabe-getragen.jpg" alt="Sammelbestattung Poster" class="event-img">
-            <p>Jede tote Idee ist Dünger für den nächsten Erfolg! Wir sezieren gemeinsam gescheiterte Visionen und schauen mit KI-Rückenwind nach vorn. Mit Clemens Maurer, Arkas Förster & Brugger Magnete. Inklusive Leichenschmaus.</p>
+            <p>Jede tote Idee ist Dünger für den nächsten Erfolg! Wir sezieren gemeinsam gescheiterte Visionen und schauen mit KI-Rückenwind nach vorn. Mit Clemens Maurer, Arkas Förster & Brugger Magnete.</p>
             <a href="https://forms.gle/qjAkkJKNctAa3QcE7" class="btn">Platz reservieren</a>
             <a href="https://addcal.io/e/cv43sysjfxmv" class="btn" style="background: #7f8c8d;">Kalender-Eintrag</a>
-            <a href="https://www.linkedin.com/groups/9804412/" class="btn btn-linkedin">KI-Impact Gruppe</a>
         </div>
 
+        <h2 class="section-title">Schramberg Events</h2>
         <div class="card">
             <span class="tag">Make it in Schramberg</span>
             <h3>Zukunft sichern statt Notlösung! Betriebsnachfolge im Unternehmen</h3>
             <span class="event-date">📅 Mittwoch, 25. Februar 2026, 18:30 Uhr | ErfinderZeiten Schramberg</span>
-            <p>Ein entscheidendes Thema für den Schramberger Mittelstand: Strategien zur erfolgreichen Übergabe und langfristigen Sicherung Ihres Unternehmens.</p>
-            <a href="mailto:wirtschaftsfoerderung@schramberg.de?subject=Betriebsnachfolge -- Anmeldung&body=Liebe Wirtschaftsförderung,%0D%0A%0D%0Aich möchte mich für die Veranstaltung 'Zukunft sichern statt Notlösung!' am 25.02.2026 anmelden.%0D%0A%0D%0AViele Grüße" class="btn">Per E-Mail anmelden</a>
+            <p>Strategien zur erfolgreichen Übergabe und langfristigen Sicherung Ihres Unternehmens.</p>
+            <a href="mailto:wirtschaftsfoerderung@schramberg.de?subject=Betriebsnachfolge Anmeldung" class="btn">Anmeldung per E-Mail</a>
         </div>
 
         <div class="card">
@@ -56,54 +54,41 @@
             <h3>SUV – Schramberger Unternehmens-vesper Vol. 4</h3>
             <span class="event-date">📅 25. März 2026, 18:00 Uhr | Szene64 Schramberg</span>
             <p>Networking-Event für Unternehmer und Entscheider aus der Region.</p>
-            <a href="mailto:wirtschaftsfoerderung@schramberg.de?subject=SUV Vol. 4 -- Anmeldung" class="btn">Anmelden</a>
+            <a href="mailto:wirtschaftsfoerderung@schramberg.de?subject=SUV Vol. 4 Anmeldung" class="btn">Anmeldung per E-Mail</a>
+        </div>
+
+        <h2 class="section-title">Innovation in der Region</h2>
+        
+        <div class="card">
+            <span class="tag">Rottweil</span>
+            <h3>Social-Media-Workshop: Einsatz von KI in Social Media</h3>
+            <span class="event-date">📅 Dienstag, 24. Februar 2026, 15:30 - 19:00 Uhr</span>
+            <p>📍 CAMPUS Schule Wirtschaft geG, Neckartal 89, Rottweil. Fokus auf KI-gestützte Erstellung von Fotos und Videos[cite: 43, 49, 51, 52].</p>
+            <a href="mailto:bettina.meier-augenstein@bwgv.de" class="btn">Infos & Anmeldung</a>
         </div>
 
         <div class="card">
-            <span class="tag">Make it in Schramberg</span>
-            <h3>Make it in Schramberg INSIGHT Vol. 2</h3>
-            <span class="event-date">📅 29. April 2026, 18:30 Uhr | Stiftung St. Franziskus</span>
-            <p>Einblicke in innovative Unternehmenspraxis – hosted by Stiftung St. Franziskus.</p>
-            <a href="mailto:wirtschaftsfoerderung@schramberg.de?subject=INSIGHT Vol. 2 -- Anmeldung" class="btn">Anmelden</a>
-        </div>
-
-        <div class="card">
-            <span class="tag">Make it in Schramberg</span>
-            <h3>China – Wirtschaft, Politik, Zukunft</h3>
-            <span class="event-date">📅 15. Mai 2026, 18:30 Uhr | ErfinderZeiten Schramberg</span>
-            <p>Diskussion über wirtschaftliche Entwicklungen in China und deren Auswirkungen auf den Mittelstand.</p>
-            <a href="mailto:wirtschaftsfoerderung@schramberg.de?subject=China-Event -- Anmeldung" class="btn">Anmelden</a>
-        </div>
-
-        <h2 class="section-title">Eigene Angebote & Training</h2>
-        <div class="card">
-            <span class="tag">IHK Akademie SBH</span>
-            <h3>KI-gestützte Prozessautomation mit n8n - Grundlagen</h3>
-            <span class="event-date">📅 Start: 3. März 2026</span>
-            <p>Lerne KI-Workflows für den Mittelstand zu bauen – DIGIPAG Grundlagenkurs.</p>
+            <span class="tag">IHK Villingen-Schwenningen</span>
+            <h3>n8n Prozessautomation Workshop</h3>
+            <span class="event-date">📅 Dienstag, 03. März 2026</span>
+            <p>Lerne KI-Workflows für den Mittelstand zu bauen – KI-Impact Training bei der IHK.</p>
             <a href="https://ihkakademie.de/DIGIPAG" class="btn">Zum Kurs</a>
         </div>
 
-        <h2 class="section-title">Innovation in Baden-Württemberg</h2>
         <div class="card">
-            <h3>AI Conference Science x Business</h3>
-            <span class="event-date">📅 14.–15. April 2026 | 📍 Heidelberg</span>
-            <p>Networking zwischen Spitzenforschung und KMU im Heidelberg Innovation Park.</p>
-            <a href="https://www.dcyphr.io/conference" style="color: #2c3e50; font-weight: bold;">Heidelberg Details →</a>
+            <span class="tag">Heilbronn</span>
+            <h3>Künstliche Intelligenz für KMU @ IPAI</h3>
+            <span class="event-date">📅 10. März 2026 | 📍 Innovationspark AI, Heilbronn</span>
+            <p>Deep Dive in praxisnahe KI-Lösungen für den Mittelstand im führenden KI-Ecosystem Europas.</p>
+            <a href="https://ipai.de/events/" style="color: #2c3e50; font-weight: bold;">Details →</a>
         </div>
 
         <div class="card">
-            <h3>Minds Mastering Machines (M3)</h3>
-            <span class="event-date">📅 22.–23. April 2026 | 📍 Karlsruhe (IHK)</span>
-            <p>Der IT-Hotspot in BW: Alles über Machine Learning, GenAI und professionelle KI-Infrastruktur.</p>
-            <a href="https://www.m3-konferenz.de/" style="color: #2c3e50; font-weight: bold;">Karlsruhe Termine →</a>
-        </div>
-
-        <div class="card">
-            <h3>Käpsele Innovation Festival</h3>
-            <span class="event-date">📅 16. Juli 2026 | 📍 Freiburg (Messe)</span>
-            <p>Das Innovations-Highlight im Südwesten für Mittelstand und Tech-Gründer.</p>
-            <a href="https://www.innovation-festival.de/" style="color: #2c3e50; font-weight: bold;">Freiburg Ticket →</a>
+            <span class="tag">St. Georgen</span>
+            <h3>Smart Factory & KI Expo</h3>
+            <span class="event-date">📅 21. Mai 2026 | 📍 Innovationszentrum St. Georgen</span>
+            <p>Demonstration von KI-gestützten Fertigungsprozessen und Automatisierung im Schwarzwald.</p>
+            <a href="https://www.st-georgen.de/wirtschaft-innovation" style="color: #2c3e50; font-weight: bold;">Details →</a>
         </div>
 
         <div style="text-align: center; margin-top: 4rem; color: #7f8c8d; font-style: italic;">
