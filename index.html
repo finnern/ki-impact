@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KI-Impact Group - Schramberg & Region</title>
+    <title>KI-Impact Group - Schramberg & Baden-Württemberg</title>
     <style>
         body { font-family: 'Arial', sans-serif; background: #fffef7; color: #2c3e50; margin: 0; padding: 20px; line-height: 1.6; }
         .container { max-width: 850px; margin: 0 auto; }
@@ -14,12 +14,14 @@
         .featured { border: 2px solid #ffd700; background: #fffdf2; }
         .death-themed { border-left: 6px solid #2c3e50; background: #f4f4f4; }
         .event-img { width: 100%; max-width: 500px; border-radius: 10px; margin: 1.5rem auto; display: block; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .mario-flex { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+        .mario-img { width: 130px; border-radius: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         .btn { display: inline-block; padding: 12px 25px; background: #2c3e50; color: #ffd700; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 10px; margin-right: 10px; text-align: center; }
         .btn-linkedin { background: #0077b5; color: white; }
         .tag { background: #2c3e50; color: white; padding: 4px 12px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; }
         h2.section-title { border-bottom: 3px solid #ffd700; display: inline-block; margin: 3rem 0 1.5rem 0; padding-bottom: 5px; }
         .event-date { font-weight: bold; color: #e67e22; display: block; margin-bottom: 5px; }
-        @media (max-width: 600px) { .btn { display: block; margin-bottom: 10px; margin-right: 0; } }
+        @media (max-width: 600px) { .mario-flex { flex-direction: column; text-align: center; } .btn { display: block; margin-bottom: 10px; } }
     </style>
 </head>
 <body>
@@ -31,68 +33,87 @@
         </div>
 
         <div class="card featured death-themed">
-            <span class="tag" style="background: #000;">KI-Impact Highlight</span>
+            <span class="tag" style="background: #000;">KI-Impact Highlight: After-Work-Shop</span>
             <h2 style="margin-top: 10px;">Zu Grabe getragen: Die Schramberger Sammelbestattung für tote Ideen</h2>
             <span class="event-date">📅 Mittwoch, 14. April 2026, 18:00h | Bestattungshaus Hauser</span>
             <img src="zu-grabe-getragen.jpg" alt="Sammelbestattung Poster" class="event-img">
-            <p>Wir feiern das Scheitern, damit der Erfolg eine Chance hat. Sezieren von Cases (u.a. VR-Bäder & KI-Suche) und KI-Rückenwind für die Zukunft. Inklusive Leichenschmaus.</p>
-            <div style="margin-top: 15px;">
-                <a href="https://forms.gle/qjAkkJKNctAa3QcE7" class="btn">Platz reservieren</a>
-                <a href="https://addcal.io/e/cv43sysjfxmv" class="btn" style="background: #7f8c8d;">Kalender</a>
-                <a href="https://www.linkedin.com/groups/9804412/" target="_blank" class="btn btn-linkedin">LinkedIn Gruppe</a>
-            </div>
+            <p>Jede tote Idee ist Dünger für den nächsten Erfolg! Wir sezieren gemeinsam gescheiterte Visionen (u.a. VR-Bäder & KI-Suche) und schauen mit KI-Rückenwind nach vorn. Inklusive Leichenschmaus & ehrlichem Austausch.</p>
+            <a href="https://forms.gle/qjAkkJKNctAa3QcE7" class="btn">Platz reservieren</a>
+            <a href="https://addcal.io/e/cv43sysjfxmv" class="btn" style="background: #7f8c8d;">Kalender-Eintrag</a>
+            <a href="https://www.linkedin.com/groups/9804412/" class="btn btn-linkedin">KI-Impact Gruppe</a>
         </div>
 
-        <h2 class="section-title">Schramberg Events</h2>
         <div class="card">
             <span class="tag">Make it in Schramberg</span>
-            <h3>Zukunft sichern statt Notlösung! Betriebsnachfolge</h3>
-            <span class="event-date">📅 Mittwoch, 25. Februar 2026, 18:30 Uhr | ErfinderZeiten</span>
-            <p>Strategien zur erfolgreichen Übergabe und langfristigen Sicherung Ihres Unternehmens.</p>
-            <a href="mailto:wirtschaftsfoerderung@schramberg.de?subject=Anmeldung Betriebsnachfolge" class="btn">Anmeldung per E-Mail</a>
+            <h3>SUV – Schramberger Unternehmens-vesper Vol. 4</h3>
+            <span class="event-date">📅 25. März 2026, 18:00 Uhr | Szene64 Schramberg</span>
+            <p>Networking-Event für Unternehmer und Entscheider aus der Region.</p>
+            <a href="mailto:wirtschaftsfoerderung@schramberg.de?subject=SUV Vol. 4 -- Anmeldung" class="btn">Per E-Mail anmelden</a>
         </div>
 
-        <h2 class="section-title">Innovation in der Region</h2>
+        <div class="card">
+            <span class="tag">Make it in Schramberg</span>
+            <h3>Make it in Schramberg INSIGHT Vol. 2</h3>
+            <span class="event-date">📅 29. April 2026, 18:30 Uhr | Stiftung St. Franziskus</span>
+            <p>Einblicke in innovative Unternehmenspraxis – hosted by Stiftung St. Franziskus.</p>
+            <a href="mailto:wirtschaftsfoerderung@schramberg.de?subject=INSIGHT Vol. 2 -- Anmeldung" class="btn">Per E-Mail anmelden</a>
+        </div>
 
         <div class="card">
-            <span class="tag">Rottweil</span>
-            <h3>Social-Media-Workshop: KI & Content</h3>
-            <span class="event-date">📅 Dienstag, 24. Februar 2026 | 15:30 – 19:00 Uhr</span>
-            <p>📍 CAMPUS Schule Wirtschaft geG, Rottweil. Fokus: KI-Fotos & Videos.</p>
-            <div style="margin-top: 15px;">
-                <a href="mailto:christine.schellhorn@campus-sw.de?subject=Anmeldung Workshop 24.02." class="btn">Anmeldung bei Christine</a>
-                <a href="20260224_SocialMediaWorkshop_EINLADUNG.pdf" target="_blank" class="btn" style="background: #7f8c8d;">Flyer (PDF)</a>
+            <span class="tag">Make it in Schramberg</span>
+            <h3>China – Wirtschaft, Politik, Zukunft</h3>
+            <span class="event-date">📅 15. Mai 2026, 18:30 Uhr | ErfinderZeiten Schramberg</span>
+            <p>Diskussion über wirtschaftliche und politische Entwicklungen in China und deren Auswirkungen.</p>
+            <a href="mailto:wirtschaftsfoerderung@schramberg.de?subject=China-Event -- Anmeldung" class="btn">Per E-Mail anmelden</a>
+        </div>
+
+        <div class="card">
+            <div class="mario-flex">
+                <div style="flex: 1; min-width: 200px;">
+                    <span class="tag">In Planung: Sommer 2026</span>
+                    <h3>Homo Syntheticus – Talk mit Mario Herger</h3>
+                    <p>Insights direkt aus San Francisco: Mario diskutiert mit uns über humanoide Roboter und die Zukunft der Arbeit.</p>
+                </div>
+                <img src="homo-syntheticus.jpeg" alt="Homo Syntheticus Buch" class="mario-img">
             </div>
-            <p style="font-size: 0.8rem; margin-top: 10px; color: #7f8c8d;">⚠️ Anmeldung bis 21.02. (Windhund-Prinzip!)</p>
+        </div>
+
+        <h2 class="section-title">Eigene Angebote & Training</h2>
+        <div class="card">
+            <span class="tag">IHK Akademie SBH</span>
+            <h3>KI-gestützte Prozessautomation mit n8n - Grundlagen</h3>
+            <span class="event-date">📅 Start: 3. März 2026</span>
+            <p>Lerne KI-Workflows für den Mittelstand zu bauen – DIGIPAG Grundlagenkurs.</p>
+            <a href="https://ihkakademie.de/DIGIPAG" class="btn">Zum Kurs</a>
+        </div>
+
+        <h2 class="section-title">Innovation in Baden-Württemberg</h2>
+        <div class="card">
+            <h3>Fraunhofer IAO: KI-Kongress 2026</h3>
+            <span class="event-date">📅 09. Juni 2026 | 📍 Stuttgart (Fraunhofer-Campus)</span>
+            <p>Generative KI in der Unternehmenspraxis: Strategien, Tools und rechtliche Rahmenbedingungen.</p>
+            <a href="https://www.iao.fraunhofer.de/de/veranstaltungen.html" style="color: #2c3e50; font-weight: bold;">Details beim IAO →</a>
         </div>
 
         <div class="card">
-            <span class="tag">IHK Villingen-Schwenningen</span>
-            <h3>n8n KI-Prozessautomation Grundlagen</h3>
-            <span class="event-date">📅 Dienstag, 03. März 2026 | IHK Akademie</span>
-            <p>Offizieller DIGIPAG Grundlagenkurs: KI-Workflows für den Mittelstand.</p>
-            <a href="https://ihkakademie.de/weiterbildung/seminare/ki-gestuetzte-prozessautomation-mit-n8n-grundlagen/1031" target="_blank" class="btn">Kursdetails</a>
+            <h3>Käpsele Innovation Festival</h3>
+            <span class="event-date">📅 16. Juli 2026 | 📍 Freiburg (Messe)</span>
+            <p>Das Innovations-Highlight im Südwesten für Mittelstand und Tech-Gründer.</p>
+            <a href="https://www.innovation-festival.de/" style="color: #2c3e50; font-weight: bold;">Freiburg Ticket →</a>
         </div>
 
         <div class="card">
-            <span class="tag">Horb a.N.</span>
-            <h3>Innovationspark Nordschwarzwald</h3>
-            <p>Der regionale Hotspot für Technologie und KI-Anwendungen.</p>
-            <a href="https://innovationspark-nordschwarzwald.de/" target="_blank" class="btn">Zur Website</a>
+            <h3>KI Summer Summit Stuttgart</h3>
+            <span class="event-date">📅 24. Juli 2026 | 📍 Stuttgart (Waldbaur-Areal)</span>
+            <p>Sommerabend voller Innovation: Drei Bühnen mit Praxis-Cases, Networking & Get-Together.</p>
+            <a href="https://wrs.region-stuttgart.de/termine/ki-summit-stuttgart-2/" style="color: #2c3e50; font-weight: bold;">Stuttgart Summer Summit →</a>
         </div>
 
         <div class="card">
-            <span class="tag">Heilbronn</span>
-            <h3>KI für KMU @ IPAI</h3>
-            <p>Praxisnahe KI-Lösungen im führenden Innovationspark Europas.</p>
-            <a href="https://ipai.de/events/" target="_blank" class="btn">IPAI Events</a>
-        </div>
-
-        <div class="card">
-            <span class="tag">St. Georgen</span>
-            <h3>Innovationszentrum St. Georgen</h3>
-            <p>Smart Factory und intelligente Produktion im Schwarzwald.</p>
-            <a href="https://www.st-georgen.de/Wirtschaft-Innovation/Gewerbe-Industrie/Innovationszentrum" target="_blank" class="btn">IZ St. Georgen</a>
+            <h3>IPAI Connect – Ecosystem Meetup</h3>
+            <span class="event-date">📅 12. August 2026 | 📍 Heilbronn (IPAI)</span>
+            <p>Networking im Herzen von Europas KI-Zentrum. Deep-Dives in aktuelle LLM-Entwicklungen.</p>
+            <a href="https://ipai.de/events/" style="color: #2c3e50; font-weight: bold;">IPAI Events →</a>
         </div>
 
         <div style="text-align: center; margin-top: 4rem; color: #7f8c8d; font-style: italic;">
