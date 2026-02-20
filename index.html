@@ -13,14 +13,18 @@
         .card:hover { transform: translateY(-3px); }
         .featured { border: 2px solid #ffd700; background: #fffdf2; }
         .death-themed { border-left: 6px solid #2c3e50; background: #f4f4f4; }
+        .highlight2 { border-left: 6px solid #e67e22; background: #fff9f2; }
         .event-img { width: 100%; max-width: 500px; border-radius: 10px; margin: 1.5rem auto; display: block; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
         .mario-flex { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
         .mario-img { width: 130px; border-radius: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         .btn { display: inline-block; padding: 12px 25px; background: #2c3e50; color: #ffd700; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 10px; margin-right: 10px; text-align: center; }
         .btn-linkedin { background: #0077b5; color: white; }
+        .btn-secondary { background: #7f8c8d; color: white; }
         .tag { background: #2c3e50; color: white; padding: 4px 12px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; }
+        .tag-orange { background: #e67e22; }
         h2.section-title { border-bottom: 3px solid #ffd700; display: inline-block; margin: 3rem 0 1.5rem 0; padding-bottom: 5px; }
         .event-date { font-weight: bold; color: #e67e22; display: block; margin-bottom: 5px; }
+        .contact-info { font-size: 0.9rem; color: #7f8c8d; margin-top: 10px; }
         @media (max-width: 600px) { .mario-flex { flex-direction: column; text-align: center; } .btn { display: block; margin-bottom: 10px; } }
     </style>
 </head>
@@ -32,17 +36,37 @@
             <p style="font-size: 1.1rem;">Silicon Valley meets Black Forest</p>
         </div>
 
+        <!-- HIGHLIGHT #1: Sammelbestattung -->
         <div class="card featured death-themed">
-            <span class="tag" style="background: #000;">KI-Impact Highlight: After-Work-Shop</span>
+            <span class="tag" style="background: #000;">KI-Impact Highlight #1: After-Work-Shop</span>
             <h2 style="margin-top: 10px;">Zu Grabe getragen: Die Schramberger Sammelbestattung für tote Ideen</h2>
             <span class="event-date">📅 Mittwoch, 14. April 2026, 18:00h | Bestattungshaus Hauser</span>
             <img src="zu-grabe-getragen.jpg" alt="Sammelbestattung Poster" class="event-img">
-            <p>Jede tote Idee ist Dünger für den nächsten Erfolg! Wir sezieren gemeinsam gescheiterte Visionen (u.a. VR-Bäder & KI-Suche) und schauen mit KI-Rückenwind nach vorn. Inklusive Leichenschmaus & ehrlichem Austausch.</p>
+            <p>Jede tote Idee ist Dünger für den nächsten Erfolg! Wir sezieren gemeinsam gescheiterte Visionen (u.a. VR-Bäder &amp; KI-Suche) und schauen mit KI-Rückenwind nach vorn. Inklusive Leichenschmaus &amp; ehrlichem Austausch.</p>
             <a href="https://forms.gle/qjAkkJKNctAa3QcE7" class="btn">Platz reservieren</a>
-            <a href="https://addcal.io/e/cv43sysjfxmv" class="btn" style="background: #7f8c8d;">Kalender-Eintrag</a>
+            <a href="https://addcal.io/e/cv43sysjfxmv" class="btn btn-secondary">Kalender-Eintrag</a>
             <a href="https://www.linkedin.com/groups/9804412/" class="btn btn-linkedin">KI-Impact Gruppe</a>
         </div>
 
+        <!-- HIGHLIGHT #2: Betriebsnachfolge -->
+        <div class="card highlight2">
+            <span class="tag tag-orange">KI-Impact Highlight #2: Workshop</span>
+            <h2 style="margin-top: 10px;">Betriebsnachfolge</h2>
+            <span class="event-date">📅 Mittwoch, 25. Februar 2026</span>
+            <p>Übergabe mit Plan – Betriebsnachfolge als strategische Chance. Informationen und Anmeldung folgen.</p>
+        </div>
+
+        <!-- NEXT EVENT: Rottweil Social Media Workshop (Feb 24 – soonest!) -->
+        <div class="card">
+            <span class="tag">Bald | 24. Februar</span>
+            <h3>Social Media Workshop – Rottweil</h3>
+            <span class="event-date">📅 Dienstag, 24. Februar 2026, 15:30–19:00 Uhr | Rottweil</span>
+            <p>Praxis-Workshop rund um Social-Media-Strategie und Content für regionale Unternehmen.</p>
+            <a href="20260224_SocialMediaWorkshop_EINLADUNG.pdf" class="btn">📄 Einladung als PDF</a>
+            <p class="contact-info">📬 Kontakt: <a href="mailto:christine.schellhorn@campus-sw.de">christine.schellhorn@campus-sw.de</a></p>
+        </div>
+
+        <!-- Schramberg Events -->
         <div class="card">
             <span class="tag">Make it in Schramberg</span>
             <h3>SUV – Schramberger Unternehmens-vesper Vol. 4</h3>
@@ -78,16 +102,18 @@
             </div>
         </div>
 
-        <h2 class="section-title">Eigene Angebote & Training</h2>
+        <h2 class="section-title">Eigene Angebote &amp; Training</h2>
+
         <div class="card">
             <span class="tag">IHK Akademie SBH</span>
-            <h3>KI-gestützte Prozessautomation mit n8n - Grundlagen</h3>
+            <h3>KI-gestützte Prozessautomation mit n8n – Grundlagen</h3>
             <span class="event-date">📅 Start: 3. März 2026</span>
             <p>Lerne KI-Workflows für den Mittelstand zu bauen – DIGIPAG Grundlagenkurs.</p>
             <a href="https://ihkakademie.de/DIGIPAG" class="btn">Zum Kurs</a>
         </div>
 
         <h2 class="section-title">Innovation in Baden-Württemberg</h2>
+
         <div class="card">
             <h3>Fraunhofer IAO: KI-Kongress 2026</h3>
             <span class="event-date">📅 09. Juni 2026 | 📍 Stuttgart (Fraunhofer-Campus)</span>
@@ -105,15 +131,30 @@
         <div class="card">
             <h3>KI Summer Summit Stuttgart</h3>
             <span class="event-date">📅 24. Juli 2026 | 📍 Stuttgart (Waldbaur-Areal)</span>
-            <p>Sommerabend voller Innovation: Drei Bühnen mit Praxis-Cases, Networking & Get-Together.</p>
+            <p>Sommerabend voller Innovation: Drei Bühnen mit Praxis-Cases, Networking &amp; Get-Together.</p>
             <a href="https://wrs.region-stuttgart.de/termine/ki-summit-stuttgart-2/" style="color: #2c3e50; font-weight: bold;">Stuttgart Summer Summit →</a>
         </div>
 
+        <!-- Innovation Centers -->
         <div class="card">
-            <h3>IPAI Connect – Ecosystem Meetup</h3>
-            <span class="event-date">📅 12. August 2026 | 📍 Heilbronn (IPAI)</span>
-            <p>Networking im Herzen von Europas KI-Zentrum. Deep-Dives in aktuelle LLM-Entwicklungen.</p>
-            <a href="https://ipai.de/events/" style="color: #2c3e50; font-weight: bold;">IPAI Events →</a>
+            <h3>Innovationspark Horb</h3>
+            <span class="event-date">📍 Horb am Neckar | Digital Hub Nordschwarzwald</span>
+            <p>Innovations- und Technologiezentrum in der Region – mit Digital Hub und Netzwerk für KMU und Start-ups.</p>
+            <a href="https://innovationsparkhorb.de/" style="color: #2c3e50; font-weight: bold;">Innovationspark Horb →</a>
+        </div>
+
+        <div class="card">
+            <h3>St. Georgener Technologiezentrum</h3>
+            <span class="event-date">📍 St. Georgen im Schwarzwald</span>
+            <p>Hochtech-Standort im Schwarzwald – Mess-, Steuer- und Regelungstechnik, Präzisionsmechanik, Software und Multimedia.</p>
+            <a href="https://www.st-georgen.de/wirtschaft-bauen-und-wohnen/wirtschaftsstandort" style="color: #2c3e50; font-weight: bold;">Wirtschaftsstandort St. Georgen →</a>
+        </div>
+
+        <div class="card">
+            <h3>IPAI – Innovation Park Artificial Intelligence, Heilbronn</h3>
+            <span class="event-date">📍 Heilbronn | Europas KI-Zentrum</span>
+            <p>Europas führende KI-Innovationsplattform mit über 100 Mitgliedern. IPAI SPACES: 6.500 m² für Community, Coworking und KI-Infrastruktur. Nächstes großes Event: KI Festival Heilbronn.</p>
+            <a href="https://ip.ai/en/" style="color: #2c3e50; font-weight: bold;">IPAI Official Site →</a>
         </div>
 
         <div style="text-align: center; margin-top: 4rem; color: #7f8c8d; font-style: italic;">
