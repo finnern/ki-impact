@@ -10,15 +10,13 @@
         .header { text-align: center; margin-bottom: 2rem; }
         .logo-banner { width: 100%; max-width: 600px; height: auto; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
 
-        /* Cards */
+        /* Cards (Highlights) */
         .card { background: white; border-radius: 15px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left: 6px solid #ffd700; transition: transform 0.2s; }
         .card:hover { transform: translateY(-3px); }
         .featured { border: 2px solid #ffd700; background: #fffdf2; }
         .death-themed { border-left: 6px solid #2c3e50; background: #f4f4f4; }
         .highlight2 { border-left: 6px solid #e67e22; background: #fff9f2; }
         .event-img { width: 100%; max-width: 500px; border-radius: 10px; margin: 1.5rem auto; display: block; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .mario-flex { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
-        .mario-img { width: 130px; border-radius: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
 
         /* Buttons */
         .btn { display: inline-block; padding: 12px 25px; background: #2c3e50; color: #ffd700; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 10px; margin-right: 10px; text-align: center; }
@@ -28,342 +26,365 @@
         /* Tags */
         .tag { background: #2c3e50; color: white; padding: 4px 12px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; }
         .tag-orange { background: #e67e22; }
-        .tag-red { background: #c0392b; }
-        .tag-blue { background: #2980b9; }
-        .tag-green { background: #27ae60; }
 
         /* Section titles */
-        h2.section-title { border-bottom: 3px solid #ffd700; display: inline-block; margin: 3rem 0 1.5rem 0; padding-bottom: 5px; }
+        h2.section-title { border-bottom: 3px solid #ffd700; display: block; margin: 3rem 0 2rem 0; padding-bottom: 5px; }
         .event-date { font-weight: bold; color: #e67e22; display: block; margin-bottom: 5px; }
-        .contact-info { font-size: 0.9rem; color: #7f8c8d; margin-top: 10px; }
 
         /* ===================== TIMELINE ===================== */
-        .timeline-section { margin-top: 3rem; }
-        .timeline-section h2.section-title { display: block; margin-bottom: 2.5rem; }
+        .timeline {
+            position: relative;
+            padding-left: 44px;  /* room for line + dot */
+        }
 
-        .timeline { position: relative; padding-left: 40px; }
-
-        /* The vertical line */
+        /* Vertical line — left-center aligns with dot center */
         .timeline-line {
             position: absolute;
-            left: 14px;
-            top: 0;
-            width: 3px;
+            left: 10px;          /* dot center = 10 + 9 = 19px; line center = 10 + 1.5 = 11.5 → tweak below */
+            top: 12px;           /* start at first dot */
+            width: 4px;
             height: 0;
-            background: linear-gradient(to bottom, #ffd700, #e67e22);
-            border-radius: 3px;
-            transition: height 0.1s linear;
+            background: linear-gradient(to bottom, #ffd700, #e67e22, #27ae60);
+            border-radius: 4px;
         }
 
         /* Month group */
         .timeline-month { position: relative; margin-bottom: 2.5rem; }
 
-        /* Month dot */
+        /* Dot — centered on the line */
         .timeline-dot {
             position: absolute;
-            left: -33px;
-            top: 6px;
-            width: 18px;
-            height: 18px;
+            left: -34px;         /* dot center = -34 + 9 = -25; from timeline left = 44 - 25 = 19px ✓ */
+            top: 5px;
+            width: 20px;
+            height: 20px;
             background: #ffd700;
             border: 3px solid #2c3e50;
             border-radius: 50%;
             z-index: 2;
             opacity: 0;
-            transform: scale(0.5);
-            transition: opacity 0.4s ease, transform 0.4s ease;
+            transform: scale(0.4);
+            transition: opacity 0.35s ease, transform 0.35s ease;
         }
         .timeline-dot.visible { opacity: 1; transform: scale(1); }
+        .timeline-dot.dot-gray { background: #bdc3c7; border-color: #95a5a6; }
+        .timeline-dot.dot-green { background: #27ae60; border-color: #1e8449; }
 
         /* Month label */
         .timeline-month-label {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             font-weight: bold;
             color: #2c3e50;
-            margin-bottom: 1rem;
-            padding-bottom: 4px;
-            border-bottom: 2px solid #ffd700;
-            display: inline-block;
+            margin-bottom: 0.9rem;
             opacity: 0;
-            transform: translateX(-10px);
-            transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
+            transform: translateX(-8px);
+            transition: opacity 0.35s ease 0.1s, transform 0.35s ease 0.1s;
         }
         .timeline-month-label.visible { opacity: 1; transform: translateX(0); }
+        .timeline-month-label span {
+            border-bottom: 2px solid #ffd700;
+            padding-bottom: 3px;
+        }
+        .timeline-month-label.label-gray span { border-bottom-color: #bdc3c7; color: #7f8c8d; }
+        .timeline-month-label.label-green span { border-bottom-color: #27ae60; }
 
-        /* Timeline cards */
-        .timeline-card {
+        /* Timeline event cards */
+        .tc {
             background: white;
-            border-radius: 12px;
-            padding: 1.2rem 1.5rem;
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border-radius: 10px;
+            padding: 1rem 1.3rem;
+            margin-bottom: 0.8rem;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
             border-left: 4px solid #ffd700;
             opacity: 0;
-            transform: translateY(15px);
-            transition: opacity 0.4s ease, transform 0.4s ease;
+            transform: translateY(12px);
+            transition: opacity 0.35s ease, transform 0.35s ease, box-shadow 0.2s;
         }
-        .timeline-card.visible { opacity: 1; transform: translateY(0); }
-        .timeline-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.1); transform: translateY(-2px); }
-        .timeline-card.border-blue { border-left-color: #2980b9; }
-        .timeline-card.border-green { border-left-color: #27ae60; }
-        .timeline-card.border-red { border-left-color: #c0392b; }
-        .timeline-card.border-orange { border-left-color: #e67e22; }
+        .tc.visible { opacity: 1; transform: translateY(0); }
+        .tc:hover { box-shadow: 0 6px 18px rgba(0,0,0,0.1); }
+        .tc.bc-blue   { border-left-color: #2980b9; }
+        .tc.bc-green  { border-left-color: #27ae60; }
+        .tc.bc-red    { border-left-color: #c0392b; }
+        .tc.bc-orange { border-left-color: #e67e22; }
+        .tc.bc-gray   { border-left-color: #bdc3c7; }
+        .tc.bc-schramberg { border-left-color: #8e44ad; }
 
-        .timeline-card h4 { margin: 0 0 4px 0; font-size: 1rem; }
-        .timeline-card .tdate { font-size: 0.85rem; color: #e67e22; font-weight: bold; display: block; margin-bottom: 4px; }
-        .timeline-card p { margin: 4px 0 8px 0; font-size: 0.9rem; color: #555; }
-        .timeline-card a.tlink { font-size: 0.85rem; color: #2980b9; font-weight: bold; text-decoration: none; }
-        .timeline-card a.tlink:hover { text-decoration: underline; }
-        .timeline-card .ttag { display: inline-block; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; color: white; margin-bottom: 6px; }
-        .timeline-card .ttag-blue { background: #2980b9; }
-        .timeline-card .ttag-green { background: #27ae60; }
-        .timeline-card .ttag-red { background: #c0392b; }
-        .timeline-card .ttag-gray { background: #7f8c8d; }
+        .tc h4 { margin: 0 0 3px 0; font-size: 0.97rem; }
+        .tc .td  { font-size: 0.82rem; color: #e67e22; font-weight: bold; display: block; margin-bottom: 3px; }
+        .tc p    { margin: 3px 0 7px 0; font-size: 0.88rem; color: #555; }
+        .tc a.tl { font-size: 0.83rem; color: #2980b9; font-weight: bold; text-decoration: none; margin-right: 12px; }
+        .tc a.tl:hover { text-decoration: underline; }
 
-        /* Offen section at bottom of timeline */
-        .timeline-offen { margin-top: 1rem; }
+        .ttag {
+            display: inline-block; font-size: 0.68rem; font-weight: bold;
+            text-transform: uppercase; padding: 2px 7px; border-radius: 3px;
+            color: white; margin-bottom: 5px; margin-right: 4px;
+        }
+        .ttag-blue      { background: #2980b9; }
+        .ttag-green     { background: #27ae60; }
+        .ttag-red       { background: #c0392b; }
+        .ttag-orange    { background: #e67e22; }
+        .ttag-gray      { background: #7f8c8d; }
+        .ttag-schramberg{ background: #8e44ad; }
+        .ttag-ihk       { background: #16a085; }
+
+        /* Mario flex in timeline */
+        .mario-flex-small { display: flex; gap: 14px; align-items: center; }
+        .mario-img-small  { width: 80px; border-radius: 5px; flex-shrink: 0; }
 
         @media (max-width: 600px) {
-            .mario-flex { flex-direction: column; text-align: center; }
             .btn { display: block; margin-bottom: 10px; }
-            .timeline { padding-left: 30px; }
-            .timeline-dot { left: -26px; width: 14px; height: 14px; }
+            .timeline { padding-left: 34px; }
+            .timeline-dot { left: -26px; width: 16px; height: 16px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <img src="ki-impact-logo-banner.png" alt="KI-Impact Group Banner" class="logo-banner">
-            <h1 style="margin-top: 1.5rem;">KI-Impact Group</h1>
-            <p style="font-size: 1.1rem;">Silicon Valley meets Black Forest</p>
-        </div>
+<div class="container">
 
-        <!-- ===================== KI-IMPACT HIGHLIGHTS ===================== -->
-        <div class="card featured death-themed">
-            <span class="tag" style="background: #000;">KI-Impact Highlight #1: After-Work-Shop</span>
-            <h2 style="margin-top: 10px;">Zu Grabe getragen: Die Schramberger Sammelbestattung für tote Ideen</h2>
-            <span class="event-date">📅 Mittwoch, 14. April 2026, 18:00h | Bestattungshaus Hauser</span>
-            <img src="zu-grabe-getragen.jpg" alt="Sammelbestattung Poster" class="event-img">
-            <p>Jede tote Idee ist Dünger für den nächsten Erfolg! Wir sezieren gemeinsam gescheiterte Visionen (u.a. VR-Bäder &amp; KI-Suche) und schauen mit KI-Rückenwind nach vorn. Inklusive Leichenschmaus &amp; ehrlichem Austausch.</p>
-            <a href="https://forms.gle/qjAkkJKNctAa3QcE7" class="btn">Platz reservieren</a>
-            <a href="https://addcal.io/e/cv43sysjfxmv" class="btn btn-secondary">Kalender-Eintrag</a>
-            <a href="https://www.linkedin.com/groups/9804412/" class="btn btn-linkedin">KI-Impact Gruppe</a>
-        </div>
+    <div class="header">
+        <img src="ki-impact-logo-banner.png" alt="KI-Impact Group Banner" class="logo-banner">
+        <h1 style="margin-top:1.5rem;">KI-Impact Group</h1>
+        <p style="font-size:1.1rem;">Silicon Valley meets Black Forest</p>
+    </div>
 
-        <div class="card highlight2">
-            <span class="tag tag-orange">KI-Impact Highlight #2: Workshop</span>
-            <h2 style="margin-top: 10px;">Betriebsnachfolge</h2>
-            <span class="event-date">📅 Mittwoch, 25. Februar 2026</span>
-            <p>Übergabe mit Plan – Betriebsnachfolge als strategische Chance. Informationen und Anmeldung folgen.</p>
-        </div>
+    <!-- HIGHLIGHT #1 -->
+    <div class="card featured death-themed">
+        <span class="tag" style="background:#000;">KI-Impact Highlight #1: After-Work-Shop</span>
+        <h2 style="margin-top:10px;">Zu Grabe getragen: Die Schramberger Sammelbestattung für tote Ideen</h2>
+        <span class="event-date">📅 Mittwoch, 14. April 2026, 18:00h | Bestattungshaus Hauser</span>
+        <img src="zu-grabe-getragen.jpg" alt="Sammelbestattung Poster" class="event-img">
+        <p>Jede tote Idee ist Dünger für den nächsten Erfolg! Wir sezieren gemeinsam gescheiterte Visionen (u.a. VR-Bäder &amp; KI-Suche) und schauen mit KI-Rückenwind nach vorn. Inklusive Leichenschmaus &amp; ehrlichem Austausch.</p>
+        <a href="https://forms.gle/qjAkkJKNctAa3QcE7" class="btn">Platz reservieren</a>
+        <a href="https://addcal.io/e/cv43sysjfxmv" class="btn btn-secondary">Kalender-Eintrag</a>
+        <a href="https://www.linkedin.com/groups/9804412/" class="btn btn-linkedin" style="background:#0077b5;color:white;">KI-Impact Gruppe</a>
+    </div>
 
-        <!-- ===================== MAKE IT IN SCHRAMBERG ===================== -->
-        <h2 class="section-title">Make it in Schramberg</h2>
+    <!-- HIGHLIGHT #2 -->
+    <div class="card highlight2">
+        <span class="tag tag-orange">KI-Impact Highlight #2: Workshop</span>
+        <h2 style="margin-top:10px;">Betriebsnachfolge</h2>
+        <span class="event-date">📅 Mittwoch, 25. Februar 2026</span>
+        <p>Übergabe mit Plan – Betriebsnachfolge als strategische Chance. Informationen und Anmeldung folgen.</p>
+    </div>
 
-        <div class="card">
-            <span class="tag">Make it in Schramberg</span>
-            <h3>SUV – Schramberger Unternehmens-vesper Vol. 4</h3>
-            <span class="event-date">📅 25. März 2026, 18:00 Uhr | 📍 Szene64 Schramberg</span>
-            <p>Networking-Event für Unternehmer und Entscheider aus der Region.</p>
-            <a href="mailto:wirtschaftsfoerderung@schramberg.de?subject=SUV Vol. 4 -- Anmeldung" class="btn">Per E-Mail anmelden</a>
-        </div>
+    <!-- ===================== TIMELINE ===================== -->
+    <h2 class="section-title">Veranstaltungskalender 2026</h2>
 
-        <div class="card">
-            <span class="tag">Make it in Schramberg</span>
-            <h3>Make it in Schramberg INSIGHT Vol. 2</h3>
-            <span class="event-date">📅 29. April 2026, 18:30 Uhr | 📍 Stiftung St. Franziskus</span>
-            <p>Einblicke in innovative Unternehmenspraxis – hosted by Stiftung St. Franziskus.</p>
-            <a href="mailto:wirtschaftsfoerderung@schramberg.de?subject=INSIGHT Vol. 2 -- Anmeldung" class="btn">Per E-Mail anmelden</a>
-        </div>
+    <div class="timeline" id="timeline">
+        <div class="timeline-line" id="timelineLine"></div>
 
-        <div class="card">
-            <span class="tag">Make it in Schramberg</span>
-            <h3>China – Wirtschaft, Politik, Zukunft</h3>
-            <span class="event-date">📅 15. Mai 2026, 18:30 Uhr | 📍 ErfinderZeiten Schramberg</span>
-            <p>Diskussion über wirtschaftliche und politische Entwicklungen in China und deren Auswirkungen auf die Region.</p>
-            <a href="mailto:wirtschaftsfoerderung@schramberg.de?subject=China-Event -- Anmeldung" class="btn">Per E-Mail anmelden</a>
-        </div>
+        <!-- FEBRUAR -->
+        <div class="timeline-month" data-month="feb">
+            <div class="timeline-dot"></div>
+            <div class="timeline-month-label"><span>Februar 2026</span></div>
 
-        <div class="card">
-            <div class="mario-flex">
-                <div style="flex: 1; min-width: 200px;">
-                    <span class="tag">In Planung: Sommer 2026</span>
-                    <h3>Homo Syntheticus – Talk mit Mario Herger</h3>
-                    <p>Insights direkt aus San Francisco: Mario diskutiert mit uns über humanoide Roboter und die Zukunft der Arbeit.</p>
-                </div>
-                <img src="homo-syntheticus.jpeg" alt="Homo Syntheticus Buch" class="mario-img">
+            <div class="tc bc-red">
+                <span class="ttag ttag-red">Diese Woche</span>
+                <h4>Social Media Workshop – Rottweil</h4>
+                <span class="td">📅 24. Feb, 15:30–19:00 Uhr &nbsp;|&nbsp; 📍 Rottweil</span>
+                <p>Praxis-Workshop: Social-Media-Strategie und Content für regionale Unternehmen.</p>
+                <a href="20260224_SocialMediaWorkshop_EINLADUNG.pdf" class="tl">📄 Einladung PDF →</a>
+                <a href="mailto:christine.schellhorn@campus-sw.de" class="tl">✉ Kontakt</a>
             </div>
         </div>
 
-        <!-- ===================== EIGENE ANGEBOTE ===================== -->
-        <h2 class="section-title">Eigene Angebote &amp; Training</h2>
+        <!-- MÄRZ -->
+        <div class="timeline-month" data-month="mar">
+            <div class="timeline-dot"></div>
+            <div class="timeline-month-label"><span>März 2026</span></div>
 
-        <div class="card">
-            <span class="tag">IHK Akademie SBH</span>
-            <h3>KI-gestützte Prozessautomation mit n8n – Grundlagen</h3>
-            <span class="event-date">📅 Start: 3. März 2026</span>
-            <p>Lerne KI-Workflows für den Mittelstand zu bauen – DIGIPAG Grundlagenkurs.</p>
-            <a href="https://ihkakademie.de/DIGIPAG" class="btn">Zum Kurs</a>
+            <div class="tc bc-ihk" style="border-left-color:#16a085;">
+                <span class="ttag ttag-ihk">IHK Akademie SBH</span>
+                <span class="ttag ttag-orange">Eigenes Angebot</span>
+                <h4>KI-gestützte Prozessautomation mit n8n – Grundlagen</h4>
+                <span class="td">📅 Start: 3. März 2026 &nbsp;|&nbsp; DIGIPAG Kurs</span>
+                <p>KI-Workflows für den Mittelstand – Grundlagenkurs mit Fördermöglichkeit.</p>
+                <a href="https://ihkakademie.de/DIGIPAG" class="tl">Zum Kurs →</a>
+            </div>
+
+            <div class="tc bc-blue">
+                <span class="ttag ttag-blue">Hackathon</span>
+                <h4>Hi!ckathon – Internationaler KI-Hackathon, Heilbronn</h4>
+                <span class="td">📅 9.–15. März &nbsp;|&nbsp; 📍 IPAI Spaces, Heilbronn</span>
+                <p>IPAI Foundation &amp; Hi!Paris. Thema: Bildung der Zukunft. Freie Teilnahme für Studierende und KI-Enthusiasten.</p>
+                <a href="https://ipai-foundation.ai/en/from-paris-to-heilbronn-the-international-hickathon-is-coming/" class="tl">Zur Anmeldung →</a>
+            </div>
+
+            <div class="tc bc-schramberg">
+                <span class="ttag ttag-schramberg">Make it in Schramberg</span>
+                <h4>SUV – Schramberger Unternehmens-vesper Vol. 4</h4>
+                <span class="td">📅 25. März, 18:00 Uhr &nbsp;|&nbsp; 📍 Szene64 Schramberg</span>
+                <p>Networking-Event für Unternehmer und Entscheider aus der Region.</p>
+                <a href="mailto:wirtschaftsfoerderung@schramberg.de?subject=SUV Vol. 4 -- Anmeldung" class="tl">Per E-Mail anmelden →</a>
+            </div>
+
+            <div class="tc bc-blue">
+                <span class="ttag ttag-blue">Meetup</span>
+                <h4>KI Summit Stuttgart #12 – Enterprise Automation</h4>
+                <span class="td">📅 26. März, 18:00–21:00 Uhr &nbsp;|&nbsp; 📍 IHK Stuttgart</span>
+                <p>KI in regulierten Umfeldern, PromptOps, lokale LLMs. Networking &amp; Food. Kostenlos.</p>
+                <a href="https://wrs.region-stuttgart.de/termine/ki-summit-stuttgart-12/" class="tl">Anmelden →</a>
+            </div>
         </div>
 
-        <!-- ===================== TIMELINE ===================== -->
-        <div class="timeline-section">
-            <h2 class="section-title">Veranstaltungskalender 2026</h2>
+        <!-- APRIL -->
+        <div class="timeline-month" data-month="apr">
+            <div class="timeline-dot"></div>
+            <div class="timeline-month-label"><span>April 2026</span></div>
 
-            <div class="timeline" id="timeline">
-                <div class="timeline-line" id="timelineLine"></div>
+            <div class="tc bc-blue">
+                <span class="ttag ttag-blue">Konferenz</span>
+                <h4>AI Conference: Science × Business – Heidelberg</h4>
+                <span class="td">📅 14.–15. April &nbsp;|&nbsp; 📍 Karlstorbahnhof, Heidelberg</span>
+                <p>1.000+ Teilnehmer, 100+ Speaker. Generative AI, Industrie-KI, Cyber Security. AWS, Bosch, Meta. Ab €49.</p>
+                <a href="https://dcyphr.io/conference" class="tl">Tickets ab €49 →</a>
+            </div>
 
-                <!-- FEBRUAR -->
-                <div class="timeline-month" data-month="feb">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-month-label">Februar 2026</div>
-                    <div class="timeline-card border-red">
-                        <span class="ttag ttag-red">Diese Woche</span>
-                        <h4>Social Media Workshop – Rottweil</h4>
-                        <span class="tdate">📅 24. Feb, 15:30–19:00 Uhr | 📍 Rottweil</span>
-                        <p>Praxis-Workshop: Social-Media-Strategie und Content für regionale Unternehmen.</p>
-                        <a href="20260224_SocialMediaWorkshop_EINLADUNG.pdf" class="tlink">📄 Einladung PDF →</a>
-                        &nbsp;&nbsp;<a href="mailto:christine.schellhorn@campus-sw.de" class="tlink">✉ Kontakt</a>
-                    </div>
-                </div>
-
-                <!-- MÄRZ -->
-                <div class="timeline-month" data-month="mar">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-month-label">März 2026</div>
-                    <div class="timeline-card border-blue">
-                        <span class="ttag ttag-blue">Hackathon</span>
-                        <h4>Hi!ckathon – Internationaler KI-Hackathon</h4>
-                        <span class="tdate">📅 9.–15. März | 📍 IPAI Spaces, Heilbronn</span>
-                        <p>IPAI Foundation &amp; Hi!Paris: Bildung der Zukunft. Freie Teilnahme für Studierende und KI-Enthusiasten.</p>
-                        <a href="https://ipai-foundation.ai/en/from-paris-to-heilbronn-the-international-hickathon-is-coming/" class="tlink">Zur Anmeldung →</a>
-                    </div>
-                    <div class="timeline-card border-blue">
-                        <span class="ttag ttag-blue">Meetup</span>
-                        <h4>KI Summit Stuttgart #12 – Enterprise Automation</h4>
-                        <span class="tdate">📅 26. März, 18:00–21:00 Uhr | 📍 IHK Stuttgart</span>
-                        <p>KI in regulierten Umfeldern, PromptOps, lokale LLMs. Networking &amp; Food. Kostenlos.</p>
-                        <a href="https://wrs.region-stuttgart.de/termine/ki-summit-stuttgart-12/" class="tlink">Anmelden →</a>
-                    </div>
-                </div>
-
-                <!-- APRIL -->
-                <div class="timeline-month" data-month="apr">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-month-label">April 2026</div>
-                    <div class="timeline-card border-blue">
-                        <span class="ttag ttag-blue">Konferenz</span>
-                        <h4>AI Conference: Science × Business – Heidelberg</h4>
-                        <span class="tdate">📅 14.–15. April | 📍 Karlstorbahnhof, Heidelberg</span>
-                        <p>1.000+ Teilnehmer, 100+ Speaker. Generative AI, Industrie-KI, Cyber Security. AWS, Bosch, Meta. Ab €49.</p>
-                        <a href="https://dcyphr.io/conference" class="tlink">Tickets ab €49 →</a>
-                    </div>
-                </div>
-
-                <!-- JUNI -->
-                <div class="timeline-month" data-month="jun">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-month-label">Juni 2026</div>
-                    <div class="timeline-card border-blue">
-                        <span class="ttag ttag-blue">Rottweil</span>
-                        <h4>Zukunftsforum Bau &amp; Industrie 2026</h4>
-                        <span class="tdate">📅 30. Juni | 📍 TK-Elevator-Testturm Rottweil (246 m)</span>
-                        <p>C-Level aus Bau, Industrie und Engineering. Digitalisierung und Innovation auf Deutschlands höchster Besucherplattform.</p>
-                        <a href="https://www.nti-group.com/de/events/zukunftsforum-bau-industrie/rottweil/" class="tlink">Details →</a>
-                    </div>
-                </div>
-
-                <!-- JULI -->
-                <div class="timeline-month" data-month="jul">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-month-label">Juli 2026</div>
-                    <div class="timeline-card border-green">
-                        <span class="ttag ttag-green">Bestätigt</span>
-                        <h4>Käpsele Innovation Festival</h4>
-                        <span class="tdate">📅 16. Juli, ab 10:00 Uhr | 📍 SICK-ARENA, Messe Freiburg</span>
-                        <p>Das Innovations-Highlight im Südwesten. Mit StartupBW Elevator Pitch Landesfinale.</p>
-                        <a href="https://www.innovation-festival.de/" class="tlink">Festival-Website →</a>
-                    </div>
-                    <div class="timeline-card border-green">
-                        <span class="ttag ttag-green">Bestätigt</span>
-                        <h4>KI Festival Heilbronn 2026</h4>
-                        <span class="tdate">📅 25.–26. Juli | 📍 Zukunftspark Wohlgelegen, Heilbronn</span>
-                        <p>Europas KI-Treffpunkt. Live-Demos, Workshops, Keynotes. Kostenlos. 2025: 13.500 Besucher.</p>
-                        <a href="https://ki-festival.de/" class="tlink">KI Festival →</a>
-                    </div>
-                </div>
-
-                <!-- TERMIN OFFEN -->
-                <div class="timeline-month timeline-offen" data-month="offen">
-                    <div class="timeline-dot" style="background: #bdc3c7; border-color: #7f8c8d;"></div>
-                    <div class="timeline-month-label" style="border-color: #bdc3c7; color: #7f8c8d;">Termin noch offen</div>
-                    <div class="timeline-card" style="border-left-color: #bdc3c7;">
-                        <span class="ttag ttag-gray">IHK SBH | Donaueschingen</span>
-                        <h4>InnovationForum Smarte Technologien &amp; Systeme</h4>
-                        <span class="tdate">📍 Donauhallen Donaueschingen | Datum folgt</span>
-                        <p>TechnologyMountains e.V. &amp; IHK Schwarzwald-Baar-Heuberg. ~200 Teilnehmer, KI, IoT, Sensorik, AR/VR.</p>
-                        <a href="https://technologymountains.de/innovationforum-smarte-technologien/" class="tlink">TechnologyMountains →</a>
-                    </div>
-                    <div class="timeline-card" style="border-left-color: #bdc3c7;">
-                        <span class="ttag ttag-gray">Stuttgart</span>
-                        <h4>Fraunhofer IAO: KI-Veranstaltungen 2026</h4>
-                        <span class="tdate">📍 Stuttgart &amp; Online | laufende Termine</span>
-                        <p>Generative KI, Agentische KI, KI in der Produktion. KI.Summit 2026 in Planung.</p>
-                        <a href="https://www.iao.fraunhofer.de/de/veranstaltungen.html" class="tlink">IAO Veranstaltungen →</a>
-                    </div>
-                </div>
-
-            </div><!-- end .timeline -->
-        </div><!-- end .timeline-section -->
-
-        <div style="text-align: center; margin-top: 4rem; color: #7f8c8d; font-style: italic;">
-            <p>Nit schwätza - macha! :-)</p>
-            <p style="font-size: 0.8rem;">
-                <a href="impressum.html" style="color: #7f8c8d;">Impressum</a> | <a href="datenschutz.html" style="color: #7f8c8d;">Datenschutz</a>
-            </p>
+            <div class="tc bc-schramberg">
+                <span class="ttag ttag-schramberg">Make it in Schramberg</span>
+                <h4>INSIGHT Vol. 2</h4>
+                <span class="td">📅 29. April, 18:30 Uhr &nbsp;|&nbsp; 📍 Stiftung St. Franziskus, Schramberg</span>
+                <p>Einblicke in innovative Unternehmenspraxis – hosted by Stiftung St. Franziskus.</p>
+                <a href="mailto:wirtschaftsfoerderung@schramberg.de?subject=INSIGHT Vol. 2 -- Anmeldung" class="tl">Per E-Mail anmelden →</a>
+            </div>
         </div>
+
+        <!-- MAI -->
+        <div class="timeline-month" data-month="mai">
+            <div class="timeline-dot"></div>
+            <div class="timeline-month-label"><span>Mai 2026</span></div>
+
+            <div class="tc bc-schramberg">
+                <span class="ttag ttag-schramberg">Make it in Schramberg</span>
+                <h4>China – Wirtschaft, Politik, Zukunft</h4>
+                <span class="td">📅 15. Mai, 18:30 Uhr &nbsp;|&nbsp; 📍 ErfinderZeiten Schramberg</span>
+                <p>Diskussion über wirtschaftliche und politische Entwicklungen in China und ihre Auswirkungen auf die Region.</p>
+                <a href="mailto:wirtschaftsfoerderung@schramberg.de?subject=China-Event -- Anmeldung" class="tl">Per E-Mail anmelden →</a>
+            </div>
+        </div>
+
+        <!-- JUNI -->
+        <div class="timeline-month" data-month="jun">
+            <div class="timeline-dot"></div>
+            <div class="timeline-month-label"><span>Juni 2026</span></div>
+
+            <div class="tc bc-blue">
+                <span class="ttag ttag-blue">Rottweil</span>
+                <h4>Zukunftsforum Bau &amp; Industrie 2026</h4>
+                <span class="td">📅 30. Juni &nbsp;|&nbsp; 📍 TK-Elevator-Testturm Rottweil (246 m)</span>
+                <p>C-Level aus Bau, Industrie und Engineering. Innovation auf Deutschlands höchster Besucherplattform.</p>
+                <a href="https://www.nti-group.com/de/events/zukunftsforum-bau-industrie/rottweil/" class="tl">Details →</a>
+            </div>
+        </div>
+
+        <!-- JULI -->
+        <div class="timeline-month" data-month="jul">
+            <div class="timeline-dot dot-green"></div>
+            <div class="timeline-month-label label-green"><span>Juli 2026</span></div>
+
+            <div class="tc bc-green">
+                <span class="ttag ttag-green">Bestätigt</span>
+                <h4>Käpsele Innovation Festival</h4>
+                <span class="td">📅 16. Juli, ab 10:00 Uhr &nbsp;|&nbsp; 📍 SICK-ARENA, Messe Freiburg</span>
+                <p>Das Innovations-Highlight im Südwesten. Mit StartupBW Elevator Pitch Landesfinale.</p>
+                <a href="https://www.innovation-festival.de/" class="tl">Festival →</a>
+            </div>
+
+            <div class="tc bc-green">
+                <span class="ttag ttag-green">Bestätigt</span>
+                <h4>KI Festival Heilbronn 2026</h4>
+                <span class="td">📅 25.–26. Juli &nbsp;|&nbsp; 📍 Zukunftspark Wohlgelegen, Heilbronn</span>
+                <p>Europas KI-Treffpunkt. Live-Demos, Workshops, Keynotes. Kostenlos. 2025: 13.500 Besucher.</p>
+                <a href="https://ki-festival.de/" class="tl">KI Festival →</a>
+            </div>
+        </div>
+
+        <!-- SOMMER (Termin offen) -->
+        <div class="timeline-month" data-month="sommer">
+            <div class="timeline-dot dot-gray"></div>
+            <div class="timeline-month-label label-gray"><span>Sommer 2026</span></div>
+
+            <div class="tc bc-orange">
+                <span class="ttag ttag-orange">Make it in Schramberg</span>
+                <span class="ttag ttag-gray">Termin folgt</span>
+                <div class="mario-flex-small">
+                    <div>
+                        <h4>Homo Syntheticus – Talk mit Mario Herger</h4>
+                        <span class="td">📍 Schramberg &nbsp;|&nbsp; Datum wird bekannt gegeben</span>
+                        <p>Insights aus San Francisco: Humanoide Roboter und die Zukunft der Arbeit.</p>
+                    </div>
+                    <img src="homo-syntheticus.jpeg" alt="Homo Syntheticus" class="mario-img-small">
+                </div>
+            </div>
+
+            <div class="tc bc-gray">
+                <span class="ttag ttag-gray">IHK SBH | Donaueschingen</span>
+                <h4>InnovationForum Smarte Technologien &amp; Systeme</h4>
+                <span class="td">📍 Donauhallen Donaueschingen &nbsp;|&nbsp; Datum folgt</span>
+                <p>TechnologyMountains e.V. &amp; IHK Schwarzwald-Baar-Heuberg. ~200 Teilnehmer, KI, IoT, Sensorik, AR/VR.</p>
+                <a href="https://technologymountains.de/innovationforum-smarte-technologien/" class="tl">TechnologyMountains →</a>
+            </div>
+
+            <div class="tc bc-gray">
+                <span class="ttag ttag-gray">Stuttgart &amp; Online</span>
+                <h4>Fraunhofer IAO: KI-Veranstaltungen 2026</h4>
+                <span class="td">📍 Stuttgart &amp; Online &nbsp;|&nbsp; laufende Termine</span>
+                <p>Generative KI, Agentische KI, KI in der Produktion. KI.Summit 2026 in Planung.</p>
+                <a href="https://www.iao.fraunhofer.de/de/veranstaltungen.html" class="tl">IAO Veranstaltungen →</a>
+            </div>
+        </div>
+
+    </div><!-- end .timeline -->
+
+    <div style="text-align:center; margin-top:4rem; color:#7f8c8d; font-style:italic;">
+        <p>Nit schwätza - macha! :-)</p>
+        <p style="font-size:0.8rem;">
+            <a href="impressum.html" style="color:#7f8c8d;">Impressum</a> |
+            <a href="datenschutz.html" style="color:#7f8c8d;">Datenschutz</a>
+        </p>
     </div>
+</div>
 
-    <script>
-        // Animate timeline line and elements on scroll
-        const line = document.getElementById('timelineLine');
-        const timeline = document.getElementById('timeline');
-        const dots = document.querySelectorAll('.timeline-dot');
-        const labels = document.querySelectorAll('.timeline-month-label');
-        const cards = document.querySelectorAll('.timeline-card');
+<script>
+(function() {
+    const line     = document.getElementById('timelineLine');
+    const timeline = document.getElementById('timeline');
+    const dots     = document.querySelectorAll('.timeline-dot');
+    const labels   = document.querySelectorAll('.timeline-month-label');
+    const cards    = document.querySelectorAll('.tc');
 
-        function getProgress() {
-            const rect = timeline.getBoundingClientRect();
-            const windowH = window.innerHeight;
-            // How far the timeline has scrolled through the viewport
-            const scrolled = windowH - rect.top;
-            const total = rect.height + windowH;
-            return Math.min(Math.max(scrolled / total, 0), 1);
-        }
+    // Grow line based on how far the user has scrolled INTO the timeline
+    function animateLine() {
+        const tlRect  = timeline.getBoundingClientRect();
+        const tlTop   = tlRect.top;
+        const tlH     = timeline.offsetHeight;
+        const winH    = window.innerHeight;
 
-        function animateLine() {
-            const progress = getProgress();
-            const totalH = timeline.offsetHeight;
-            line.style.height = (progress * totalH) + 'px';
-        }
+        // Start growing when top of timeline enters viewport,
+        // finish when bottom of timeline hits mid-screen
+        const scrolled = winH * 0.8 - tlTop;   // distance scrolled past start trigger
+        const total    = tlH + winH * 0.2;      // full travel distance
+        const progress = Math.min(Math.max(scrolled / total, 0), 1);
 
-        // IntersectionObserver for dots, labels, cards
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        line.style.height = Math.round(progress * tlH) + 'px';
+    }
 
-        dots.forEach(el => observer.observe(el));
-        labels.forEach(el => observer.observe(el));
-        cards.forEach(el => observer.observe(el));
+    // Fade-in for dots, labels, cards
+    const io = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+            if (e.isIntersecting) { e.target.classList.add('visible'); }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 
-        // Line grows on scroll
-        window.addEventListener('scroll', animateLine, { passive: true });
-        animateLine(); // run once on load
-    </script>
+    dots.forEach(function(el)   { io.observe(el); });
+    labels.forEach(function(el) { io.observe(el); });
+    cards.forEach(function(el)  { io.observe(el); });
+
+    window.addEventListener('scroll', animateLine, { passive: true });
+    window.addEventListener('resize', animateLine, { passive: true });
+    animateLine();
+})();
+</script>
 </body>
 </html>
