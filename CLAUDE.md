@@ -2,9 +2,12 @@
 
 ## Workflow
 - Änderungen immer direkt in `index.html` im Projektordner speichern
-- **Nie pushen ohne explizite Freigabe** ("push" oder "deploy") durch Mark
-- Lokale Vorschau: `file:///Users/markfinnern/Developer/ki-impact/index.html`
-- Deployment: GitHub → Netlify (automatisch nach Push)
+- **Aktiver Branch: `dev`** — Pushes gehen nach `dev`, NICHT nach `main`
+- `dev`-Branch ist privat / nicht live — GitHub Pages deployed nur von `main`
+- **Iterieren:** Claude editiert → `git commit + push → dev` (kein Live-Update)
+- **Vorschau:** Mark macht `git pull` im Terminal, dann `file:///Users/markfinnern/Developer/ki-impact/index.html`
+- **Live schalten:** Mark sagt "deploy" → Claude merged `dev` → `main` → Seite geht live
+- **Nie nach `main` pushen ohne explizites "deploy"** von Mark
 
 ## Seitenstruktur (Reihenfolge einhalten!)
 1. **KI-Impact Highlight #1** – Sammelbestattung (14. April) — immer ganz oben
