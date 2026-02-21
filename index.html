@@ -46,6 +46,7 @@
             height: 0;
             background: linear-gradient(to bottom, #ffd700, #e67e22, #27ae60);
             border-radius: 4px;
+            z-index: 1;          /* behind dots (z-index: 2) so line passes through them */
         }
 
         /* Month group */
@@ -358,16 +359,24 @@
     function animateLine() {
         const tlRect  = timeline.getBoundingClientRect();
         const tlTop   = tlRect.top;
-        const tlH     = timeline.offsetHeight;
         const winH    = window.innerHeight;
 
-        // Start growing when top of timeline enters viewport,
-        // finish when bottom of timeline hits mid-screen
-        const scrolled = winH * 0.8 - tlTop;   // distance scrolled past start trigger
-        const total    = tlH + winH * 0.2;      // full travel distance
+        // Calculate the center of the last dot relative to the timeline top
+        const lastDot    = dots[dots.length - 1];
+        const lastMonth  = lastDot.closest('.timeline-month');
+        const lastDotCenter = lastMonth.offsetTop + lastDot.offsetTop + (lastDot.offsetHeight / 2);
+
+        // Max line height = last dot center minus the line's CSS top offset (12px)
+        const lineTopOffset = 12;
+        const maxH = Math.max(0, lastDotCenter - lineTopOffset);
+
+        // Start growing when timeline enters viewport at 80% mark;
+        // finish when the last dot is near center-screen (20% buffer)
+        const scrolled = winH * 0.8 - tlTop;
+        const total    = lastDotCenter + winH * 0.2;
         const progress = Math.min(Math.max(scrolled / total, 0), 1);
 
-        line.style.height = Math.round(progress * tlH) + 'px';
+        line.style.height = Math.round(progress * maxH) + 'px';
     }
 
     // Fade-in for dots, labels, cards
