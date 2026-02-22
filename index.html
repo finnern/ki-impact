@@ -40,7 +40,7 @@
         /* Vertical line — left-center aligns with dot center */
         .timeline-line {
             position: absolute;
-            left: 10px;          /* dot center = 10 + 9 = 19px; line center = 10 + 1.5 = 11.5 → tweak below */
+            left: 18px;          /* line center = 18+2 = 20px = dot center (44-34+10) */
             top: 12px;           /* start at first dot */
             width: 4px;
             height: 0;
@@ -136,7 +136,7 @@
         @media (max-width: 600px) {
             .btn { display: block; margin-bottom: 10px; }
             .timeline { padding-left: 34px; }
-            .timeline-dot { left: -26px; width: 16px; height: 16px; }
+            .timeline-line { left: 14px; } .timeline-dot { left: -26px; width: 16px; height: 16px; }
         }
     </style>
 </head>
