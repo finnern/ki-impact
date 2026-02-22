@@ -34,3 +34,12 @@
 - Farbschema: `#2c3e50` (dunkel), `#ffd700` (gold), `#e67e22` (orange), `#fffef7` (hintergrund)
 - Tag-Farben: `.tag-red` = sofort/diese Woche, `.tag-blue` = bestätigter Termin, `.tag-green` = bestätigt Sommer+, `.tag-orange` = KI-Impact eigene Events
 - Keine externen CSS-Frameworks — alles inline im `<style>`-Block
+
+## Checkliste vor jedem Commit (nie weglassen!)
+- [ ] Alle 4 Schramberg mailto-Links vorhanden: Betriebsnachfolge, SUV, INSIGHT, China
+- [ ] Jeder mailto-Link hat `subject=` UND `body=` mit Name/Unternehmen/Telefon-Felder
+- [ ] Highlight #1 (Sammelbestattung) mit Anmelde-Button oben
+- [ ] Highlight #2 (Betriebsnachfolge) direkt darunter
+- [ ] IHK-Link zeigt auf https://ihkakademie.de/DIGIPAG
+- [ ] Keine erfundenen URLs — alle geprüft
+- [ ] `git diff HEAD` vor dem Commit lesen und prüfen
