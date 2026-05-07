@@ -29,6 +29,7 @@
 - Keine URLs erfinden oder aus dem Gedächtnis ergänzen — immer suchen und bestätigen
 - Bei unklaren Terminen: "Termin 2026 noch offen" schreiben, Link zur Eventseite setzen
 - Vergangene Events entfernen sobald das Datum überschritten ist
+- **Make it in Schramberg-Events**: immer Logo `make-it-in-schramberg-logo.png` mit `tline-img-flex` einbinden (Pattern siehe bestehende MiiS-Karten)
 
 ## Design
 - Farbschema: `#2c3e50` (dunkel), `#ffd700` (gold), `#e67e22` (orange), `#fffef7` (hintergrund)
