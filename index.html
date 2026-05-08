@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KI-Impact Group – Schramberg &amp; Baden-Württemberg</title>
     <meta name="description" content="KI-Impact Group Schramberg. Humanoide Robotik im Schwarzwald, KI-Workshops und Innovations-Events im Raum Schwarzwald / Baden-Württemberg. Silicon Valley meets Black Forest.">
+
+    <!-- Open Graph / LinkedIn / Slack Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="KI-Impact Group">
+    <meta property="og:title" content="KI-Impact Group – Humanoide Robotik im Schwarzwald · 11. Juni 2026">
+    <meta property="og:description" content="Silicon Valley meets Black Forest. Innovations- und KI-Events im Raum Schwarzwald / Baden-Württemberg. Nächstes Highlight: Humanoide Robotik mit Mario Herger & BETEK in Schramberg.">
+    <meta property="og:url" content="https://ki-impact.org/">
+    <meta property="og:image" content="https://ki-impact.org/humanoide-robotik-schwarzwald.png">
+    <meta property="og:image:alt" content="Humanoide Robotik im Schwarzwald – KI-Impact Group, 11. Juni 2026 in Schramberg">
+    <meta property="og:locale" content="de_DE">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KI-Impact Group – Humanoide Robotik im Schwarzwald · 11. Juni 2026">
+    <meta name="twitter:description" content="Silicon Valley meets Black Forest. Innovations- und KI-Events im Raum Baden-Württemberg.">
+    <meta name="twitter:image" content="https://ki-impact.org/humanoide-robotik-schwarzwald.png">
     <style>
         /* ============ Base / Typography ============ */
         :root {
@@ -91,38 +107,34 @@
         /* ============ Hero ============ */
         .hero {
             text-align: center;
-            padding: 5rem 0 3rem 0;
+            padding: 2.5rem 0 1.5rem 0;
         }
         .hero .logo-banner {
-            max-width: 520px;
+            max-width: 380px;
             width: 100%;
             height: auto;
-            margin: 0 auto 2rem;
+            margin: 0 auto 0.6rem;
             display: block;
-        }
-        .hero .title {
-            font-size: clamp(3.2rem, 9vw, 6.4rem);
-            font-weight: 900;
-            letter-spacing: -0.04em;
-            line-height: 0.95;
-            margin: 0.6rem 0;
-        }
-        .hero .title .gold { color: var(--gold); }
-        .hero .title .gray { color: #c5c5c5; }
-        .hero .lead {
-            max-width: 640px;
-            margin: 1.4rem auto 0;
-            font-size: 1.05rem;
-            color: #444;
         }
         .hero .motto {
             display: inline-block;
-            margin-top: 1.8rem;
+            margin-top: 0.4rem;
             color: var(--gold-dark);
             font-weight: 900;
             font-family: 'Courier New', monospace;
             letter-spacing: 0.2em;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+        }
+        .hero-actions {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .hero-actions .btn {
+            padding: 8px 14px;
+            font-size: 0.78rem;
         }
 
         /* ============ Stats strip ============ */
@@ -162,6 +174,9 @@
         .section-head {
             text-align: center;
             margin: 5rem 0 2.5rem;
+        }
+        .section-head.section-head-tight {
+            margin-top: 1.5rem;
         }
         .section-head h2 {
             font-size: clamp(2rem, 5vw, 3rem);
@@ -399,37 +414,19 @@
 
 <div class="container">
 
-    <!-- ============ HERO ============ -->
+    <!-- ============ HERO (compact) ============ -->
     <div class="hero">
-        <img src="ki-impact-logo-banner.png" alt="KI-Impact Group Banner" class="logo-banner">
-        <div class="eyebrow">KI-Impact Group · Schramberg · seit 2024</div>
-        <h1 class="title">
-            <span class="gray">MAKE</span> <span class="gold">THE</span><br>
-            <span class="gold">FUTURE</span> <span class="gray">HAPPEN.</span>
-        </h1>
-        <p class="lead">
-            Eine Region, die KI nicht nur diskutiert – sondern <strong>macht</strong>.
-            Innovations-Events im Raum Schwarzwald, von Schramberg bis ganz Baden-Württemberg.
-            Gegründet von Mark Finnern nach Jahren im Silicon Valley.
-        </p>
+        <img src="ki-impact-logo-banner.png" alt="KI-Impact Group · Silicon Valley meets Black Forest" class="logo-banner">
         <div class="motto">// NIT SCHWÄTZA – MACHA!</div>
-        <div style="margin-top:1.6rem;">
+        <div class="hero-actions">
             <a href="https://www.linkedin.com/groups/9804412/" class="btn btn-outline">LinkedIn KI-Impact Gruppe →</a>
             <a href="https://ki-impact.org/history" class="btn btn-outline">The Future's Past →</a>
         </div>
     </div>
 
-    <!-- ============ STATS ============ -->
-    <div class="stats">
-        <div class="stat"><div class="n">13+</div><div class="lbl">Events &amp; Workshops</div></div>
-        <div class="stat"><div class="n">500+</div><div class="lbl">Teilnehmende</div></div>
-        <div class="stat"><div class="n">10+</div><div class="lbl">Presseartikel</div></div>
-        <div class="stat"><div class="n">2</div><div class="lbl">Jahre Pionierarbeit</div></div>
-    </div>
-
-    <!-- ============ HIGHLIGHT #1 – ROBOTICS ============ -->
-    <div class="section-head">
-        <div class="eyebrow">Hauptevent · Save the Date</div>
+    <!-- ============ NEXT EVENT – ROBOTICS (above the fold) ============ -->
+    <div class="section-head section-head-tight">
+        <div class="eyebrow">Nächstes KI-Impact Event · Save the Date</div>
         <h2>Humanoide Robotik im Schwarzwald</h2>
     </div>
 
@@ -438,7 +435,7 @@
             <img src="humanoide-robotik-schwarzwald.png" alt="Humanoide Robotik im Schwarzwald – Poster">
         </div>
         <div class="hl-body">
-            <span class="ribbon">KI-Impact Highlight #1</span>
+            <span class="ribbon">KI-Impact Highlight</span>
             <h3>Humanoide Robotik im Schwarzwald</h3>
             <div class="hl-meta">
                 <span>📅 <strong>Do · 11. Juni 2026</strong></span>
@@ -459,6 +456,14 @@
                 <a href="https://www.linkedin.com/groups/9804412/" class="btn btn-outline">KI-Impact Gruppe</a>
             </div>
         </div>
+    </div>
+
+    <!-- ============ STATS ============ -->
+    <div class="stats">
+        <div class="stat"><div class="n">20+</div><div class="lbl">Events &amp; Workshops</div></div>
+        <div class="stat"><div class="n">500+</div><div class="lbl">Teilnehmende</div></div>
+        <div class="stat"><div class="n">10+</div><div class="lbl">Presseartikel</div></div>
+        <div class="stat"><div class="n">2</div><div class="lbl">Jahre Pionierarbeit</div></div>
     </div>
 
     <!-- ============ TIMELINE ============ -->
