@@ -279,7 +279,37 @@
 
         .timeline {
             position: relative;
-            margin-bottom: 4rem;
+            margin-bottom: 1.6rem;
+        }
+        .legend {
+            margin: 0 0 4rem;
+            padding: 1rem 1.2rem;
+            background: #faf8ee;
+            border: 1px solid var(--line);
+            border-radius: 4px;
+        }
+        .legend-title {
+            font-size: 0.68rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--muted);
+            font-weight: 700;
+            margin-bottom: 0.55rem;
+        }
+        .legend-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.4rem;
+            font-size: 0.85rem;
+            color: var(--ink);
+        }
+        .legend-item { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
+        .legend-swatch {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-radius: 2px;
+            border: 1px solid rgba(0,0,0,0.08);
         }
 
         .tline {
@@ -625,6 +655,16 @@
         </div>
 
     </div><!-- /timeline -->
+
+    <div class="legend">
+        <div class="legend-title">Farbcode</div>
+        <div class="legend-items">
+            <span class="legend-item"><span class="legend-swatch" style="background:#ffd700"></span> KI-Impact Highlight</span>
+            <span class="legend-item"><span class="legend-swatch" style="background:#f5c518"></span> Make it in Schramberg</span>
+            <span class="legend-item"><span class="legend-swatch" style="background:#e67e22"></span> Eigene Angebote / Training</span>
+            <span class="legend-item"><span class="legend-swatch" style="background:#16a085"></span> IHK Akademie</span>
+        </div>
+    </div>
 
     <!-- ============ KI-KOMPASS 2026 ============ -->
     <div class="section-head">
