@@ -6,6 +6,13 @@
     <title>KI-Impact Group – Schramberg &amp; Baden-Württemberg</title>
     <meta name="description" content="KI-Impact Group Schramberg. Humanoide Robotik im Schwarzwald, KI-Workshops und Innovations-Events im Raum Schwarzwald / Baden-Württemberg. Silicon Valley meets Black Forest.">
 
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#ffd700">
+
     <!-- Open Graph / LinkedIn / Slack Preview -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="KI-Impact Group">
@@ -272,17 +279,37 @@
 
         .timeline {
             position: relative;
-            padding-left: 52px;
-            margin-bottom: 4rem;
+            margin-bottom: 1.6rem;
         }
-        .timeline::before {
-            content: "";
-            position: absolute;
-            left: 19px;
-            top: 14px;
-            bottom: 14px;
-            width: 2px;
-            background: #e4e4e4;
+        .legend {
+            margin: 0 0 4rem;
+            padding: 1rem 1.2rem;
+            background: #faf8ee;
+            border: 1px solid var(--line);
+            border-radius: 4px;
+        }
+        .legend-title {
+            font-size: 0.68rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--muted);
+            font-weight: 700;
+            margin-bottom: 0.55rem;
+        }
+        .legend-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.4rem;
+            font-size: 0.85rem;
+            color: var(--ink);
+        }
+        .legend-item { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
+        .legend-swatch {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-radius: 2px;
+            border: 1px solid rgba(0,0,0,0.08);
         }
 
         .tline {
@@ -299,21 +326,6 @@
         .tline.visible { opacity: 1; transform: translateY(0); transition: opacity 0.4s ease, transform 0.4s ease; }
         .tline:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
 
-        .tline::before {
-            content: "";
-            position: absolute;
-            left: -41px;
-            top: 22px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: #fff;
-            border: 3px solid var(--gold);
-            z-index: 2;
-        }
-        .tline.past::before { border-color: #bbb; background: #f5f5f5; }
-        .tline.soon::before { border-color: var(--accent); }
-        .tline.confirmed::before { border-color: #27ae60; }
 
         .tline .eyebrow { margin-bottom: 0.4rem; font-size: 0.68rem; letter-spacing: 0.2em; }
         .tline h4 {
@@ -355,9 +367,35 @@
             border-color: var(--gold);
             border-left: 4px solid var(--gold);
         }
-        .tline.schramberg { border-left: 4px solid #8e44ad; }
+        .tline.schramberg { border-left: 4px solid #f5c518; }
         .tline.own { border-left: 4px solid var(--accent); }
         .tline.ihk { border-left: 4px solid #16a085; }
+
+        .tline.postponed { background: #fafafa; }
+        .tline.postponed h4,
+        .tline.postponed .meta,
+        .tline.postponed p { opacity: 0.55; }
+        .tline.postponed h4 { text-decoration: line-through; text-decoration-thickness: 1px; }
+        .badge-postponed {
+            display: inline-block;
+            background: #c0392b;
+            color: #fff;
+            font-weight: 800;
+            font-size: 0.72rem;
+            letter-spacing: 0.18em;
+            padding: 5px 10px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            transform: rotate(-3deg);
+            box-shadow: 0 2px 6px rgba(192,57,43,0.3);
+            margin-bottom: 0.6rem;
+        }
+        .badge-postponed-note {
+            font-size: 0.82rem;
+            color: #c0392b;
+            font-weight: 700;
+            margin-top: 0.4rem;
+        }
 
         .tline-img-flex {
             display: grid;
@@ -402,9 +440,6 @@
             .hl .hl-body { padding: 1.8rem 1.5rem; }
             .stats { grid-template-columns: repeat(2, 1fr); gap: 1.2rem 0; }
             .stats .stat + .stat::before { display: none; }
-            .timeline { padding-left: 40px; }
-            .timeline::before { left: 13px; }
-            .tline::before { left: -34px; width: 14px; height: 14px; }
             .tline-img-flex { grid-template-columns: 80px 1fr; }
             .tline-img-flex img { width: 80px; }
         }
@@ -477,36 +512,16 @@
     <div class="timeline" id="timeline">
 
         <!-- MAI -->
-        <div class="tline ihk">
-            <div class="eyebrow eyebrow-dark">Karlsruhe · CyberForum</div>
-            <h4>Road to AI Compliance – Workshop</h4>
-            <div class="meta">📅 Di · 12. Mai 2026, 09:00 – 13:00 Uhr &nbsp;·&nbsp; 📍 CyberForum Karlsruhe &nbsp;·&nbsp; 🎟 120 €</div>
-            <p>Praxis-Workshop zum EU AI Act und zur Operationalisierung von KI-Compliance im Unternehmen. Welche Pflichten gelten ab wann, wie dokumentiere ich Risikoklassen, was muss in Verträgen und Prozessen verankert werden.</p>
-            <a href="https://www.cyberforum.de/veranstaltungen/" class="tline-link outline">Zur Veranstaltung →</a>
-        </div>
-
-        <div class="tline schramberg">
-            <div class="tline-img-flex">
-                <img src="make-it-in-schramberg-logo.png" alt="Make it in Schramberg">
-                <div>
-                    <div class="eyebrow eyebrow-dark">Online-Workshop · Make it in Schramberg</div>
-                    <h4>Erfolgreiches Standortmarketing: Digitale Tools zur Fachkräftegewinnung</h4>
-                    <div class="meta">📅 Mi · 13. Mai 2026, 15:00 – 16:00 Uhr &nbsp;·&nbsp; 📍 Online · MS Teams &nbsp;·&nbsp; 🎟 kostenfrei</div>
-                    <p>Kostenfreier Workshop mit Wirtschaftsförderung Schwarzwald-Baar-Heuberg &amp; Firma Maurer. Wie Lage, Infrastruktur und Freizeitangebote professionell in die Karriereseite einfließen – einfach, digital, DSGVO-konform.</p>
-                    <a href="mailto:wirtschaftsfoerderung@schramberg.de?subject=Online%20Workshop%20Standortmarketing%20--%20Anmeldung&body=Hallo%2C%0A%0Aich%20m%C3%B6chte%20am%20Online-Workshop%20Standortmarketing%20am%2013.%20Mai%202026%20teilnehmen.%0A%0AName%3A%20%0AUnternehmen%3A%20%0AE-Mail%3A%20%0A%0AVielen%20Dank!" class="tline-link">Zur Anmeldung →</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="tline schramberg">
+        <div class="tline schramberg postponed">
             <div class="tline-img-flex">
                 <img src="make-it-in-schramberg-logo.png" alt="Make it in Schramberg">
                 <div>
                     <div class="eyebrow eyebrow-dark">Make it in Schramberg · Save the Date</div>
+                    <span class="badge-postponed">Verschoben</span>
                     <h4>Themenabend: China – Wirtschaft, Politik, Zukunft</h4>
                     <div class="meta">📅 Fr · 15. Mai 2026, 18:30 Uhr &nbsp;·&nbsp; 📍 Schramberg (Ort folgt)</div>
                     <p>Mit <strong>Lukas Eggert</strong> (Universität Tübingen): aktuelle wirtschaftliche und politische Entwicklungen in China und was sie für Unternehmen, Märkte und internationale Zusammenarbeit bedeuten.</p>
-                    <a href="mailto:wirtschaftsfoerderung@schramberg.de?subject=China-Event%20--%20Anmeldung&body=Hallo%2C%0A%0Aich%20m%C3%B6chte%20mich%20f%C3%BCr%20den%20China-Themenabend%20am%2015.%20Mai%202026%20anmelden.%0A%0AName%3A%20%0AUnternehmen%3A%20%0ATelefon%3A%20%0A%0AVielen%20Dank!" class="tline-link">Per E-Mail anmelden →</a>
+                    <div class="badge-postponed-note">Termin verschoben – neuer Termin folgt. Die Wirtschaftsförderung Schramberg ist mit dem Speaker im Austausch zu einem Ersatztermin.</div>
                 </div>
             </div>
         </div>
@@ -640,6 +655,16 @@
         </div>
 
     </div><!-- /timeline -->
+
+    <div class="legend">
+        <div class="legend-title">Farbcode</div>
+        <div class="legend-items">
+            <span class="legend-item"><span class="legend-swatch" style="background:#ffd700"></span> KI-Impact Highlight</span>
+            <span class="legend-item"><span class="legend-swatch" style="background:#f5c518"></span> Make it in Schramberg</span>
+            <span class="legend-item"><span class="legend-swatch" style="background:#e67e22"></span> Eigene Angebote / Training</span>
+            <span class="legend-item"><span class="legend-swatch" style="background:#16a085"></span> IHK Akademie</span>
+        </div>
+    </div>
 
     <!-- ============ KI-KOMPASS 2026 ============ -->
     <div class="section-head">
