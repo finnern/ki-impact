@@ -16,8 +16,8 @@
     <!-- Open Graph / LinkedIn / Slack Preview -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="KI-Impact Group">
-    <meta property="og:title" content="KI-Impact Group – Silicon Valley meets Black Forest">
-    <meta property="og:description" content="Innovations- und KI-Events im Raum Schwarzwald / Baden-Württemberg. Nächste Highlights u. a. KI Summit Südwest am 13. Juli und Zukunftsforum Bau & Industrie am 30. Juni – beide im Testturm Rottweil.">
+    <meta property="og:title" content="KI-Impact Group – China-Themenabend mit Lukas Eggert · 15. Juli 2026, Schramberg">
+    <meta property="og:description" content="Make it in Schramberg × KI-Impact Group: China-Themenabend mit Lukas Eggert (Universität Tübingen). Plus zwei Highlights im Testturm Rottweil (Zukunftsforum Bau 30.6., KI Summit Südwest 13.7.).">
     <meta property="og:url" content="https://ki-impact.org/">
     <meta property="og:image" content="https://ki-impact.org/ki-impact-logo-banner.png">
     <meta property="og:image:alt" content="KI-Impact Group – Silicon Valley meets Black Forest">
@@ -25,8 +25,8 @@
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="KI-Impact Group – Silicon Valley meets Black Forest">
-    <meta name="twitter:description" content="Innovations- und KI-Events im Raum Baden-Württemberg. Nächste Termine im Testturm Rottweil und in der Region.">
+    <meta name="twitter:title" content="KI-Impact Group – China-Themenabend · 15. Juli 2026, Schramberg">
+    <meta name="twitter:description" content="Make it in Schramberg × KI-Impact Group: China mit Lukas Eggert (Uni Tübingen) – plus zwei Testturm-Highlights in Rottweil.">
     <meta name="twitter:image" content="https://ki-impact.org/ki-impact-logo-banner.png">
     <style>
         /* ============ Base / Typography ============ */
@@ -218,6 +218,35 @@
             max-width: 100%;
             max-height: 550px;
             display: block;
+        }
+        /* Crossfade between two language variants (DE/CN) – 3s each, 6s loop */
+        .hl-img.swap {
+            position: relative;
+            min-height: 320px;
+        }
+        .hl-img.swap img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: calc(100% - 32px);
+            max-height: 520px;
+            opacity: 0;
+            animation: swap6s 6s ease-in-out infinite;
+        }
+        .hl-img.swap img:nth-child(2) {
+            animation-delay: 3s;
+        }
+        @keyframes swap6s {
+            0%   { opacity: 0; }
+            5%   { opacity: 1; }
+            45%  { opacity: 1; }
+            55%  { opacity: 0; }
+            100% { opacity: 0; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hl-img.swap img { animation: none; opacity: 1; }
+            .hl-img.swap img:nth-child(2) { opacity: 0; }
         }
         .hl .hl-body { padding: 2.4rem 2.2rem; }
         .hl .hl-body h3 {
@@ -466,31 +495,35 @@
         </div>
     </div>
 
-    <!-- ============ NEXT REGIONAL HIGHLIGHT – KI SUMMIT SÜDWEST (above the fold) ============ -->
+    <!-- ============ NEXT HIGHLIGHT – CHINA THEMENABEND (above the fold) ============ -->
     <div class="section-head section-head-tight">
-        <div class="eyebrow">Nächstes KI-Highlight in der Region · Save the Date</div>
-        <h2>KI Summit Südwest – auf 232 Metern Höhe.</h2>
+        <div class="eyebrow">Nächstes Highlight · Make it in Schramberg × KI-Impact Group</div>
+        <h2>China – Wirtschaft, Politik, Zukunft.</h2>
     </div>
 
     <div class="hl">
-        <div class="hl-body" style="grid-column: 1 / -1; padding: 2.4rem 2.2rem;">
-            <span class="ribbon">Regionales Highlight</span>
-            <span class="ribbon ribbon-orange">Testturm Rottweil</span>
-            <h3>KI Summit Südwest 2026</h3>
+        <div class="hl-img swap">
+            <img src="china-themenabend-de.png" alt="China – Wirtschaft · Politik · Zukunft (deutsche Version)" onerror="this.style.display='none'">
+            <img src="china-themenabend-cn.png" alt="中国 经济 · 政治 · 未来 (chinesische Version)">
+        </div>
+        <div class="hl-body">
+            <span class="ribbon">Make it in Schramberg</span>
+            <span class="ribbon ribbon-orange">Save the Date</span>
+            <h3>Themenabend: China – Wirtschaft, Politik, Zukunft</h3>
             <div class="hl-meta">
-                <span>📅 <strong>Mo · 13. Juli 2026</strong></span>
-                <span>🕑 <strong>14:00 – 18:00 Uhr + Networking</strong></span>
-                <span>📍 <strong>TK Elevator Testturm Rottweil (höchster Kongressraum Deutschlands, 232 m)</strong></span>
-                <span>🎟 <strong>249 € zzgl. MwSt. · nur 120 Plätze</strong></span>
+                <span>📅 <strong>Mi · 15. Juli 2026</strong></span>
+                <span>🕡 <strong>18:30 Uhr</strong></span>
+                <span>📍 <strong>Schramberg · Ort folgt</strong></span>
+                <span>🎟 <strong>Eintritt frei · Anmeldung erbeten</strong></span>
             </div>
             <p>
-                <strong>Keynote:</strong> Sven Dörrenbächer, ehemaliger Digital-Chef bei Mercedes-Benz und einer der renommiertesten KI-Berater Deutschlands – Hype trennen von echtem Wissen.
+                <strong>Mit Lukas Eggert</strong> (Universität Tübingen): aktuelle wirtschaftliche und politische Entwicklungen in China und was sie für Unternehmen, Märkte und internationale Zusammenarbeit bedeuten.
             </p>
             <p>
-                <strong>Praxis:</strong> Acht Sprecher:innen aus Aesculap AG, Hansgrohe SE, ENGESER GmbH, Meisterbäckerei Schneckenburger, <strong>fruitcore robotics</strong>, ARNO Group und nuwacom GmbH zeigen konkrete KI-Anwendungen im Mittelstand: Operations, Marketing, Automation, Sales. Kein Theater, keine Buzzwords.
+                China ist Risiko, Markt und Maßstab in einem – gleichzeitig. Wer im Schwarzwald Produkte baut, ohne ein klares China-Bild zu haben, fliegt blind. Lukas Eggert ordnet ein, was gerade passiert – und was Mittelstand und Familienunternehmen daraus mitnehmen sollten.
             </p>
             <div class="btn-row">
-                <a href="https://ki-summit-suedwest.com/" class="btn btn-gold">Zum Summit & Anmeldung →</a>
+                <a href="mailto:wirtschaftsfoerderung@schramberg.de?subject=China-Event%20--%20Anmeldung&body=Hallo%2C%0A%0Aich%20m%C3%B6chte%20mich%20f%C3%BCr%20den%20China-Themenabend%20am%2015.%20Juli%202026%20anmelden.%0A%0AName%3A%20%0AUnternehmen%3A%20%0ATelefon%3A%20%0A%0AVielen%20Dank!" class="btn btn-gold">Per E-Mail anmelden →</a>
                 <a href="https://www.linkedin.com/groups/9804412/" class="btn btn-outline">KI-Impact Gruppe</a>
             </div>
         </div>
@@ -515,14 +548,6 @@
     <div class="timeline" id="timeline">
 
         <!-- JUNI -->
-        <div class="tline ihk own">
-            <div class="eyebrow">Eigenes Angebot · IHK Akademie SBH</div>
-            <h4>KI-gestützte Prozessautomation mit n8n – Grundlagen für KMU</h4>
-            <div class="meta">📅 Start: Di · 23. Juni 2026 &nbsp;·&nbsp; 📍 IHK Akademie Schwarzwald-Baar-Heuberg</div>
-            <p>Erster IHK-zertifizierter n8n-Kurs der Region. Mark Finnern als Dozent. Berufsbegleitend, praxisnah, Low-Code. Fördermöglichkeit vorhanden.</p>
-            <a href="https://ihkakademie.de/DIGIPAG" class="tline-link">Zum Kurs →</a>
-        </div>
-
         <div class="tline ihk">
             <div class="eyebrow eyebrow-dark">Online · TechnologyMountains</div>
             <h4>Künstliche Intelligenz in der Medizintechnik – wie geht das regulatorisch konform?</h4>
@@ -540,12 +565,12 @@
         </div>
 
         <!-- JULI -->
-        <div class="tline featured">
-            <div class="eyebrow">⭐ Regionales Highlight · Testturm Rottweil</div>
+        <div class="tline">
+            <div class="eyebrow eyebrow-dark">Rottweil · Testturm · KI</div>
             <h4>KI Summit Südwest 2026 – auf 232 Metern Höhe</h4>
             <div class="meta">📅 Mo · 13. Juli 2026, 14:00 – 18:00 Uhr + Networking &nbsp;·&nbsp; 📍 TK Elevator Testturm Rottweil &nbsp;·&nbsp; 🎟 249 € zzgl. MwSt., nur 120 Plätze</div>
             <p>Keynote von Sven Dörrenbächer (Ex-Digital-Chef Mercedes-Benz). Acht Praxisvorträge u. a. von Aesculap, Hansgrohe, ENGESER, Meisterbäckerei Schneckenburger, fruitcore robotics, ARNO Group und nuwacom. Operations, Marketing, Automation, Sales – konkret, kein Buzzword-Bingo.</p>
-            <a href="https://ki-summit-suedwest.com/" class="tline-link">Zum Summit & Anmeldung →</a>
+            <a href="https://ki-summit-suedwest.com/" class="tline-link outline">Zum Summit & Anmeldung →</a>
         </div>
 
         <div class="tline schramberg confirmed">
@@ -591,6 +616,14 @@
         </div>
 
         <!-- SEPTEMBER -->
+        <div class="tline ihk own">
+            <div class="eyebrow">Eigenes Angebot · IHK Akademie SBH · Villingen-Schwenningen</div>
+            <h4>KI-gestützte Prozessautomation mit n8n – Grundlagen für KMU</h4>
+            <div class="meta">📅 Start: Di · 22. September 2026 &nbsp;·&nbsp; 📍 IHK Akademie Schwarzwald-Baar-Heuberg, Villingen-Schwenningen &nbsp;·&nbsp; 🎟 Genügend Plätze frei</div>
+            <p><strong>Berufsbegleitende Präsenz – Start auf September verschoben.</strong> Erster IHK-zertifizierter n8n-Kurs der Region. Mark Finnern als Dozent. Praxisnah, Low-Code. Fördermöglichkeit vorhanden. Plätze sind jetzt wieder frei – ideal, wenn du im Juni noch nicht reinkamst.</p>
+            <a href="https://ihkakademie.de/DIGIPAG" class="tline-link">Zum Kurs →</a>
+        </div>
+
         <div class="tline ihk">
             <div class="eyebrow eyebrow-dark">Online · TechnologyMountains</div>
             <h4>„Was KI wirklich ist" – Technischer Einstieg &amp; Begriffsverständnis</h4>
