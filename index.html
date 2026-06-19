@@ -219,7 +219,9 @@
             max-height: 550px;
             display: block;
         }
-        /* Crossfade between two language variants (DE/CN) – 3s each, 6s loop */
+        /* Crossfade between two language variants (CN primary, DE secondary).
+           Default state: primary always visible. Only when BOTH images load
+           successfully, JS adds .dual → animation alternates them (3s each, 6s loop). */
         .hl-img.swap {
             position: relative;
             min-height: 320px;
@@ -231,22 +233,24 @@
             transform: translate(-50%, -50%);
             max-width: calc(100% - 32px);
             max-height: 520px;
-            opacity: 0;
-            animation: swap6s 6s ease-in-out infinite;
         }
-        .hl-img.swap img:nth-child(2) {
-            animation-delay: 3s;
+        .hl-img.swap .primary   { opacity: 1; z-index: 1; }
+        .hl-img.swap .secondary { opacity: 0; z-index: 2; }
+        .hl-img.swap.dual .primary   { animation: swapPrimary   6s ease-in-out infinite; }
+        .hl-img.swap.dual .secondary { animation: swapSecondary 6s ease-in-out infinite; }
+        @keyframes swapPrimary {
+            0%, 45%  { opacity: 1; }
+            55%, 95% { opacity: 0; }
+            100%     { opacity: 1; }
         }
-        @keyframes swap6s {
-            0%   { opacity: 0; }
-            5%   { opacity: 1; }
-            45%  { opacity: 1; }
-            55%  { opacity: 0; }
-            100% { opacity: 0; }
+        @keyframes swapSecondary {
+            0%, 45%  { opacity: 0; }
+            55%, 95% { opacity: 1; }
+            100%     { opacity: 0; }
         }
         @media (prefers-reduced-motion: reduce) {
-            .hl-img.swap img { animation: none; opacity: 1; }
-            .hl-img.swap img:nth-child(2) { opacity: 0; }
+            .hl-img.swap.dual .primary   { animation: none; opacity: 1; }
+            .hl-img.swap.dual .secondary { animation: none; opacity: 0; }
         }
         .hl .hl-body { padding: 2.4rem 2.2rem; }
         .hl .hl-body h3 {
@@ -503,8 +507,8 @@
 
     <div class="hl">
         <div class="hl-img swap">
-            <img src="china-themenabend-de.png" alt="China – Wirtschaft · Politik · Zukunft (deutsche Version)" onerror="this.style.display='none'">
-            <img src="china-themenabend-cn.png" alt="中国 经济 · 政治 · 未来 (chinesische Version)">
+            <img src="china-themenabend-cn.png" class="primary" alt="中国 经济 · 政治 · 未来 (chinesische Version)">
+            <img src="china-themenabend-de.png" class="secondary" alt="China – Wirtschaft · Politik · Zukunft (deutsche Version)">
         </div>
         <div class="hl-body">
             <span class="ribbon">Make it in Schramberg</span>
@@ -548,12 +552,36 @@
     <div class="timeline" id="timeline">
 
         <!-- JUNI -->
+        <div class="tline">
+            <div class="eyebrow eyebrow-dark">Stuttgart · Deep Tech · ARENA2036</div>
+            <h4>NXTGN: Applied Deep Tech Fest 2026</h4>
+            <div class="meta">📅 Mi · 24. Juni 2026 &nbsp;·&nbsp; 📍 ARENA2036, Pfaffenwaldring 19, Stuttgart</div>
+            <p>Wissenschaft, Startups, Industrie und Investment in einem kuratierten Format. Deep-Dive-Sessions zu Next-Gen-Batterien, BioTech 4.0 &amp; KI in MedTech, Dual-Use-Tech und „AI meets Quantum". Startup-Showcases inklusive.</p>
+            <a href="https://join-nxtgn.com/en/applieddeeptechfest/" class="tline-link outline">Zum Festival →</a>
+        </div>
+
         <div class="tline ihk">
             <div class="eyebrow eyebrow-dark">Online · TechnologyMountains</div>
             <h4>Künstliche Intelligenz in der Medizintechnik – wie geht das regulatorisch konform?</h4>
             <div class="meta">📅 Do · 25. Juni 2026, 09:00 – 17:00 Uhr &nbsp;·&nbsp; 📍 Online</div>
             <p>MDR, IVDR und EU AI Act zusammengedacht: Anforderungen an KI-Komponenten in Medizinprodukten, Risikoklassen, technische Dokumentation und Marktzugang.</p>
             <a href="https://technologymountains.de/terminkalender/" class="tline-link outline">TechnologyMountains Kalender →</a>
+        </div>
+
+        <div class="tline">
+            <div class="eyebrow eyebrow-dark">Stuttgart · Cross-Innovation · Festival</div>
+            <h4>FUTUROMUNDO Multi-Conference + Festival 2026</h4>
+            <div class="meta">📅 Do – Fr · 25. – 26. Juni 2026 &nbsp;·&nbsp; 📍 Liederhalle &amp; Haus der Wirtschaft, Stuttgart</div>
+            <p>~150 internationale Speaker, fünf Konferenzen (EDU, FORESIGHT, INNO, CYBERLÄND, START UP) und Festival-Formate quer durch die Stuttgarter Innenstadt. Treffpunkt für Macher:innen aus Business, Bildung, Politik und Tech.</p>
+            <a href="https://www.futuromundo.com/" class="tline-link outline">Programm & Tickets →</a>
+        </div>
+
+        <div class="tline">
+            <div class="eyebrow eyebrow-dark">Stuttgart · KI · MHP Arena</div>
+            <h4>Der KI-Gipfel 2026 – Treffpunkt für Macher</h4>
+            <div class="meta">📅 Di · 30. Juni 2026, 12:00 – 20:00 Uhr &nbsp;·&nbsp; 📍 MHP Arena, Mercedesstraße 87, Stuttgart</div>
+            <p>~1.000 Teilnehmende, 50+ KI-Expert:innen. Entscheider aus Mittelstand, Industrie, Tech und Politik. Praxisorientiert. Zehn KI-Startups pitchen auf der Startup Stage. Veranstaltet von a11 mit MHP und AWS.</p>
+            <a href="https://www.a11.com/ki-gipfel" class="tline-link outline">Zum KI-Gipfel →</a>
         </div>
 
         <div class="tline">
@@ -751,6 +779,30 @@
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll('.tline').forEach(function(el){ io.observe(el); });
+
+    // China-Event: nur dann zwischen DE/CN crossfaden, wenn BEIDE Bilder geladen sind.
+    // Sonst bleibt das vorhandene Poster statisch sichtbar (keine 3-Sekunden-Blackouts).
+    document.querySelectorAll('.hl-img.swap').forEach(function(swap){
+        var imgs = swap.querySelectorAll('img');
+        if (imgs.length < 2) return;
+        var resolved = 0, okCount = 0;
+        function resolve(img, ok) {
+            resolved++;
+            if (ok) { okCount++; }
+            else { img.style.display = 'none'; }
+            if (resolved === imgs.length && okCount === imgs.length) {
+                swap.classList.add('dual');
+            }
+        }
+        imgs.forEach(function(img){
+            if (img.complete) {
+                resolve(img, img.naturalWidth > 0);
+            } else {
+                img.addEventListener('load',  function(){ resolve(img, true);  }, { once: true });
+                img.addEventListener('error', function(){ resolve(img, false); }, { once: true });
+            }
+        });
+    });
 })();
 </script>
 
