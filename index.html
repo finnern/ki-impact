@@ -16,18 +16,18 @@
     <!-- Open Graph / LinkedIn / Slack Preview -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="KI-Impact Group">
-    <meta property="og:title" content="KI-Impact Group – Humanoide Robotik im Schwarzwald · 11. Juni 2026">
-    <meta property="og:description" content="Silicon Valley meets Black Forest. Innovations- und KI-Events im Raum Schwarzwald / Baden-Württemberg. Nächstes Highlight: Humanoide Robotik mit Mario Herger, fruitcore robotics & Simon/BETEK in Schramberg.">
+    <meta property="og:title" content="KI-Impact Group – China-Themenabend mit Lukas Eggert · 15. Juli 2026, Schramberg">
+    <meta property="og:description" content="Make it in Schramberg × KI-Impact Group: China-Themenabend mit Lukas Eggert (Universität Tübingen). Plus zwei Highlights im Testturm Rottweil (Zukunftsforum Bau 30.6., KI Summit Südwest 13.7.).">
     <meta property="og:url" content="https://ki-impact.org/">
-    <meta property="og:image" content="https://ki-impact.org/humanoide-robotik-schwarzwald.jpg?v=20260608">
-    <meta property="og:image:alt" content="Humanoide Robotik im Schwarzwald – KI-Impact Group, 11. Juni 2026 in Schramberg">
+    <meta property="og:image" content="https://ki-impact.org/ki-impact-logo-banner.png">
+    <meta property="og:image:alt" content="KI-Impact Group – Silicon Valley meets Black Forest">
     <meta property="og:locale" content="de_DE">
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="KI-Impact Group – Humanoide Robotik im Schwarzwald · 11. Juni 2026">
-    <meta name="twitter:description" content="Silicon Valley meets Black Forest. Innovations- und KI-Events im Raum Baden-Württemberg.">
-    <meta name="twitter:image" content="https://ki-impact.org/humanoide-robotik-schwarzwald.jpg?v=20260608">
+    <meta name="twitter:title" content="KI-Impact Group – China-Themenabend · 15. Juli 2026, Schramberg">
+    <meta name="twitter:description" content="Make it in Schramberg × KI-Impact Group: China mit Lukas Eggert (Uni Tübingen) – plus zwei Testturm-Highlights in Rottweil.">
+    <meta name="twitter:image" content="https://ki-impact.org/ki-impact-logo-banner.png">
     <style>
         /* ============ Base / Typography ============ */
         :root {
@@ -218,6 +218,39 @@
             max-width: 100%;
             max-height: 550px;
             display: block;
+        }
+        /* Crossfade between two language variants (CN primary, DE secondary).
+           Default state: primary always visible. Only when BOTH images load
+           successfully, JS adds .dual → animation alternates them (3s each, 6s loop). */
+        .hl-img.swap {
+            position: relative;
+            min-height: 320px;
+        }
+        .hl-img.swap img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: calc(100% - 32px);
+            max-height: 520px;
+        }
+        .hl-img.swap .primary   { opacity: 1; z-index: 1; }
+        .hl-img.swap .secondary { opacity: 0; z-index: 2; }
+        .hl-img.swap.dual .primary   { animation: swapPrimary   6s ease-in-out infinite; }
+        .hl-img.swap.dual .secondary { animation: swapSecondary 6s ease-in-out infinite; }
+        @keyframes swapPrimary {
+            0%, 45%  { opacity: 1; }
+            55%, 95% { opacity: 0; }
+            100%     { opacity: 1; }
+        }
+        @keyframes swapSecondary {
+            0%, 45%  { opacity: 0; }
+            55%, 95% { opacity: 1; }
+            100%     { opacity: 0; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hl-img.swap.dual .primary   { animation: none; opacity: 1; }
+            .hl-img.swap.dual .secondary { animation: none; opacity: 0; }
         }
         .hl .hl-body { padding: 2.4rem 2.2rem; }
         .hl .hl-body h3 {
@@ -466,42 +499,35 @@
         </div>
     </div>
 
-    <!-- ============ NEXT EVENT – ROBOTICS (above the fold) ============ -->
+    <!-- ============ NEXT HIGHLIGHT – CHINA THEMENABEND (above the fold) ============ -->
     <div class="section-head section-head-tight">
-        <div class="eyebrow">Nächstes KI-Impact Event · Save the Date</div>
-        <h2>Humanoide Robotik im Schwarzwald</h2>
+        <div class="eyebrow">Nächstes Highlight · Make it in Schramberg × KI-Impact Group</div>
+        <h2>China – Wirtschaft, Politik, Zukunft.</h2>
     </div>
 
     <div class="hl">
-        <div class="hl-img">
-            <img src="humanoide-robotik-schwarzwald.jpg?v=20260608" alt="Humanoide Robotik im Schwarzwald – Poster mit Mario Herger, fruitcore robotics und Simon/BETEK">
+        <div class="hl-img swap">
+            <img src="china-themenabend-cn.png" class="primary" alt="中国 经济 · 政治 · 未来 (chinesische Version)">
+            <img src="china-themenabend-de.png" class="secondary" alt="China – Wirtschaft · Politik · Zukunft (deutsche Version)">
         </div>
         <div class="hl-body">
-            <span class="ribbon">KI-Impact Highlight</span>
-            <span class="ribbon ribbon-orange">🔄 Verlegt · Szene 64</span>
-            <h3>Humanoide Robotik im Schwarzwald</h3>
+            <span class="ribbon">Make it in Schramberg</span>
+            <span class="ribbon ribbon-orange">Save the Date</span>
+            <h3>Themenabend: China – Wirtschaft, Politik, Zukunft</h3>
             <div class="hl-meta">
-                <span>📅 <strong>Do · 11. Juni 2026</strong></span>
-                <span>🕕 <strong>18:00 – 21:00 Uhr</strong></span>
-                <span>📍 <strong>Szene 64 · Geißhaldenstr. 49, Schramberg</strong></span>
-                <span>🎟 <strong>Eintritt frei</strong></span>
+                <span>📅 <strong>Mi · 15. Juli 2026</strong></span>
+                <span>🕡 <strong>18:30 Uhr</strong></span>
+                <span>📍 <strong>Schramberg · Ort folgt</strong></span>
+                <span>🎟 <strong>Eintritt frei · Anmeldung erbeten</strong></span>
             </div>
-            <p style="background:#fff3e0; border-left:3px solid var(--accent); padding:10px 14px; font-size:0.92rem;">
-                <strong>Wegen großer Nachfrage verlegt</strong> – aus dem Erfinderzeiten Museum in die größere Szene 64. Bereits Angemeldete: gleicher Termin, neuer Ort.
+            <p>
+                <strong>Mit Lukas Eggert</strong> (Universität Tübingen): aktuelle wirtschaftliche und politische Entwicklungen in China und was sie für Unternehmen, Märkte und internationale Zusammenarbeit bedeuten.
             </p>
             <p>
-                <strong>Keynote · Silicon Valley:</strong> Dr. Mario Herger, Technologie-Analyst und Autor von
-                <em>Homo Syntheticus</em>. Der globale Blick auf humanoide Roboter.
-            </p>
-            <p>
-                <strong>Hersteller · Konstanz/Villingen-Schwenningen:</strong> <strong>fruitcore robotics</strong> stellt PLEXA One vor – ihr neuer Industrial Humanoid, made im Ländle für die echte Produktionshalle.
-            </p>
-            <p>
-                <strong>Praxis · Aichhalden bei Schramberg:</strong> Simon · BETEK GmbH experimentiert bereits mit humanoiden
-                Robotern und bringt ihren Roboter zum Anfassen mit – Erfahrungen aus erster Hand.
+                China ist Risiko, Markt und Maßstab in einem – gleichzeitig. Wer im Schwarzwald Produkte baut, ohne ein klares China-Bild zu haben, fliegt blind. Lukas Eggert ordnet ein, was gerade passiert – und was Mittelstand und Familienunternehmen daraus mitnehmen sollten.
             </p>
             <div class="btn-row">
-                <a href="https://forms.gle/zoCb3dHfP5q4p2B76" class="btn btn-gold">Jetzt anmelden →</a>
+                <a href="mailto:wirtschaftsfoerderung@schramberg.de?subject=China-Event%20--%20Anmeldung&body=Hallo%2C%0A%0Aich%20m%C3%B6chte%20mich%20f%C3%BCr%20den%20China-Themenabend%20am%2015.%20Juli%202026%20anmelden.%0A%0AName%3A%20%0AUnternehmen%3A%20%0ATelefon%3A%20%0A%0AVielen%20Dank!" class="btn btn-gold">Per E-Mail anmelden →</a>
                 <a href="https://www.linkedin.com/groups/9804412/" class="btn btn-outline">KI-Impact Gruppe</a>
             </div>
         </div>
@@ -527,59 +553,11 @@
 
         <!-- JUNI -->
         <div class="tline">
-            <div class="eyebrow eyebrow-dark">Nürtingen · Summit</div>
-            <h4>KI-READY Summit 2026</h4>
-            <div class="meta">📅 9. – 10. Juni 2026 &nbsp;·&nbsp; 📍 Nürtingen bei Stuttgart</div>
-            <p>Der KI-Anwender-Event für Entscheider aus Automation, Automotive, Maschinenbau, Elektronik und Medizintechnik.</p>
-            <a href="https://www.kiready.eu/de/konferenz" class="tline-link outline">Zum Summit →</a>
-        </div>
-
-        <div class="tline ihk">
-            <div class="eyebrow eyebrow-dark">TechnologyMountains · MountainsTour</div>
-            <h4>MountainsTour @ E. Wehrle GmbH</h4>
-            <div class="meta">📅 Di · 9. Juni 2026, 16:30 – 19:30 Uhr &nbsp;·&nbsp; 📍 E. Wehrle GmbH</div>
-            <p>Werksbesichtigung &amp; Netzwerken in der Schwarzwälder Industrie. Einblicke in Fertigung, Innovation und gelebte Unternehmenspraxis.</p>
-            <a href="https://technologymountains.de/veranstaltungen/mountainstour-e-wehrle-gmbh/" class="tline-link outline">Zum Event →</a>
-        </div>
-
-        <div class="tline featured">
-            <div class="eyebrow">⭐ KI-Impact Hauptevent</div>
-            <h4>Humanoide Robotik im Schwarzwald – Herger × fruitcore × BETEK</h4>
-            <div class="meta">📅 Do · 11. Juni 2026, 18:00 – 21:00 Uhr &nbsp;·&nbsp; 📍 <strong>Szene 64 · Geißhaldenstr. 49, Schramberg</strong> <span style="color:var(--accent); font-weight:700;">(wegen großer Nachfrage verlegt)</span> &nbsp;·&nbsp; 🎟 Eintritt frei</div>
-            <p>Drei Perspektiven an einem Abend: Silicon Valley (Mario Herger), Hersteller im Ländle (fruitcore robotics aus Konstanz/Villingen-Schwenningen mit PLEXA One), Anwender im Schwarzwald (Simon / BETEK mit echtem Roboter zum Anfassen).</p>
-            <a href="https://forms.gle/zoCb3dHfP5q4p2B76" class="tline-link">Jetzt anmelden →</a>
-        </div>
-
-        <div class="tline">
-            <div class="eyebrow eyebrow-dark">Rottweil · Netzwerk</div>
-            <h4>Business-Speeddating der Wirtschaftsjunioren SBH</h4>
-            <div class="meta">📅 Mo · 15. Juni 2026 &nbsp;·&nbsp; 📍 Badhaus Rottweil, Neckartal 167</div>
-            <p>Wirtschaftsjunioren Schwarzwald-Baar-Heuberg. Strukturiertes Speeddating für schnelle, gezielte Business-Kontakte in der Region.</p>
-            <a href="https://www.wj-sbh.de/" class="tline-link outline">Weitere Informationen →</a>
-        </div>
-
-        <div class="tline">
-            <div class="eyebrow eyebrow-dark">Villingen-Schwenningen · Hochschule Furtwangen</div>
-            <h4>Innovation Night #9 meets KTUR</h4>
-            <div class="meta">📅 Mi · 17. Juni 2026, 15:30 – 23:00 Uhr &nbsp;·&nbsp; 📍 Neue Tonhalle, Bertholdstr. 7, Villingen-Schwenningen &nbsp;·&nbsp; 🎟 Eintritt frei</div>
-            <p>Trinationales Event für Gründer:innen und Startups: drei Workshops (International Startup Partnerships, Open Innovation Challenges, Success Factors for Startups) und 5×5-Startup-Pitches mit Preisverleihung. Veranstaltet von der HFU mit dem Startup-Incubator Schwarzwald-Baar-Heuberg. Sprache: Englisch.</p>
-            <a href="https://www.hs-furtwangen.de/en/news/detail/2573-innovation-night-9-meets-ktur" class="tline-link outline">Zum Event &amp; Anmeldung →</a>
-        </div>
-
-        <div class="tline ihk">
-            <div class="eyebrow eyebrow-dark">Tuttlingen · TechnologyMountains</div>
-            <h4>Infomarkt der Möglichkeiten: Forschung trifft Industrie</h4>
-            <div class="meta">📅 Do · 18. Juni 2026, 09:30 – 15:00 Uhr &nbsp;·&nbsp; 📍 Stadthalle Tuttlingen</div>
-            <p>Forschungseinrichtungen präsentieren Lösungen für Industrie und Mittelstand: Sensorik, KI, Materialien, Produktion. Direkter Austausch mit Forschenden und passenden Förderwegen.</p>
-            <a href="https://technologymountains.de/terminkalender/" class="tline-link outline">TechnologyMountains Kalender →</a>
-        </div>
-
-        <div class="tline ihk own">
-            <div class="eyebrow">Eigenes Angebot · IHK Akademie SBH</div>
-            <h4>KI-gestützte Prozessautomation mit n8n – Grundlagen für KMU</h4>
-            <div class="meta">📅 Start: Di · 23. Juni 2026 &nbsp;·&nbsp; 📍 IHK Akademie Schwarzwald-Baar-Heuberg</div>
-            <p>Erster IHK-zertifizierter n8n-Kurs der Region. Mark Finnern als Dozent. Berufsbegleitend, praxisnah, Low-Code. Fördermöglichkeit vorhanden.</p>
-            <a href="https://ihkakademie.de/DIGIPAG" class="tline-link">Zum Kurs →</a>
+            <div class="eyebrow eyebrow-dark">Stuttgart · Deep Tech · ARENA2036</div>
+            <h4>NXTGN: Applied Deep Tech Fest 2026</h4>
+            <div class="meta">📅 Mi · 24. Juni 2026 &nbsp;·&nbsp; 📍 ARENA2036, Pfaffenwaldring 19, Stuttgart</div>
+            <p>Wissenschaft, Startups, Industrie und Investment in einem kuratierten Format. Deep-Dive-Sessions zu Next-Gen-Batterien, BioTech 4.0 &amp; KI in MedTech, Dual-Use-Tech und „AI meets Quantum". Startup-Showcases inklusive.</p>
+            <a href="https://join-nxtgn.com/en/applieddeeptechfest/" class="tline-link outline">Zum Festival →</a>
         </div>
 
         <div class="tline ihk">
@@ -591,14 +569,38 @@
         </div>
 
         <div class="tline">
-            <div class="eyebrow eyebrow-dark">Rottweil · C-Level</div>
+            <div class="eyebrow eyebrow-dark">Stuttgart · Cross-Innovation · Festival</div>
+            <h4>FUTUROMUNDO Multi-Conference + Festival 2026</h4>
+            <div class="meta">📅 Do – Fr · 25. – 26. Juni 2026 &nbsp;·&nbsp; 📍 Liederhalle &amp; Haus der Wirtschaft, Stuttgart</div>
+            <p>~150 internationale Speaker, fünf Konferenzen (EDU, FORESIGHT, INNO, CYBERLÄND, START UP) und Festival-Formate quer durch die Stuttgarter Innenstadt. Treffpunkt für Macher:innen aus Business, Bildung, Politik und Tech.</p>
+            <a href="https://www.futuromundo.com/" class="tline-link outline">Programm & Tickets →</a>
+        </div>
+
+        <div class="tline">
+            <div class="eyebrow eyebrow-dark">Stuttgart · KI · MHP Arena</div>
+            <h4>Der KI-Gipfel 2026 – Treffpunkt für Macher</h4>
+            <div class="meta">📅 Di · 30. Juni 2026, 12:00 – 20:00 Uhr &nbsp;·&nbsp; 📍 MHP Arena, Mercedesstraße 87, Stuttgart</div>
+            <p>~1.000 Teilnehmende, 50+ KI-Expert:innen. Entscheider aus Mittelstand, Industrie, Tech und Politik. Praxisorientiert. Zehn KI-Startups pitchen auf der Startup Stage. Veranstaltet von a11 mit MHP und AWS.</p>
+            <a href="https://www.a11.com/ki-gipfel" class="tline-link outline">Zum KI-Gipfel →</a>
+        </div>
+
+        <div class="tline">
+            <div class="eyebrow eyebrow-dark">Rottweil · Testturm · C-Level</div>
             <h4>Zukunftsforum Bau &amp; Industrie 2026</h4>
             <div class="meta">📅 Di · 30. Juni 2026 &nbsp;·&nbsp; 📍 TK-Elevator-Testturm Rottweil (246 m)</div>
-            <p>C-Level aus Bau, Industrie und Engineering. Innovation auf Deutschlands höchster Besucherplattform.</p>
+            <p>C-Level aus Bau, Industrie und Engineering. Anwenderberichte, Expertenrunden und Best Practices zur Digitalisierung – auf Deutschlands höchster Besucherplattform.</p>
             <a href="https://www.nti-group.com/de/events/zukunftsforum-bau-industrie/rottweil/" class="tline-link outline">Details →</a>
         </div>
 
         <!-- JULI -->
+        <div class="tline">
+            <div class="eyebrow eyebrow-dark">Rottweil · Testturm · KI</div>
+            <h4>KI Summit Südwest 2026 – auf 232 Metern Höhe</h4>
+            <div class="meta">📅 Mo · 13. Juli 2026, 14:00 – 18:00 Uhr + Networking &nbsp;·&nbsp; 📍 TK Elevator Testturm Rottweil &nbsp;·&nbsp; 🎟 249 € zzgl. MwSt., nur 120 Plätze</div>
+            <p>Keynote von Sven Dörrenbächer (Ex-Digital-Chef Mercedes-Benz). Acht Praxisvorträge u. a. von Aesculap, Hansgrohe, ENGESER, Meisterbäckerei Schneckenburger, fruitcore robotics, ARNO Group und nuwacom. Operations, Marketing, Automation, Sales – konkret, kein Buzzword-Bingo.</p>
+            <a href="https://ki-summit-suedwest.com/" class="tline-link outline">Zum Summit & Anmeldung →</a>
+        </div>
+
         <div class="tline schramberg confirmed">
             <div class="tline-img-flex">
                 <img src="make-it-in-schramberg-logo.png" alt="Make it in Schramberg">
@@ -642,6 +644,14 @@
         </div>
 
         <!-- SEPTEMBER -->
+        <div class="tline ihk own">
+            <div class="eyebrow">Eigenes Angebot · IHK Akademie SBH · Villingen-Schwenningen</div>
+            <h4>KI-gestützte Prozessautomation mit n8n – Grundlagen für KMU</h4>
+            <div class="meta">📅 Start: Di · 22. September 2026 &nbsp;·&nbsp; 📍 IHK Akademie Schwarzwald-Baar-Heuberg, Villingen-Schwenningen &nbsp;·&nbsp; 🎟 Genügend Plätze frei</div>
+            <p><strong>Berufsbegleitende Präsenz – Start auf September verschoben.</strong> Erster IHK-zertifizierter n8n-Kurs der Region. Mark Finnern als Dozent. Praxisnah, Low-Code. Fördermöglichkeit vorhanden. Plätze sind jetzt wieder frei – ideal, wenn du im Juni noch nicht reinkamst.</p>
+            <a href="https://ihkakademie.de/DIGIPAG" class="tline-link">Zum Kurs →</a>
+        </div>
+
         <div class="tline ihk">
             <div class="eyebrow eyebrow-dark">Online · TechnologyMountains</div>
             <h4>„Was KI wirklich ist" – Technischer Einstieg &amp; Begriffsverständnis</h4>
@@ -769,6 +779,30 @@
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll('.tline').forEach(function(el){ io.observe(el); });
+
+    // China-Event: nur dann zwischen DE/CN crossfaden, wenn BEIDE Bilder geladen sind.
+    // Sonst bleibt das vorhandene Poster statisch sichtbar (keine 3-Sekunden-Blackouts).
+    document.querySelectorAll('.hl-img.swap').forEach(function(swap){
+        var imgs = swap.querySelectorAll('img');
+        if (imgs.length < 2) return;
+        var resolved = 0, okCount = 0;
+        function resolve(img, ok) {
+            resolved++;
+            if (ok) { okCount++; }
+            else { img.style.display = 'none'; }
+            if (resolved === imgs.length && okCount === imgs.length) {
+                swap.classList.add('dual');
+            }
+        }
+        imgs.forEach(function(img){
+            if (img.complete) {
+                resolve(img, img.naturalWidth > 0);
+            } else {
+                img.addEventListener('load',  function(){ resolve(img, true);  }, { once: true });
+                img.addEventListener('error', function(){ resolve(img, false); }, { once: true });
+            }
+        });
+    });
 })();
 </script>
 
