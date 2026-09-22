@@ -21,11 +21,11 @@
 7. **Innovation in der Region & BW** – BW-weite Events und Jahresformate
 
 ## Aktuelle Events (einziger Block, der sich laufend ändert — Stand: 2026-09-22)
-- **Aktueller Modus: Herbst 2026** — Highlight #1 above the fold ist die **KI-Werkstatt** (IFC Tuttlingen × KI-Impact, Termin folgt; mailto mark@finnern.com, Subject "KI-Werkstatt: mein Thema"). Kein Highlight #2 derzeit.
+- **Aktueller Modus: Herbst 2026** — Highlight #1 above the fold ist die **KI-Werkstatt** (IFC Tuttlingen × KI-Impact, Termin folgt; mailto mark@finnern.com, Subject "KI-Werkstatt: mein Thema"). Highlight #2 = **Quantencomputing / MiiS 30.09.** (hl-Block mit swap-Bildern quantencomputing-flyer.png + quantencomputing-strohm.png). Die Timeline-Karte zu Quantencomputing bleibt zusätzlich drin.
 - Timeline „Was jetzt kommt": Quantencomputing / Make it in Schramberg (Mi 30.09., 18:30, Brugger GmbH Magnetsysteme, Gewerbestraße 23, 78739 Hardt; Anmeldung wirtschaftsfoerderung@schramberg.de) → KI-Werkstatt-Karte (Termin folgt) → „KI außer Kontrolle?" Online / MiiS (Termin folgt, Vormerkung wirtschaftsfoerderung@schramberg.de, Bild ki-ausser-kontrolle.png) → KI Palooza 29./30.09. → …
 - Sommerpause-Karte und sommerpause.png sind raus (Datei bleibt im Repo, nicht verlinkt). og:image vorerst ki-impact-logo-banner.png — durch Werkstatt-Motiv ersetzen, sobald vorhanden.
 - IHK n8n-Kurs (DIGIPAG): Start 22.09. hat nicht stattgefunden — Karte ist raus. Erst wieder eintragen, wenn Mark einen bestätigten neuen Starttermin nennt.
-- Nach dem 30.09.: Quantencomputing-Karte entfernen oder als Rückblick nach history.html.
+- Nach dem 30.09.: Quantencomputing-Highlight und -Karte entfernen oder als Rückblick nach history.html.
 - Neue Highlights: Mark nennt Event + Datum + Anmeldelink — nie selbst recherchieren und ungeprüft eintragen
 
 ## URLs – nur diese verwenden (nie abändern!)
