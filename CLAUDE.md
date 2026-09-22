@@ -22,9 +22,10 @@
 
 ## Aktuelle Events (einziger Block, der sich laufend ändert — Stand: 2026-09-22)
 - **Aktueller Modus: Herbst 2026** — Highlight #1 above the fold ist die **KI-Werkstatt** (IFC Tuttlingen × KI-Impact, Termin folgt; mailto mark@finnern.com, Subject "KI-Werkstatt: mein Thema"). Kein Highlight #2 derzeit.
-- Timeline „Was jetzt kommt": n8n-Kurs IHK (läuft seit 22.09.) → Quantencomputing / Make it in Schramberg (Mi 30.09., 18:30, Brugger GmbH Magnetsysteme, Gewerbestraße 23, 78739 Hardt; Anmeldung wirtschaftsfoerderung@schramberg.de) → KI-Werkstatt-Karte (Termin folgt) → „KI außer Kontrolle?" Online / MiiS (Termin folgt, Vormerkung wirtschaftsfoerderung@schramberg.de, Bild ki-ausser-kontrolle.png) → KI Palooza 29./30.09. → …
+- Timeline „Was jetzt kommt": Quantencomputing / Make it in Schramberg (Mi 30.09., 18:30, Brugger GmbH Magnetsysteme, Gewerbestraße 23, 78739 Hardt; Anmeldung wirtschaftsfoerderung@schramberg.de) → KI-Werkstatt-Karte (Termin folgt) → „KI außer Kontrolle?" Online / MiiS (Termin folgt, Vormerkung wirtschaftsfoerderung@schramberg.de, Bild ki-ausser-kontrolle.png) → KI Palooza 29./30.09. → …
 - Sommerpause-Karte und sommerpause.png sind raus (Datei bleibt im Repo, nicht verlinkt). og:image vorerst ki-impact-logo-banner.png — durch Werkstatt-Motiv ersetzen, sobald vorhanden.
-- Nach dem 30.09.: Quantencomputing-Karte entfernen oder als Rückblick nach history.html. Nach Kursende n8n-Karte entfernen.
+- IHK n8n-Kurs (DIGIPAG): Start 22.09. hat nicht stattgefunden — Karte ist raus. Erst wieder eintragen, wenn Mark einen bestätigten neuen Starttermin nennt.
+- Nach dem 30.09.: Quantencomputing-Karte entfernen oder als Rückblick nach history.html.
 - Neue Highlights: Mark nennt Event + Datum + Anmeldelink — nie selbst recherchieren und ungeprüft eintragen
 
 ## URLs – nur diese verwenden (nie abändern!)
@@ -49,7 +50,7 @@
 - [ ] Alle Anmelde-mailto-Links für **aktuelle** Events vorhanden (Liste siehe Aktuelle Events)
 - [ ] Jeder mailto-Link hat `subject=` UND `body=` mit Name/Unternehmen/Telefon-Felder
 - [ ] Highlight #1 und #2 entsprechen dem Block Aktuelle Events
-- [ ] IHK-Link zeigt auf https://ihkakademie.de/DIGIPAG
+- [ ] Falls n8n-Karte drin: IHK-Link zeigt auf https://ihkakademie.de/DIGIPAG
 - [ ] Keine erfundenen URLs — alle geprüft
 - [ ] Kein Event mit überschrittenem Datum mehr auf der Seite
 - [ ] `git diff HEAD` vor dem Commit lesen und prüfen
