@@ -1,6 +1,6 @@
 # KI-Impact Group – Projektregeln
 
-> Letzte Review: 2026-07-29 · Bei jedem "deploy" prüfen, ob der Block **Aktuelle Events** noch stimmt.
+> Letzte Review: 2026-09-22 · Bei jedem "deploy" prüfen, ob der Block **Aktuelle Events** noch stimmt.
 
 ## Workflow
 - Änderungen immer direkt in `index.html` im Projektordner speichern
@@ -20,11 +20,11 @@
 6. **Nächste Veranstaltungen** – zeitnah bevorstehende regionale Events
 7. **Innovation in der Region & BW** – BW-weite Events und Jahresformate
 
-## Aktuelle Events (einziger Block, der sich laufend ändert — Stand: 2026-07-29)
-- **Aktueller Modus: Sommerpause** — oben (above the fold) steht die Sommerpause-Karte statt der Highlight-Event-Karten #1/#2. Herbstprogramm entsteht aus der LinkedIn-Diskussion.
-- Timeline „Was jetzt kommt" startet im September 2026: n8n-Kurs IHK (Start 22. Sept.), Quantencomputing / Make it in Schramberg (September, Termin folgt), diverse TechnologyMountains-Termine (17. Sept.)
-- Alle Events vor dem 29.07.2026 (China 15. Juli, Sammelbestattung 14. April, Betriebsnachfolge 25. Februar) sind vorbei und stehen nicht mehr live auf der Seite
-- Sobald Herbst-Highlights feststehen: Sommerpause-Karte durch Highlight #1/#2 ersetzen (siehe Seitenstruktur)
+## Aktuelle Events (einziger Block, der sich laufend ändert — Stand: 2026-09-22)
+- **Aktueller Modus: Herbst 2026** — Highlight #1 above the fold ist die **KI-Werkstatt** (IFC Tuttlingen × KI-Impact, Termin folgt; mailto mark@finnern.com, Subject "KI-Werkstatt: mein Thema"). Kein Highlight #2 derzeit.
+- Timeline „Was jetzt kommt": n8n-Kurs IHK (läuft seit 22.09.) → Quantencomputing / Make it in Schramberg (Mi 30.09., 18:30, Brugger GmbH Magnetsysteme, Gewerbestraße 23, 78739 Hardt; Anmeldung wirtschaftsfoerderung@schramberg.de) → KI-Werkstatt-Karte (Termin folgt) → „KI außer Kontrolle?" Online / MiiS (Termin folgt, Vormerkung wirtschaftsfoerderung@schramberg.de, Bild ki-ausser-kontrolle.png) → KI Palooza 29./30.09. → …
+- Sommerpause-Karte und sommerpause.png sind raus (Datei bleibt im Repo, nicht verlinkt). og:image vorerst ki-impact-logo-banner.png — durch Werkstatt-Motiv ersetzen, sobald vorhanden.
+- Nach dem 30.09.: Quantencomputing-Karte entfernen oder als Rückblick nach history.html. Nach Kursende n8n-Karte entfernen.
 - Neue Highlights: Mark nennt Event + Datum + Anmeldelink — nie selbst recherchieren und ungeprüft eintragen
 
 ## URLs – nur diese verwenden (nie abändern!)
