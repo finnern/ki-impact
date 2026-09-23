@@ -240,17 +240,18 @@
         }
         .hl-img.swap .primary   { opacity: 1; z-index: 1; }
         .hl-img.swap .secondary { opacity: 0; z-index: 2; }
-        .hl-img.swap.dual .primary   { animation: swapPrimary   6s ease-in-out infinite; }
-        .hl-img.swap.dual .secondary { animation: swapSecondary 6s ease-in-out infinite; }
+        /* 22s-Loop: 10s Bild A, 1s Übergang, 10s Bild B, 1s Übergang */
+        .hl-img.swap.dual .primary   { animation: swapPrimary   22s ease-in-out infinite; }
+        .hl-img.swap.dual .secondary { animation: swapSecondary 22s ease-in-out infinite; }
         @keyframes swapPrimary {
-            0%, 45%  { opacity: 1; }
-            55%, 95% { opacity: 0; }
-            100%     { opacity: 1; }
+            0%, 45.45%   { opacity: 1; }
+            50%, 95.45%  { opacity: 0; }
+            100%         { opacity: 1; }
         }
         @keyframes swapSecondary {
-            0%, 45%  { opacity: 0; }
-            55%, 95% { opacity: 1; }
-            100%     { opacity: 0; }
+            0%, 45.45%   { opacity: 0; }
+            50%, 95.45%  { opacity: 1; }
+            100%         { opacity: 0; }
         }
         @media (prefers-reduced-motion: reduce) {
             .hl-img.swap.dual .primary   { animation: none; opacity: 1; }
