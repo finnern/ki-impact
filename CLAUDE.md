@@ -1,6 +1,6 @@
 # KI-Impact Group – Projektregeln
 
-> Letzte Review: 2026-09-22 · Bei jedem "deploy" prüfen, ob der Block **Aktuelle Events** noch stimmt.
+> Letzte Review: 2026-10-01 · Bei jedem "deploy" prüfen, ob der Block **Aktuelle Events** noch stimmt.
 
 ## Workflow
 - Änderungen immer direkt in `index.html` im Projektordner speichern
@@ -20,13 +20,18 @@
 6. **Nächste Veranstaltungen** – zeitnah bevorstehende regionale Events
 7. **Innovation in der Region & BW** – BW-weite Events und Jahresformate
 
-## Aktuelle Events (einziger Block, der sich laufend ändert — Stand: 2026-09-22)
-- **Aktueller Modus: Herbst 2026** — Highlight #1 above the fold ist die **KI-Werkstatt** (IFC Tuttlingen × KI-Impact, Termin folgt; mailto mark@finnern.com, Subject "KI-Werkstatt: mein Thema"). Highlight #2 = **Quantencomputing / MiiS 30.09.** (hl-Block mit swap-Bildern quantencomputing-flyer.png + quantencomputing-strohm.png). Die Timeline-Karte zu Quantencomputing bleibt zusätzlich drin.
-- Timeline „Was jetzt kommt": Quantencomputing / Make it in Schramberg (Mi 30.09., 18:30, Brugger GmbH Magnetsysteme, Gewerbestraße 23, 78739 Hardt; Anmeldung wirtschaftsfoerderung@schramberg.de) → KI-Werkstatt-Karte (Termin folgt) → „KI außer Kontrolle?" Online / MiiS (Termin folgt, Vormerkung wirtschaftsfoerderung@schramberg.de, Bild ki-ausser-kontrolle.png) → KI Palooza 29./30.09. → …
+## Aktuelle Events (einziger Block, der sich laufend ändert — Stand: 2026-10-01)
+- **Aktueller Modus: Herbst 2026** — Highlight #1 above the fold ist die **KI-Werkstatt** (IFC Tuttlingen × KI-Impact, Termin folgt; mailto mark@finnern.com, Subject "KI-Werkstatt: mein Thema"). Highlight #2: derzeit keins — Mark entscheidet, was als Nächstes dort steht (nächstes eigenes Event oder Rückblick).
+- Timeline „Was jetzt kommt": KI-Werkstatt-Karte (Termin folgt) → „KI außer Kontrolle?" Online / MiiS (Termin folgt, Vormerkung wirtschaftsfoerderung@schramberg.de, Bild ki-ausser-kontrolle.png) → Oktober: … → 1. KI-Night SBH (Mo 12.10., IHK VS, Anker #ki-night-sbh) → …
 - Sommerpause-Karte und sommerpause.png sind raus (Datei bleibt im Repo, nicht verlinkt). og:image vorerst ki-impact-logo-banner.png — durch Werkstatt-Motiv ersetzen, sobald vorhanden.
 - IHK n8n-Kurs (DIGIPAG): Start 22.09. hat nicht stattgefunden — Karte ist raus. Erst wieder eintragen, wenn Mark einen bestätigten neuen Starttermin nennt.
-- Nach dem 30.09.: Quantencomputing-Highlight und -Karte entfernen oder als Rückblick nach history.html.
+- Quantencomputing (30.09.) ist Rückblick in history.html (#quantencomputing); /quant zeigt dorthin.
 - Neue Highlights: Mark nennt Event + Datum + Anmeldelink — nie selbst recherchieren und ungeprüft eintragen
+
+## Kurzlinks
+- Jeder Kurzlink ist ein Ordner mit `index.html`-Redirect (Muster: `quant/index.html`), z. B. `/ki-night` → `index.html#ki-night-sbh`
+- Vergangene Events: `/<slug>` → `history.html#<slug>` (robotik, grabe, buecher, n8n-kurs, bornheim, prozesse, ebike, marketing, copilot, jahresabschluss, erath, hexenwerk, mickey, herger, workshops, quant)
+- Wandert ein Event in die History: Anker in history.html setzen und den Kurzlink dorthin umbiegen
 
 ## URLs – nur diese verwenden (nie abändern!)
 - IHK n8n Kurs: `https://ihkakademie.de/DIGIPAG`
