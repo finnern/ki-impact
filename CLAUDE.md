@@ -21,7 +21,7 @@
 7. **Innovation in der Region & BW** – BW-weite Events und Jahresformate
 
 ## Aktuelle Events (einziger Block, der sich laufend ändert — Stand: 2026-10-01)
-- **Aktueller Modus: Herbst 2026** — Highlight #1 above the fold ist die **KI-Werkstatt** (IFC Tuttlingen × KI-Impact, Termin folgt; mailto mark@finnern.com, Subject "KI-Werkstatt: mein Thema"). Highlight #2: derzeit keins — Mark entscheidet, was als Nächstes dort steht (nächstes eigenes Event oder Rückblick).
+- **Aktueller Modus: Herbst 2026** — Highlight #1 above the fold ist die **KI-Werkstatt** (IFC Tuttlingen × KI-Impact, Termin folgt; mailto mark@finnern.com, Subject "KI-Werkstatt: mein Thema"). Highlight #2: bewusst keins (Entscheidung Mark, 01.10.) — erst wieder einsetzen, wenn Mark ein Event dafür nennt.
 - Timeline „Was jetzt kommt": KI-Werkstatt-Karte (Termin folgt) → „KI außer Kontrolle?" Online / MiiS (Termin folgt, Vormerkung wirtschaftsfoerderung@schramberg.de, Bild ki-ausser-kontrolle.png) → Oktober: … → 1. KI-Night SBH (Mo 12.10., IHK VS, Anker #ki-night-sbh) → …
 - Sommerpause-Karte und sommerpause.png sind raus (Datei bleibt im Repo, nicht verlinkt). og:image vorerst ki-impact-logo-banner.png — durch Werkstatt-Motiv ersetzen, sobald vorhanden.
 - IHK n8n-Kurs (DIGIPAG): Start 22.09. hat nicht stattgefunden — Karte ist raus. Erst wieder eintragen, wenn Mark einen bestätigten neuen Starttermin nennt.
