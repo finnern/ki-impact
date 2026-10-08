@@ -7,7 +7,7 @@
 - **Aktiver Branch: `dev`** — Pushes gehen nach `dev`, NICHT nach `main`
 - `dev`-Branch ist privat / nicht live — GitHub Pages deployed nur von `main`
 - **Iterieren:** Claude editiert → `git commit + push → dev` (kein Live-Update)
-- **Vorschau:** Mark macht `git pull` im Terminal, dann `file:///Users/finnern/Documents/ki-impact/index.html` (Clone liegt seit Okt 2026 unter `~/Documents/ki-impact`)`
+- **Vorschau:** Mark macht `git pull` im Terminal, dann `file:///Users/finnern/Documents/ki-impact/index.html` (Clone liegt seit Okt 2026 unter `~/Documents/ki-impact`)
 - **Live schalten:** Mark sagt "deploy" → Claude merged `dev` → `main` → Seite geht live
 - **Nie nach `main` pushen ohne explizites "deploy"** von Mark
 
