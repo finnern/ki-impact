@@ -20,10 +20,10 @@
 6. **Nächste Veranstaltungen** – zeitnah bevorstehende regionale Events
 7. **Innovation in der Region & BW** – BW-weite Events und Jahresformate
 
-## Aktuelle Events (einziger Block, der sich laufend ändert — Stand: 2026-10-07)
+## Aktuelle Events (einziger Block, der sich laufend ändert — Stand: 2026-10-12)
 - **Aktueller Modus: Herbst 2026** — Highlight #1 above the fold ist die **KI-Werkstatt** (IFC Tuttlingen × KI-Impact, Termin folgt; mailto mark@finnern.com, Subject "KI-Werkstatt: mein Thema"). Highlight #2 = **Rückblick Quantencomputing / MiiS 30.09.** (hl-Block `#rueckblick-quantencomputing`, Link auf SB-Artikel + history.html#quantencomputing) — ersetzen, sobald Mark das nächste eigene Event nennt.
 - KI-Werkstatt hat eine eigene Seite `/werkstatt/` (werkstatt/index.html); Startseite verlinkt dorthin. Keine Nennung von Make it in Schramberg / Wirtschaftsförderung auf der Werkstatt-Seite, solange deren Zusage fehlt.
-- Timeline „Was jetzt kommt": KI-Werkstatt-Karte (Termin folgt) → „KI außer Kontrolle?" Online / MiiS (Termin folgt, Vormerkung wirtschaftsfoerderung@schramberg.de, Bild ki-ausser-kontrolle.png) → VISION 6.–8.10. → Rafati 08.10. → 1. KI-Night SBH 12.10. → flownight x HOW2START Offenburg 15.10. (#flownight) → …
+- Timeline „Was jetzt kommt": KI-Werkstatt-Karte (Termin folgt) → „KI außer Kontrolle?" Online / MiiS (Termin folgt, Vormerkung wirtschaftsfoerderung@schramberg.de, Bild ki-ausser-kontrolle.png) → 1. KI-Night SBH 12.10. → Sensor→ML 12.–13.10. → flownight x HOW2START Offenburg 15.10. (#flownight) → Medizintechnik-Forum 22.10. → KI-Woche 2.–3.11. → #StartupTrifftMittelstand online 12.11. → Schwarzwandel akut Freudenstadt 12.11. → Lernfabrik 13.11. → Zwillingsspitzen #4 19.11. (am 12.10. nicht mehr auf campus-schwarzwald.de gelistet – prüfen) → …
 - Quantencomputing (30.09.) ist in history.html (`#quantencomputing`, mit SB-Artikel + 2 LinkedIn-Posts); Kurzlink /quant zeigt dorthin.
 - Sommerpause-Karte und sommerpause.png sind raus (Datei bleibt im Repo, nicht verlinkt). og:image vorerst ki-impact-logo-banner.png — durch Werkstatt-Motiv ersetzen, sobald vorhanden.
 - IHK n8n-Kurs (DIGIPAG): Start 22.09. hat nicht stattgefunden — Karte ist raus. Erst wieder eintragen, wenn Mark einen bestätigten neuen Starttermin nennt.
