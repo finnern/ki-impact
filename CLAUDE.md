@@ -41,6 +41,7 @@
 - Keine URLs erfinden oder aus dem Gedächtnis ergänzen — immer suchen und bestätigen
 - Bei unklaren Terminen: "Termin 2026 noch offen" schreiben, Link zur Eventseite setzen
 - Vergangene Events entfernen sobald das Datum überschritten ist (gilt auch für Highlights und Checklisten-Einträge)
+- **Kalender-Button**: Jede Karte mit festem Datum bekommt am `<div class="tline …">` die Attribute `data-cal-start` (`2026-11-12T17:00` oder ganztägig `2026-11-12`), optional `data-cal-end`, `data-cal-loc` und `data-cal-title`. Das JS baut daraus „In meinen Kalender (.ics)“ und einen Google-Kalender-Link. Ohne Ende wird mit 3 h gerechnet. Bei „Termin folgt“ keine Attribute setzen.
 - **Make it in Schramberg-Events**: immer Logo `make-it-in-schramberg-logo.png` mit `tline-img-flex` einbinden (Pattern siehe bestehende MiiS-Karten)
 
 ## Design
