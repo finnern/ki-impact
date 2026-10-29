@@ -20,7 +20,7 @@
 6. **Nächste Veranstaltungen** – zeitnah bevorstehende regionale Events
 7. **Innovation in der Region & BW** – BW-weite Events und Jahresformate
 
-## Aktuelle Events (einziger Block, der sich laufend ändert — Stand: 2026-10-14)
+## Aktuelle Events (einziger Block, der sich laufend ändert — Stand: 2026-10-29)
 - **Aktueller Modus: Herbst 2026** — Highlight #1 above the fold ist die **KI-Werkstatt** (IFC Tuttlingen × KI-Impact, Start Frühjahr 2027, Termin folgt; mailto mark@finnern.com, Subject "KI-Werkstatt: mein Thema"). Highlight #2 = **Rückblick Quantencomputing / MiiS 30.09.** (hl-Block `#rueckblick-quantencomputing`, Link auf SB-Artikel + history.html#quantencomputing) — ersetzen, sobald Mark das nächste eigene Event nennt.
 - KI-Werkstatt hat eine eigene Seite `/werkstatt/` (werkstatt/index.html); Startseite verlinkt dorthin. Keine Nennung von Make it in Schramberg / Wirtschaftsförderung auf der Werkstatt-Seite, solange deren Zusage fehlt.
 - Werkstatt-Ablauf (Stand 12.10.): Halbtag 1 → eine Woche, in der Studierende und Betriebe gemeinsam an der Lösung weiterarbeiten → Halbtag 2. Start Frühjahr 2027.
