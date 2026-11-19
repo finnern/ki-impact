@@ -13,7 +13,7 @@
 
 ## Seitenstruktur (Reihenfolge einhalten!)
 1. **KI-Impact Highlight #1** – das nächste eigene KI-Impact-Event (siehe Aktuelle Events)
-2. **KI-Impact Highlight #2** – das übernächste eigene Event oder Rückblick auf das letzte
+2. **KI-Impact Highlight #2** – optional: das übernächste eigene Event, sobald bestätigt
 3. **Make it in Schramberg** – lokale Schramberg-Events
 4. **Mario Herger** – direkt nach Make it in Schramberg
 5. **Eigene Angebote & Training** – n8n / IHK Kurs
@@ -21,7 +21,7 @@
 7. **Innovation in der Region & BW** – BW-weite Events und Jahresformate
 
 ## Aktuelle Events (einziger Block, der sich laufend ändert — Stand: 2026-11-19)
-- **Aktueller Modus: Herbst 2026** — Highlight #1 above the fold ist die **KI-Werkstatt** (IFC Tuttlingen × KI-Impact, Start Frühjahr 2027, Termin folgt; mailto mark@finnern.com, Subject "KI-Werkstatt: mein Thema"). Highlight #2 = **Rückblick Quantencomputing / MiiS 30.09.** (hl-Block `#rueckblick-quantencomputing`, Link auf SB-Artikel + history.html#quantencomputing) — ersetzen, sobald Mark das nächste eigene Event nennt.
+- **Aktueller Modus: Herbst 2026** — Highlight #1 above the fold ist die **KI-Werkstatt** (IFC Tuttlingen × KI-Impact, Start Frühjahr 2027, Termin folgt; mailto mark@finnern.com, Subject "KI-Werkstatt: mein Thema"). Danach folgt direkt das **Make-it-in-Schramberg-Highlight „KI außer Kontrolle?“**. Quantencomputing steht ausschließlich in „The Future’s Past“; kein Rückblick-Highlight mehr auf der Startseite.
 - KI-Werkstatt hat eine eigene Seite `/werkstatt/` (werkstatt/index.html); Startseite verlinkt dorthin. Keine Nennung von Make it in Schramberg / Wirtschaftsförderung auf der Werkstatt-Seite, solange deren Zusage fehlt.
 - Werkstatt-Ablauf (Stand 12.10.): Halbtag 1 → eine Woche, in der Studierende und Betriebe gemeinsam an der Lösung weiterarbeiten → Halbtag 2. Start Frühjahr 2027.
 - Make-it-in-Schramberg-Highlight: „KI außer Kontrolle?“ am **3. Dezember 2026, 18:30 Uhr, online**, mit **Clemens Ackerl (ITAS/KIT)**. Anmeldung https://eveeno.com/134192641, Quelle https://www.makeitinschramberg.de/templateva2. Highlight-Anker `#ki-kontrolle`, Kalenderkarte `#ki-kontrolle-termin`, Kurzlink /ki-kontrolle. Offizieller Flyer `ki-ausser-kontrolle-dezember-2026.jpg`. Alternative Anmeldung per E-Mail an wirtschaftsfoerderung@schramberg.de.
